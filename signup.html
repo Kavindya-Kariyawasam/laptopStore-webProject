@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign In</title>
+  <link rel="stylesheet" href="signup.css">
+  <link rel="stylesheet" href="navbar.css">
+  <script defer src="menu.js"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="navbar-brand">
+                <a href="home.html">
+                 <img src="" alt="Lap_store logo">
+                </a>
+            </div>
+    
+            <ul class="navbar-nav-left">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="#">Laptops</a></li>
+                <li><a href="#">Desktops</a></li>
+                <li><a href="#">Accessories</a></li>
+                <li><a href="#">About</a></li>
+            </ul>
+            
+            <!-- Hamburger Menu -->
+            <button class="hamburger" type="button" id="menu-btn">
+                <span class="hamburger-top"></span>
+                <span class="hamburger-middle"></span>
+                <span class="hamburger-bottom"></span>
+            </button>
+        </div>
+      </nav>
+    
+      <!-- Mobile Menu -->
+      <div class="mobile-menu hidden" id="menu">
+          <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="#">Laptops</a></li>
+            <li><a href="#">Desktops</a></li>
+            <li><a href="#">Accessories</a></li>
+            <li><a href="#">About</a></li>
+          </ul>
+      </div>
+
+  <div class="container">
+    <div class="login-form">
+      <form id="signup-form" action="#">
+        <h1>Sign Up</h1>
+        <p>Please fill in this form to create an account. or <a href="login.html">Login</a></p>
+
+        <label for="fname">First Name</label>
+        <input type="text" id="fname" name="fname" placeholder="Enter First Name" required />
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Enter Email" required />
+
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" placeholder="Enter Password" required />
+
+        <label for="confirm-password">Confirm Password</label>
+        <input type="password" id="confirm-password" name="confirm-password" placeholder="Repeat Password" required />
+
+        <label>
+          <input type="checkbox" checked="checked" name="remember" style="margin-bottom: 15px">
+          Remember me
+        </label>
+
+        <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
+
+        <div class="buttons">
+          <button type="button" class="cancelbtn">Cancel</button>
+          <button type="submit" class="signupbtn">Sign Up</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    const form = document.getElementById('signup-form');
+
+    form.addEventListener('submit', function(event) {
+      event.preventDefault();
+
+      const fname = document.getElementById('fname').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const password = document.getElementById('password').value;
+      const confirmPassword = document.getElementById('confirm-password').value;
+
+      // Validate First Name
+      if (fname === '') {
+        alert('Please enter your First Name.');
+        return false;
+      }
+
+      // Validate Email
+      if (email === '') {
+        alert('Please enter your Email.');
+        return false;
+      } else if (!isValidEmail(email)) {
+        alert('Please enter a valid Email.');
+        return false;
+      }
+
+      // Validate Password
+      if (password === '') {
+        alert('Please enter your Password.');
+        return false;
+      } else if (password.length < 6) {
+        alert('Password must be at least 6 characters long.');
+        return false;
+      }
+
+      // Validate Confirm Password
+      if (confirmPassword === '') {
+        alert('Please confirm your Password.');
+        return false;
+      } else if (password !== confirmPassword) {
+        alert('Passwords do not match.');
+        return false;
+      }
+
+      // If all validations pass, submit the form
+      alert('Sign up successful!');
+      form.reset();
+    });
+
+    // Function to validate email format
+    function isValidEmail(email) {
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      return emailRegex.test(email);
+    }
+  </script>
+</body>
+</html>

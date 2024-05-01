@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <link rel="stylesheet" href="login.css">
+  <script defer src="menu.js"></script>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="navbar-container">
+        <div class="navbar-brand">
+            <a href="home.html">
+             <img src="" alt="Lap_store logo">
+            </a>
+        </div>
+
+        <ul class="navbar-nav-left">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="#">Laptops</a></li>
+            <li><a href="#">Desktops</a></li>
+            <li><a href="#">Accessories</a></li>
+            <li><a href="#">About</a></li>
+        </ul>
+
+        <!-- <ul class="navbar-nav-right">
+            <li><button class="btn btn-dark-outline"><a href="#">Sign in</a></button></li>
+            <li><button class="btn btn-dark">Join now</button></li>
+        </ul>  -->
+        
+        <!-- Hamburger Menu -->
+        <button class="hamburger" type="button" id="menu-btn">
+            <span class="hamburger-top"></span>
+            <span class="hamburger-middle"></span>
+            <span class="hamburger-bottom"></span>
+        </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu hidden" id="menu">
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="#">Laptops</a></li>
+        <li><a href="#">Desktops</a></li>
+        <li><a href="#">Accessories</a></li>
+        <li><a href="#">About</a></li>
+      </ul>
+      <!-- <div class="mobile-menu-bottom">
+        <li><button class="btn btn-dark-outline"><a href="#">Sign in</a></button></li>
+          <button class="btn btn-dark">Join now</button>
+      </div> -->
+  </div>
+
+
+  <!-- Box -->
+  <!-- <section class="box grid-col-2"> -->
+    <div class="container">
+      <h1 class="logo">Welcome Back!</h1>
+      <p>Already have an account? Login in or <a href="#">Sign Up</a></p>
+      <form action="#" method="post" id="loginForm">
+        <div class="input-field">
+          <label for="username">Username or Email</label>
+          <input type="text" id="username" name="username" required>
+          <div class="error-message" id="usernameError"></div>
+        </div>
+        <div class="input-field">
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" required>
+          <div class="error-message" id="passwordError"></div>
+        </div>
+        <div class="checkbox-field">
+          <input type="checkbox" id="remember-me">
+          <label for="remember-me">Remember Me</label>
+        </div>
+        <button type="submit">Login</button>
+        <a id="forgot" href="#">Forgot Password?</a>
+      </form>
+    </div>
+  <!-- </section> -->
+
+  <!-- <div class="container">
+    <h1 class="logo">Welcome Back!</h1>
+    <form action="#" method="post" id="loginForm">
+      <div class="input-field">
+        <label for="username">Username or Email</label>
+        <input type="text" id="username" name="username" required>
+        <div class="error-message" id="usernameError"></div>
+      </div>
+      <div class="input-field">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" required>
+        <div class="error-message" id="passwordError"></div>
+      </div>
+      <div class="checkbox-field">
+        <input type="checkbox" id="remember-me">
+        <label for="remember-me">Remember Me</label>
+      </div>
+      <button type="submit">Login</button>
+      <a href="#">Forgot Password?</a>
+    </form>
+  </div> -->
+
+  <script>
+    const form = document.getElementById('loginForm');
+
+    form.addEventListener('submit', function(event) {
+      const username = document.getElementById('username').value;
+      const password = document.getElementById('password').value;
+
+      if (!username || !password) {
+        event.preventDefault(); // Prevent form submission
+        document.getElementById('usernameError').textContent = username ? '' : 'Username is required';
+        document.getElementById('passwordError').textContent = password ? '' : 'Password is required';
+      }
+    });
+  </script>
+</body>
+</html>
