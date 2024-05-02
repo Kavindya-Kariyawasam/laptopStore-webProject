@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css"/>
+    <link rel="stylesheet" type="text/css" href="accessories.css">
+    <link rel="stylesheet" type="text/css" href="navbar.css">
+    <link rel="stylesheet" type="text/css" href="footer.css">
+    <script defer src="menu.js"></script>
+    <script defer src="footer.js"></script>
+    <title>Keyboard</title>
+  </head>
+
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div class="navbar-container">
+          <div class="navbar-brand">
+              <a href="home.html">
+               <img src="" alt="Lap_store logo">
+              </a>
+          </div>
+
+          <ul class="navbar-nav-left">
+              <li><a href="home.html">Home</a></li>
+              <li><a href="laptop.html">Laptops</a></li>
+              <li><a href="desktops">Desktops</a></li>
+              <li><a href="accessories.html">Accessories</a></li>
+              <li><a href="#">About</a></li>
+          </ul>
+
+          <ul class="navbar-nav-right">
+              <li><a href="signup.html"><button class="btn btn-dark-outline">Sign in</button></a></li>
+              <li><a href="login.html"><button class="btn btn-dark">Join now</button></a></li>
+          </ul> 
+          
+          <!-- Hamburger Menu -->
+          <button class="hamburger" type="button" id="menu-btn">
+              <span class="hamburger-top"></span>
+              <span class="hamburger-middle"></span>
+              <span class="hamburger-bottom"></span>
+          </button>
+      </div>
+  </nav>
+
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu hidden" id="menu">
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="Laptop.html">Laptops</a></li>
+        <li><a href="desktop.html">Desktops</a></li>
+        <li><a href="accessories.html">Accessories</a></li>
+        <li><a href="#">About</a></li>
+      </ul>
+      <div class="mobile-menu-bottom">
+          <ul>
+              <li><a href="signup.html"><button class="btn btn-dark-outline">Sign in</button></a></li>
+              <li><a href="login.html"><button class="btn btn-dark">Join now</button></a></li>
+          </ul>
+      </div>
+  </div>
+
+    <!-- Product Details -->
+    <section class="section product-detail">
+      <div class="details container">
+        <div class="left image-container">
+          <div class="main">
+            <img src="./images/a2.jpeg" id="zoom" alt="" />
+          </div>
+        </div>
+        <div class="right">
+          <span>Accessories</span>
+          <h1>A4tech KM-720 Keyboard</h1>
+          <div class="price">Rs.3000</div>
+          <form>
+            <div>
+              <select>
+                <option value="Select Size" selected disabled>
+                  Select Size
+                </option>
+                <option value="1">32</option>
+                <option value="2">42</option>
+                <option value="3">52</option>
+                <option value="4">62</option>
+              </select>
+              <span><i class="bx bx-chevron-down"></i></span>
+            </div>
+          </form>
+          <form class="form">
+            <input type="text" placeholder="1" />
+            <a href="cart.html" class="addCart">Add To Cart</a>
+          </form>
+          <h3>Product Details</h3>
+          <p>
+            <ul>
+              <li style="list-style: disc;">Reliable performance with clicky, tactile or linear switches.</li>
+              <li style="list-style: disc;">Easy-to-use combo keys for instant control of media functions.</li>
+              <li style="list-style: disc;">Durable aluminum-alloy top cover for long-term use.</li>
+              <li style="list-style: disc;">Connectivity is wired - ensuring a stable and reliable connection for uninterrupted usage.</li>
+              <li style="list-style: disc;">Programmable Keys - allowing users to customize key functions and create macros for enhanced productivity and gaming performance.</li>
+            </ul>      
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Related -->
+    <section class="section featured">
+      <div class="top container">
+        <h1>Related Products</h1>
+        <a href="#" class="view-more">View more</a>
+      </div>
+      <div class="product-center container">
+
+        <!--earphones-->
+        <div class="product-item">
+          <div class="overlay">
+            <a href="" class="product-thumb">
+              <img src="./images/a3.jpg" alt="" />
+            </a>
+            <span class="discount">40%</span>
+          </div>
+          <div class="product-info">
+            <span>ACCESSORIES</span>
+            <a href="">Wired Earphones</a>
+            <h4>Rs.4500</h4>
+          </div>
+          <ul class="icons">
+            <li><i class="bx bx-heart"></i></li>
+            <li><i class="bx bx-search"></i></li>
+            <li><i class="bx bx-cart"></i></li>
+          </ul>
+        </div>
+
+        <!--speakers-->
+        <div class="product-item">
+          <div class="overlay">
+            <a href="" class="product-thumb">
+              <img src="./images/a4.png" alt="" />
+            </a>
+          </div>
+          <div class="product-info">
+            <span>ACCESSORIES</span>
+            <a href="">Speakers</a>
+            <h4>Rs.6500</h4>
+          </div>
+          <ul class="icons">
+            <li><i class="bx bx-heart"></i></li>
+            <li><i class="bx bx-search"></i></li>
+            <li><i class="bx bx-cart"></i></li>
+          </ul>
+        </div>
+
+        <!--headset-->
+        <div class="product-item">
+          <div class="overlay">
+            <a href="" class="product-thumb">
+              <img src="./images/a5.jpg" alt="" />
+            </a>
+            <span class="discount">40%</span>
+          </div>
+          <div class="product-info">
+            <span>ACCESSORIES</span>
+            <a href="">Headset</a>
+            <h4>Rs.4200</h4>
+          </div>
+          <ul class="icons">
+            <li><i class="bx bx-heart"></i></li>
+            <li><i class="bx bx-search"></i></li>
+            <li><i class="bx bx-cart"></i></li>
+          </ul>
+        </div>
+
+        <!--web cam-->
+        <div class="product-item">
+          <div class="overlay">
+            <a href="" class="product-thumb">
+              <img src="./images/a6.jpeg" alt="" />
+            </a>
+          </div>
+          <div class="product-info">
+            <span>ACCESSORIES</span>
+            <a href="">Web camera</a>
+            <h4>Rs.3750</h4>
+          </div>
+          <ul class="icons">
+            <li><i class="bx bx-heart"></i></li>
+            <li><i class="bx bx-search"></i></li>
+            <li><i class="bx bx-cart"></i></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="footer-column">
+        <h3>Company</h3>
+        <ul>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Customer Reviews</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-column">
+        <h3>Contact</h3>
+        <ul>
+          <li><a href="#">Store Locations</a></li>
+          <li><a href="#">Online Enquiry</a></li>
+          <li><a href="#">Phone Details</a></li>
+          <li><a href="#">Feedback & Complaints</a></li>
+          <li><a href="#">FAQs</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-column">
+        <h3>Information</h3>
+        <ul>
+          <li><a href="#">Open Hours</a></li>
+          <li><a href="#">Warranty & Returns</a></li>
+          <li><a href="#">Shipping</a></li>
+          <li><a href="#">Terms & Conditions</a></li>
+          <li><a href="#">Privacy Statement</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-column wider-column">
+        <h3>Don’t Miss Anything</h3>
+        <p>Subscribe to get the notifications of latest products, Deals & Giveaways!</p>
+        <form id="emailForm">
+          <input type="email" placeholder="Enter your Email" name="email">
+          <button type="submit">Subscribe</button>
+        </form>
+        <h4>Stay in Touch</h4>
+        <div class="social-media">
+          <a href="#"><img src="./images/footer/facebook.png" alt="Facebook"></a>
+          <a href="#"><img src="./images/footer/twitter.png" alt="Twitter"></a>
+          <a href="#"><img src="./images/footer/instagram.jpg" alt="Instagram"></a>
+        </div>
+       
+      </div>
+    </footer>
+  </body>
+</html>

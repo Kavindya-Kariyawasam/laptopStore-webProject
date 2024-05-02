@@ -1,0 +1,120 @@
+/* General Footer Styles */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 40px 0;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .footer-column {
+    padding: 0 10px; /* Reduced padding for less gap */
+    box-sizing: border-box;
+    float: left;
+  }
+  
+  /* Adjusted widths for columns */
+  .footer-column:not(.wider-column) {
+    width: calc((100% - 38%) / 3); /* Adjusted for more space for the wider column */
+  }
+  
+  .footer-column.wider-column {
+    width: 38%; /* Increased width for the wider column */
+  }
+  
+  /* Footer Column Headings */
+  .footer-column h3 {
+    font-size: 18px;
+    margin-bottom: 20px;
+    line-height:1.2;
+  }
+  .footer-column.wider-column h3{
+    font-size: 36px;
+    line-height: 1.2;
+    margin:1px 0px  18px;
+  }
+  .footer-column.wider-column h4{
+    font-size: 30px;
+    margin:18px 0px  18px;
+  }
+
+  
+  
+  /* Footer Column Lists, Forms, and Paragraphs */
+  .footer-column ul,
+  .footer-column form,
+  .footer-column p {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  /* Footer Column Links, Inputs, Buttons, and Paragraphs */
+  .footer-column a,
+  .footer-column input,
+  .footer-column button,
+  .footer-column p {
+    text-decoration: none;
+    color: #ccc;
+    margin-bottom: 10px;
+    display: block;
+    transition: color 0.3s ease;
+  }
+  .footer-column.wider-column a{
+    padding: 10px;
+  }
+  
+  /* Hover Effects */
+  .footer-column a:hover,
+  .footer-column button:hover,
+  .footer-column p:hover {
+    color: #fff;
+  }
+  
+  /* Input and Button Styles */
+  .footer-column input[type="email"],
+  .footer-column button[type="submit"] {
+    width: 100%;
+    padding: 15px 10px; /* Increased vertical padding for input */
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 3px;
+    box-sizing: border-box; /* Ensures padding is included in the width */
+  }
+
+  
+  .footer-column input[type="email"] {
+    color: #000;
+  }
+  
+  .footer-column button[type="submit"] {
+    background-color: #0078d7;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Social Media Icons */
+  .social-media {
+    display: flex;
+    justify-content: center; /* Evenly spaced icons */
+    align-items: center; /* Vertically centered icons */
+  }
+  
+  .social-media a img {
+    width: 36px; /* Increased size */
+    height: 36px; /* Increased size */
+    border-radius: 18px; /* Rounded edges */
+    transition: transform 0.3s ease;
+  }
+  
+  .social-media a:hover img {
+    transform: scale(1.1); /* Icon grows on hover */
+  }
+  
+  /* Clearfix */
+  footer::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  

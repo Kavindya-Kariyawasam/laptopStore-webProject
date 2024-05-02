@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css"/>
+    <link rel="stylesheet" type="text/css" href="productdetails.css">
+    <link rel="stylesheet" type="text/css" href="navbar.css">
+    <link rel="stylesheet" type="text/css" href="footer.css">
+    <script defer src="menu.js"></script>
+    <script defer src="footer.js"></script>
+    <title>L4</title>
+  </head>
+
+  <body>
+    <nav class="navbar">
+      <div class="navbar-container">
+          <div class="navbar-brand">
+              <a href="home.html">
+               <img src="" alt="Lap_store logo">
+              </a>
+          </div>
+
+          <ul class="navbar-nav-left">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="Laptop.html">Laptops</a></li>
+            <li><a href="desktop.html">Desktops</a></li>
+            <li><a href="accessories.html">Accessories</a></li>
+            <li><a href="#">About</a></li>
+          </ul>
+
+          <ul class="navbar-nav-right">
+              <li><a href="signup.html"><button class="btn btn-dark-outline">Sign in</button></a></li>
+              <li><a href="login.html"></a><button class="btn btn-dark">Join now</button></a></li>
+          </ul> 
+          
+          <!-- Hamburger Menu -->
+          <button class="hamburger" type="button" id="menu-btn">
+              <span class="hamburger-top"></span>
+              <span class="hamburger-middle"></span>
+              <span class="hamburger-bottom"></span>
+          </button>
+      </div>
+  </nav>
+
+  
+  <!-- Mobile Menu -->
+  <div class="mobile-menu hidden" id="menu">
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="Laptop.html">Laptops</a></li>
+        <li><a href="desktop.html">Desktops</a></li>
+        <li><a href="accessories.html">Accessories</a></li>
+        <li><a href="#">About</a></li>
+      </ul>
+      <div class="mobile-menu-bottom">
+          <ul>
+              <li><a href="signup.html"><button class="btn btn-dark-outline">Sign in</button></a></li>
+              <li><a href="login.html"></a><button class="btn btn-dark">Join now</button></a></li>
+          </ul>
+      </div>
+  </div>
+
+
+    <!-- Product Details -->
+    <section class="section product-detail">
+      <div class="details container">
+        <div class="left image-container">
+          <div class="main">
+            <img src="./images/L4.png" id="zoom" alt="" />
+          </div>
+        </div>
+        <div class="right">
+          <span>Acer Laptops, Laptops</span>
+          <h1>Acer Nitro V 15 ANV15-51-52AM Gaming – i5
+
+          </h1>
+          <div class="price">Rs.262,000</div>
+          <h3>Product Detail</h3>
+          <div class="specs-list">
+            <ul>
+              <li>Processor: Intel Core i5-13420H</li>
+              <li>Storage: 512GB PCIe NVMe SSD</li>
+              <li>Memory: 8GB DDR5 RAM</li>
+              <li>Display: 15.6", 1920 x 1080, 144 Hz Refresh Rate, IPS</li>
+              <li>Graphics: 6GB NVIDIA GeForce RTX 3050 Laptop GPU</li>
+              <li>Keyboard: Backlit</li>
+            </ul>
+        </div>
+        <label for="models">Choose the model:</label>
+        <select name="models" id="models">
+          <option value="32" selected>32</option>
+          <option value="42">42</option>
+          <option value="52">52</option>
+        </select>
+          <form class="form">
+            <input type="text" placeholder="1" />
+            <a href="#" class="addCart">Add To Cart</a>
+          </form>
+          
+        </div>
+      </div>
+    </section>
+
+    <!-- Related -->
+    <section class="section featured">
+      <div class="top container">
+        <h1>Related Products</h1>
+        <a href="#" class="view-more">View more</a>
+      </div>
+      <div class="product-center container">
+        <div class="product-item">
+          <div class="overlay">
+            <a href="L1.html" class="product-thumb">
+              <img src="./images/L1.png" alt="" />
+            </a>
+          </div>
+          <div class="product-info">
+            <span>Asus Laptops Gaming,</span>
+            <a href="L1.html">Acer Aspire 3 A315 Notebook (R5)
+            </a>
+            <h4>$150</h4>
+          </div>
+          <ul class="icons">
+            <li><i class="bx bx-heart"></i></li>
+            <li><i class="bx bx-search"></i></li>
+            <li><i class="bx bx-cart"></i></li>
+          </ul>
+        </div>
+        <div class="product-item">
+          <div class="overlay">
+            <a href="L2.html" class="product-thumb">
+              <img src="./images/L2.png" alt="" />
+            </a>
+            <span class="discount">12%</span>
+          </div>
+          <div class="product-info">
+            <span>Asus Laptops Gaming,</span>
+            <a href="L2.html">Acer Aspire 5 A515 – i5
+            </a>
+            <h4>$150</h4>
+          </div>
+          <ul class="icons">
+            <li><i class="bx bx-heart"></i></li>
+            <li><i class="bx bx-search"></i></li>
+            <li><i class="bx bx-cart"></i></li>
+          </ul>
+        </div>
+        <div class="product-item">
+          <div class="overlay">
+            <a href="L3.html" class="product-thumb">
+              <img src="./images/L3.png" alt="" />
+            </a>
+          </div>
+          <div class="product-info">
+            <span>Asus Laptops Gaming,</span>
+            <a href="L3.html">ACER Aspire A515 – i5 1135G7
+
+            </a>
+            <h4>$150</h4>
+          </div>
+          <ul class="icons">
+            <li><i class="bx bx-heart"></i></li>
+            <li><i class="bx bx-search"></i></li>
+            <li><i class="bx bx-cart"></i></li>
+          </ul>
+        </div>
+        <div class="product-item">
+          <div class="overlay">
+            <a href="L4.html" class="product-thumb">
+              <img src="./images/L4.png" alt="" />
+            </a>
+            <span class="discount">40%</span>
+          </div>
+          <div class="product-info">
+            <span>Asus Laptops Gaming,</span>
+            <a href="L4.html">Acer Nitro V 15 ANV15-51-52AM Gaming – i5
+            </a>
+            <h4>$150</h4>
+          </div>
+          <ul class="icons">
+            <li><i class="bx bx-heart"></i></li>
+            <li><i class="bx bx-search"></i></li>
+            <li><i class="bx bx-cart"></i></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <!-- Footer -->
+    <footer>
+      <div class="footer-column">
+        <h3>Company</h3>
+        <ul>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Customer Reviews</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-column">
+        <h3>Contact</h3>
+        <ul>
+          <li><a href="#">Store Locations</a></li>
+          <li><a href="#">Online Enquiry</a></li>
+          <li><a href="#">Phone Details</a></li>
+          <li><a href="#">Feedback & Complaints</a></li>
+          <li><a href="#">FAQs</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-column">
+        <h3>Information</h3>
+        <ul>
+          <li><a href="#">Open Hours</a></li>
+          <li><a href="#">Warranty & Returns</a></li>
+          <li><a href="#">Shipping</a></li>
+          <li><a href="#">Terms & Conditions</a></li>
+          <li><a href="#">Privacy Statement</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-column wider-column">
+        <h3>Don’t Miss Anything</h3>
+        <p>Subscribe to get the notifications of latest products, Deals & Giveaways!</p>
+        <form id="emailForm">
+          <input type="email" placeholder="Enter your Email" name="email">
+          <button type="submit">Subscribe</button>
+        </form>
+        <h4>Stay in Touch</h4>
+        <div class="social-media">
+          <a href="#"><img src="./images/footer/facebook.png" alt="Facebook"></a>
+          <a href="#"><img src="./images/footer/twitter.png" alt="Twitter"></a>
+          <a href="#"><img src="./images/footer/instagram.jpg" alt="Instagram"></a>
+        </div>       
+      </div>
+    </footer>
+  </body>
+</html>

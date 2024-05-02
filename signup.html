@@ -6,7 +6,9 @@
   <title>Sign In</title>
   <link rel="stylesheet" href="signup.css">
   <link rel="stylesheet" href="navbar.css">
+  <link rel="stylesheet" type="text/css" href="footer.css">
   <script defer src="menu.js"></script>
+  <script defer src="footer.js"></script>
 </head>
 <body>
     <nav class="navbar">
@@ -18,11 +20,11 @@
             </div>
     
             <ul class="navbar-nav-left">
-                <li><a href="home.html">Home</a></li>
-                <li><a href="#">Laptops</a></li>
-                <li><a href="#">Desktops</a></li>
-                <li><a href="#">Accessories</a></li>
-                <li><a href="#">About</a></li>
+              <li><a href="home.html">Home</a></li>
+              <li><a href="Laptop.html">Laptops</a></li>
+              <li><a href="desktop.html">Desktops</a></li>
+              <li><a href="accessories.html">Accessories</a></li>
+              <li><a href="#">About</a></li>
             </ul>
             
             <!-- Hamburger Menu -->
@@ -38,9 +40,9 @@
       <div class="mobile-menu hidden" id="menu">
           <ul>
             <li><a href="home.html">Home</a></li>
-            <li><a href="#">Laptops</a></li>
-            <li><a href="#">Desktops</a></li>
-            <li><a href="#">Accessories</a></li>
+            <li><a href="Laptop.html">Laptops</a></li>
+            <li><a href="desktop.html">Desktops</a></li>
+            <li><a href="accessories.html">Accessories</a></li>
             <li><a href="#">About</a></li>
           </ul>
       </div>
@@ -77,7 +79,53 @@
       </form>
     </div>
   </div>
-
+  <footer>
+    <div class="footer-column">
+      <h3>Company</h3>
+      <ul>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Careers</a></li>
+        <li><a href="#">Customer Reviews</a></li>
+      </ul>
+    </div>
+    
+    <div class="footer-column">
+      <h3>Contact</h3>
+      <ul>
+        <li><a href="#">Store Locations</a></li>
+        <li><a href="#">Online Enquiry</a></li>
+        <li><a href="#">Phone Details</a></li>
+        <li><a href="#">Feedback & Complaints</a></li>
+        <li><a href="#">FAQs</a></li>
+      </ul>
+    </div>
+    
+    <div class="footer-column">
+      <h3>Information</h3>
+      <ul>
+        <li><a href="#">Open Hours</a></li>
+        <li><a href="#">Warranty & Returns</a></li>
+        <li><a href="#">Shipping</a></li>
+        <li><a href="#">Terms & Conditions</a></li>
+        <li><a href="#">Privacy Statement</a></li>
+      </ul>
+    </div>
+    
+    <div class="footer-column wider-column">
+      <h3>Don’t Miss Anything</h3>
+      <p>Subscribe to get the notifications of latest products, Deals & Giveaways!</p>
+      <form id="emailForm">
+        <input type="email" placeholder="Enter your Email" name="email">
+        <button type="submit">Subscribe</button>
+      </form>
+      <h4>Stay in Touch</h4>
+      <div class="social-media">
+        <a href="#"><img src="./images/footer/facebook.png" alt="Facebook"></a>
+        <a href="#"><img src="./images/footer/twitter.png" alt="Twitter"></a>
+        <a href="#"><img src="./images/footer/instagram.jpg" alt="Instagram"></a>
+      </div>     
+    </div>
+  </footer>
   <script>
     const form = document.getElementById('signup-form');
 
