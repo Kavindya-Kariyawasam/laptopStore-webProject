@@ -5,7 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Login</title>
   <link rel="stylesheet" href="login.css">
+  <link rel="stylesheet" href="navbar.css">
+  <link rel="stylesheet" type="text/css" href="footer.css">
   <script defer src="menu.js"></script>
+  <script defer src="footer.js"></script>
 </head>
 <body>
   <nav class="navbar">
@@ -20,7 +23,7 @@
             <li><a href="home.html">Home</a></li>
             <li><a href="#">Laptops</a></li>
             <li><a href="#">Desktops</a></li>
-            <li><a href="#">Accessories</a></li>
+            <li><a href="accessories.html">Accessories</a></li>
             <li><a href="#">About</a></li>
         </ul>
 
@@ -44,7 +47,7 @@
         <li><a href="home.html">Home</a></li>
         <li><a href="#">Laptops</a></li>
         <li><a href="#">Desktops</a></li>
-        <li><a href="#">Accessories</a></li>
+        <li><a href="accessories.html">Accessories</a></li>
         <li><a href="#">About</a></li>
       </ul>
       <!-- <div class="mobile-menu-bottom">
@@ -52,10 +55,7 @@
           <button class="btn btn-dark">Join now</button>
       </div> -->
   </div>
-
-
-  <!-- Box -->
-  <!-- <section class="box grid-col-2"> -->
+  
     <div class="container">
       <h1 class="logo">Welcome Back!</h1>
       <p>Already have an account? Login in or <a href="#">Sign Up</a></p>
@@ -78,30 +78,54 @@
         <a id="forgot" href="#">Forgot Password?</a>
       </form>
     </div>
-  <!-- </section> -->
-
-  <!-- <div class="container">
-    <h1 class="logo">Welcome Back!</h1>
-    <form action="#" method="post" id="loginForm">
-      <div class="input-field">
-        <label for="username">Username or Email</label>
-        <input type="text" id="username" name="username" required>
-        <div class="error-message" id="usernameError"></div>
+  <footer>
+    <div class="footer-column">
+      <h3>Company</h3>
+      <ul>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Careers</a></li>
+        <li><a href="#">Customer Reviews</a></li>
+      </ul>
+    </div>
+    
+    <div class="footer-column">
+      <h3>Contact</h3>
+      <ul>
+        <li><a href="#">Store Locations</a></li>
+        <li><a href="#">Online Enquiry</a></li>
+        <li><a href="#">Phone Details</a></li>
+        <li><a href="#">Feedback & Complaints</a></li>
+        <li><a href="#">FAQs</a></li>
+      </ul>
+    </div>
+    
+    <div class="footer-column">
+      <h3>Information</h3>
+      <ul>
+        <li><a href="#">Open Hours</a></li>
+        <li><a href="#">Warranty & Returns</a></li>
+        <li><a href="#">Shipping</a></li>
+        <li><a href="#">Terms & Conditions</a></li>
+        <li><a href="#">Privacy Statement</a></li>
+      </ul>
+    </div>
+    
+    <div class="footer-column wider-column">
+      <h3>Don’t Miss Anything</h3>
+      <p>Subscribe to get the notifications of latest products, Deals & Giveaways!</p>
+      <form id="emailForm">
+        <input type="email" placeholder="Enter your Email" name="email">
+        <button type="submit">Subscribe</button>
+      </form>
+      <h4>Stay in Touch</h4>
+      <div class="social-media">
+        <a href="#"><img src="./images/footer/facebook.png" alt="Facebook"></a>
+        <a href="#"><img src="./images/footer/twitter.png" alt="Twitter"></a>
+        <a href="#"><img src="./images/footer/instagram.jpg" alt="Instagram"></a>
       </div>
-      <div class="input-field">
-        <label for="password">Password</label>
-        <input type="password" id="password" name="password" required>
-        <div class="error-message" id="passwordError"></div>
-      </div>
-      <div class="checkbox-field">
-        <input type="checkbox" id="remember-me">
-        <label for="remember-me">Remember Me</label>
-      </div>
-      <button type="submit">Login</button>
-      <a href="#">Forgot Password?</a>
-    </form>
-  </div> -->
-
+     
+    </div>
+  </footer>
   <script>
     const form = document.getElementById('loginForm');
 

@@ -80,6 +80,11 @@ footer {
     border-radius: 3px;
     box-sizing: border-box; /* Ensures padding is included in the width */
   }
+
+  
+  .footer-column input[type="email"] {
+    color: #000;
+  }
   
   .footer-column button[type="submit"] {
     background-color: #0078d7;
