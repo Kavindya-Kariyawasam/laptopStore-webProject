@@ -659,13 +659,23 @@ th:last-child {
   z-index: -1;
 }
 
+.product-detail .right li {
+  margin-bottom: 1rem;
+}
+
+.product-detail .right label {
+  display: block;
+}
+
 .product-detail .right select {
+  display: block;
   font-family: 'Poppins', sans-serif;
   width: 20rem;
   padding: 0.7rem;
   border: 1px solid #ccc;
   appearance: none;
   outline: none;
+  margin-bottom: 1rem;
 }
 
 .product-detail form {
