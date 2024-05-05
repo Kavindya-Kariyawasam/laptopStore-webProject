@@ -1,3 +1,29 @@
+<?php
+  require "database.php";
+
+  if(isset($_POST["signup-btn"])) {//Getting inputs from the form.
+    $name = $_POST["name"];
+    $email = $_POST["email"];
+    $username = $_POST["username"];
+    $password = $_POST["password"];
+
+    //Defining a SQL Insert Query Format
+    $sql = "INSERT INTO Users(Name,Email,Username,Password)VALUES('$name','$email','$username','$password');";
+
+    //Run this Query Format as an SQL Query
+    $result = $con->query($sql);
+
+    //Checking for the Confirmation of Insertion
+    if($result===true){
+      echo "<script>alert('Sucessfully created an account');
+      location.replace('login.php');</script>";
+    }else{
+      echo "<script>alert('Data Insertion Failed');</script>";
+    }
+  }
+  
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -49,15 +75,18 @@
 
   <div class="container">
     <div class="login-form">
-      <form id="signup-form" action="#">
+      <form id="signup-form" action="#" method="POST">
         <h1>Sign Up</h1>
-        <p>Please fill in this form to create an account. or <a href="login.html">Login</a></p>
+        <p>Please fill in this form to create an account. or <a href="login.php">Login</a></p>
 
-        <label for="fname">First Name</label>
-        <input type="text" id="fname" name="fname" placeholder="Enter First Name" required />
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" placeholder="Enter Name" required />
 
         <label for="email">Email</label>
         <input type="email" id="email" name="email" placeholder="Enter Email" required />
+
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username" placeholder="Enter username" required />
 
         <label for="password">Password</label>
         <input type="password" id="password" name="password" placeholder="Enter Password" required />
@@ -74,7 +103,8 @@
 
         <div class="buttons">
           <button type="button" class="cancelbtn">Cancel</button>
-          <button type="submit" class="signupbtn">Sign Up</button>
+          <button type="submit" class="signupbtn" name="signup-btn" onclick="return validateForm()">Sign Up</button>
+          <!-- <input type="submit" value="submit" name="signup-btn" class="signupbtn"> -->
         </div>
       </form>
     </div>
@@ -126,13 +156,11 @@
       </div>     
     </div>
   </footer>
+
   <script>
-    const form = document.getElementById('signup-form');
 
-    form.addEventListener('submit', function(event) {
-      event.preventDefault();
-
-      const fname = document.getElementById('fname').value.trim();
+    function validateForm() {
+      const name = document.getElementById('name').value.trim();
       const email = document.getElementById('email').value.trim();
       const password = document.getElementById('password').value;
       const confirmPassword = document.getElementById('confirm-password').value;
@@ -149,6 +177,15 @@
         return false;
       } else if (!isValidEmail(email)) {
         alert('Please enter a valid Email.');
+        return false;
+      }
+
+      // Validate Username
+      if (username === '') { // New block
+        alert('Please enter your Username.');
+        return false;
+      } else if (username.length < 4) {
+        alert('Username must be at least 4 characters long.');
         return false;
       }
 
@@ -179,6 +216,7 @@
     function isValidEmail(email) {
       const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
       return emailRegex.test(email);
+    }
     }
   </script>
 </body>
