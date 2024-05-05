@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -58,23 +59,23 @@
   
     <div class="container">
       <h1 class="logo">Welcome Back!</h1>
-      <p>Already have an account? Login in or <a href="signup.html">Sign Up</a></p>
-      <form action="#" method="post" id="loginForm">
+      <p>Already have an account? Login in or <a href="signup.php">Sign Up</a></p>
+      <form action="#" method="POST" id="loginForm">
         <div class="input-field">
           <label for="username">Username or Email</label>
-          <input type="text" id="username" name="username" required>
+          <input type="text" id="username" name="txt_username" required>
           <div class="error-message" id="usernameError"></div>
         </div>
         <div class="input-field">
           <label for="password">Password</label>
-          <input type="password" id="password" name="password" required>
+          <input type="password" id="password" name="txt_password" required>
           <div class="error-message" id="passwordError"></div>
         </div>
         <div class="checkbox-field">
           <input type="checkbox" id="remember-me">
           <label for="remember-me">Remember Me</label>
         </div>
-        <button type="submit">Login</button>
+        <button type="submit" name="login_btn">Login</button>
         <a id="forgot" href="#">Forgot Password?</a>
       </form>
     </div>
