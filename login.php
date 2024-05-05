@@ -1,4 +1,35 @@
+<?php
+  require "database.php";
 
+  if(isset($_POST["login-btn"])) {
+    $username = $_POST["txt_username"];
+    $password = $_POST["txt_password"];
+
+    //Designing SQL Query Format
+    $sql = "SELECT * FROM users WHERE username = '$username'";
+    $result = $con->query($sql);
+    if($result->num_rows>0){
+      while($row = $result->fetch_assoc()){
+        // echo $row['Name']."<br>";
+        // echo $row['Email']."<br>";
+        // echo $row['Username']."<br>";
+
+        $db_un = $row["Username"];
+        $db_pw = $row["Password"];
+
+        if($db_un == $username && $db_pw == $password){
+            echo "<script>alert('Login Successful');
+            location.replace('home.html');</script>";
+            
+        } else{
+            echo "<script>alert('Login Failed');</script>";
+        }
+      }
+    } else {
+      echo "<script>alert('User does not exist')</script>";
+    }
+  }  
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -75,7 +106,7 @@
           <input type="checkbox" id="remember-me">
           <label for="remember-me">Remember Me</label>
         </div>
-        <button type="submit" name="login_btn">Login</button>
+        <button type="submit" name="login-btn" onclick="validateForm()">Login</button>
         <a id="forgot" href="#">Forgot Password?</a>
       </form>
     </div>
@@ -127,18 +158,16 @@
     </div>
   </footer>
   <script>
-    const form = document.getElementById('loginForm');
-
-    form.addEventListener('submit', function(event) {
+    function validateForm() {
       const username = document.getElementById('username').value;
       const password = document.getElementById('password').value;
 
       if (!username || !password) {
-        event.preventDefault(); // Prevent form submission
+        // event.preventDefault();
         document.getElementById('usernameError').textContent = username ? '' : 'Username is required';
         document.getElementById('passwordError').textContent = password ? '' : 'Password is required';
       }
-    });
+    }
   </script>
 </body>
 </html>
