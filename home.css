@@ -16,8 +16,8 @@ html {
 body {
   font-family: 'Roboto', sans-serif;
   font-size: 1.6rem;
-  background-color: rgba(100, 111, 162, 0.836);
-  color: black;
+  background-color:rgb(255, 255, 255);
+  color:black;
   font-weight: 400;
   font-style: normal;
 }
@@ -42,7 +42,24 @@ li {
   align-items: center;
 }
 
-
+.deals {
+  
+  
+  text-align: center;
+  
+  font-weight: 1px ;
+  color: #002225; /* Adjust color as needed */
+  margin-top: 20px; /* Adjust margin as needed */
+  margin-bottom: 3rem;
+}
+.deals h1{
+  font-size: 40px;
+  text-transform: uppercase;
+}
+.deals p{
+  font-size: 15px;
+  
+}
 
 /* Category Section */
 .section {
@@ -55,7 +72,8 @@ li {
 
 .section .top {
   padding: 8rem;
-  background-color: rgb(38, 38, 38);
+  background-color: #181818 ;
+  background: linear-gradient(to bottom, white,#041426)
 }
 
 .cat-center {
@@ -65,7 +83,7 @@ li {
   max-width: 114rem;
   margin: auto;
   padding: 0 3rem;
-  background-color: rgb(38, 38, 38);
+ 
 }
 
 .cat-center .cat {
@@ -75,15 +93,15 @@ li {
   position: relative;
   cursor: pointer;
   text-align: center;
+  background-color:#acb5b8b7 ;
+  border-radius: 10px;
 }
 
 #cat1, #cat2, #cat3 {
-    box-shadow: 0px 0px 20px 4px rgba(119, 105, 101, 0.7);
+    box-shadow: 16px 14px 20px #02070c8c;
 }
 
-#cat2 {
-  background-color: white;
-}
+
 
 .cat-center .cat:not(:last-child) {
   margin-right: 8rem;
@@ -97,24 +115,42 @@ li {
   transition: all 2s ease;
 }
 
-.cat-center .cat:hover img {
-  transform: scale(1.1);
+
+
+.cat-center .cat:hover  {
+  transform: scale(1.05);
+  transition: all 0.77s ease
 }
+
 
 .cat-center .cat div {
   position: absolute;
   bottom: 15%;
   left: 50%;
   transform: translateX(-50%);
-  background-color: white;
-  width: 18rem;
-  height: 5rem;
-  line-height: 5rem;
-  text-align: center;
-  font-size: 2rem;
-  font-weight: 500;
-}
+  background-image: linear-gradient(to right,rgba(17, 159, 199, 0.831) 50%, white 50%);
+  background-size: 200% 100%; /* Double the width for smooth transition */
+  background-position: right; /* Initial position */
 
+  width: 17rem;
+  height: 4rem;
+  line-height: 4rem;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 500;
+  transition: background-position 0.5s;;
+}
+.cat-center .cat div:hover{
+  background-position: left;
+}
+/*@keyframes swipe {
+  0% {
+    background-color: white;
+  }
+  100% {
+    background-color:  rgb(36, 173, 173);
+  }}
+*/
 @media only screen and (max-width: 1200px) {
   .cat-center .cat img {
     width: 30rem;
@@ -182,8 +218,8 @@ li {
 
 .product-item {
   position: relative;
-  width: 27rem;
-  margin: 0 auto;
+  width: 22rem;
+  margin: 3rem;
   margin-bottom: 3rem;
 }
 
@@ -214,7 +250,7 @@ li {
 }
 
 .product-info a:hover {
-  color: #6cbe02;
+  color: #0225be;
 }
 
 .product-item .icons {
@@ -298,7 +334,7 @@ li {
   position: absolute;
   top: 1rem;
   left: 1rem;
-  background-color: #6cbe02;
+  background-color: #000c79;
   padding: 0.5rem 1rem;
   color: white;
   border-radius: 2rem;
@@ -368,8 +404,9 @@ li {
 
 .banner {
   position: relative;
-  background-color: #e9d7d3;
+  background-color: #041b26;
   padding: 14rem 20%;
+  color:azure
 }
 
 .banner .right img {
@@ -390,18 +427,25 @@ li {
 
 .banner h1 {
   font-size: 5.4rem;
-  color: black;
+  color:rgb(106, 184, 195);
   margin-bottom: 1.5rem;
 }
 
 .banner .btn {
   display: inline-block;
   /* margin-top: 2rem; */
-  background-color: #6cbe02;
+  background-image: linear-gradient(to right,rgb(219, 62, 185) 50%, rgb(12, 113, 175) 50%);
+  background-size: 200% 100%; /* Double the width for smooth transition */
+  background-position: right; /* Initial position */
   color: white;
   border-radius: 1rem;
   padding: 1rem 2rem;
+  transition: background-position 0.5s;;
 }
+.banner .btn:hover{
+  background-position: left;
+}
+
 
 @media only screen and (max-width: 1500px) {
   .banner {
