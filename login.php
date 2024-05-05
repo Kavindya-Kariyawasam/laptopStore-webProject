@@ -1,4 +1,28 @@
+<?php
+  require "database.php";
 
+  if(isset($_POST["login-btn"])) {
+    $name = $_POST["name"];
+    $email = $_POST["email"];
+    $username = $_POST["username"];
+    $password = $_POST["password"];
+
+    //Defining a SQL Insert Query Format
+    $sql = "INSERT INTO Users(Name,Email,Username,Password)VALUES('$name','$email','$username','$password');";
+
+    //Run this Query Format as an SQL Query
+    $result = $con->query($sql);
+
+    //Checking for the Confirmation of Insertion
+    if($result===true){
+      echo "<script>alert('Sucessfully created an account');
+      location.replace('login.php');</script>";
+    }else{
+      echo "<script>alert('Data Insertion Failed');</script>";
+    }
+  }
+  
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -75,7 +99,7 @@
           <input type="checkbox" id="remember-me">
           <label for="remember-me">Remember Me</label>
         </div>
-        <button type="submit" name="login_btn">Login</button>
+        <button type="submit" name="login-btn" onclick="validateForm()">Login</button>
         <a id="forgot" href="#">Forgot Password?</a>
       </form>
     </div>
@@ -127,18 +151,16 @@
     </div>
   </footer>
   <script>
-    const form = document.getElementById('loginForm');
-
-    form.addEventListener('submit', function(event) {
+    function validateForm() {
       const username = document.getElementById('username').value;
       const password = document.getElementById('password').value;
 
       if (!username || !password) {
-        event.preventDefault(); // Prevent form submission
+        // event.preventDefault();
         document.getElementById('usernameError').textContent = username ? '' : 'Username is required';
         document.getElementById('passwordError').textContent = password ? '' : 'Password is required';
       }
-    });
+    }
   </script>
 </body>
 </html>
