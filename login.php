@@ -2,26 +2,33 @@
   require "database.php";
 
   if(isset($_POST["login-btn"])) {
-    $name = $_POST["name"];
-    $email = $_POST["email"];
-    $username = $_POST["username"];
-    $password = $_POST["password"];
+    $username = $_POST["txt_username"];
+    $password = $_POST["txt_password"];
 
-    //Defining a SQL Insert Query Format
-    $sql = "INSERT INTO Users(Name,Email,Username,Password)VALUES('$name','$email','$username','$password');";
-
-    //Run this Query Format as an SQL Query
+    //Designing SQL Query Format
+    $sql = "SELECT * FROM users WHERE username = '$username'";
     $result = $con->query($sql);
+    if($result->num_rows>0){
+      while($row = $result->fetch_assoc()){
+        // echo $row['Name']."<br>";
+        // echo $row['Email']."<br>";
+        // echo $row['Username']."<br>";
 
-    //Checking for the Confirmation of Insertion
-    if($result===true){
-      echo "<script>alert('Sucessfully created an account');
-      location.replace('login.php');</script>";
-    }else{
-      echo "<script>alert('Data Insertion Failed');</script>";
+        $db_un = $row["Username"];
+        $db_pw = $row["Password"];
+
+        if($db_un == $username && $db_pw == $password){
+            echo "<script>alert('Login Successful');
+            location.replace('home.html');</script>";
+            
+        } else{
+            echo "<script>alert('Login Failed');</script>";
+        }
+      }
+    } else {
+      echo "<script>alert('User does not exist')</script>";
     }
-  }
-  
+  }  
 ?>
 <!DOCTYPE html>
 <html lang="en">
