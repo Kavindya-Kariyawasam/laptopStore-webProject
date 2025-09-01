@@ -313,7 +313,7 @@ img {
   margin-bottom: 3rem;
 }
 
-.btn {
+.cta-section .btn {
   display: inline-block;
   padding: 1.5rem 3rem;
   background: white;
@@ -326,7 +326,7 @@ img {
   transition: all 0.3s ease;
 }
 
-.btn:hover {
+.cta-section .btn:hover {
   background: transparent;
   color: white;
   transform: translateY(-2px);
