@@ -4,140 +4,320 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="aboutus.css">
-    <link rel="stylesheet" href="navbar.css">
-    <link rel="stylesheet" type="text/css" href="footer.css">
-    <script defer src="menu.js"></script>
-    <script defer src="footer.js"></script>
-    <title>AboutUs</title>
+
+    <!-- Font Awesome Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/navbar.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/footer.css" />
+    <link rel="stylesheet" href="assets/css/aboutus.css" />
+
+    <!-- JavaScript -->
+    <script defer src="assets/js/menu.js"></script>
+    <script defer src="assets/js/footer.js"></script>
+
+    <title>About Us - TechHub</title>
   </head>
   <body>
     <!-- Header -->
     <nav class="navbar">
-        <div class="navbar-container">
-            <div class="navbar-brand">
-                <a href="home.html">
-                 <img src="./images/logo.png" alt="Lap_store logo">
-                </a>
-            </div>
-
-            <ul class="navbar-nav-left">
-                <li><a href="home.html">Home</a></li>
-                <li><a href="Laptop.html">Laptops</a></li>
-                <li><a href="desktop.html">Desktops</a></li>
-                <li><a href="accessories.html">Accessories</a></li>
-                <li><a href="aboutus.html">About</a></li>
-            </ul>
-
-            <ul class="navbar-nav-right">
-                <li><a href="signup.php"><button class="btn btn-dark-outline">Join now</button></a></li>
-                <li><a href="login.php"></a><button class="btn btn-dark">Sign in</button></a></li>
-            </ul> 
-            
-            <!-- Hamburger Menu -->
-            <button class="hamburger" type="button" id="menu-btn">
-                <span class="hamburger-top"></span>
-                <span class="hamburger-middle"></span>
-                <span class="hamburger-bottom"></span>
-            </button>
+      <div class="navbar-container">
+        <div class="navbar-brand">
+          <a href="home.html">
+            <img src="./assets/images/icons/logo.png" alt="TechHub logo" />
+          </a>
         </div>
+
+        <ul class="navbar-nav-left">
+          <li>
+            <a href="home.html"><i class="fas fa-home"></i> Home</a>
+          </li>
+          <li>
+            <a href="Laptop.html"><i class="fas fa-laptop"></i> Laptops</a>
+          </li>
+          <li>
+            <a href="desktop.html"><i class="fas fa-desktop"></i> Desktops</a>
+          </li>
+          <li>
+            <a href="accessories.html"
+              ><i class="fas fa-mouse"></i> Accessories</a
+            >
+          </li>
+          <li>
+            <a href="aboutus.html"><i class="fas fa-info-circle"></i> About</a>
+          </li>
+        </ul>
+
+        <ul class="navbar-nav-right">
+          <li>
+            <a href="login.php" class="btn btn-dark-outline"
+              ><i class="fas fa-sign-in-alt"></i> Login</a
+            >
+          </li>
+          <li>
+            <a href="signup.php" class="btn btn-dark"
+              ><i class="fas fa-user-plus"></i> Register</a
+            >
+          </li>
+        </ul>
+
+        <button class="hamburger">
+          <span class="hamburger-top"></span>
+          <span class="hamburger-middle"></span>
+          <span class="hamburger-bottom"></span>
+        </button>
+      </div>
     </nav>
 
-    
     <!-- Mobile Menu -->
-    <div class="mobile-menu hidden" id="menu">
-        <ul>
-            <li><a href="home.html">Home</a></li>
-            <li><a href="Laptop.html">Laptops</a></li>
-            <li><a href="desktop.html">Desktops</a></li>
-            <li><a href="accessories.html">Accessories</a></li>
-            <li><a href="aboutus.html">About</a></li>
-        </ul>
-        <div class="mobile-menu-bottom">
-            <ul>
-                <li><a href="signup.php"><button class="btn btn-dark-outline">Join now</button></a></li>
-                <li><a href="login.php"></a><button class="btn btn-dark">Sign in</button></a></li>
-            </ul>
-        </div>
+    <div class="mobile-menu hidden">
+      <ul>
+        <li>
+          <a href="home.html"><i class="fas fa-home"></i> Home</a>
+        </li>
+        <li>
+          <a href="Laptop.html"><i class="fas fa-laptop"></i> Laptops</a>
+        </li>
+        <li>
+          <a href="desktop.html"><i class="fas fa-desktop"></i> Desktops</a>
+        </li>
+        <li>
+          <a href="accessories.html"
+            ><i class="fas fa-mouse"></i> Accessories</a
+          >
+        </li>
+        <li>
+          <a href="aboutus.html"><i class="fas fa-info-circle"></i> About</a>
+        </li>
+      </ul>
+      <div class="mobile-menu-bottom">
+        <a href="login.php" class="btn btn-dark-outline"
+          ><i class="fas fa-sign-in-alt"></i> Login</a
+        >
+        <a href="signup.php" class="btn btn-dark"
+          ><i class="fas fa-user-plus"></i> Register</a
+        >
+      </div>
     </div>
 
-    <div class = "about_image">
-        <img  src ="./images/about_us.webp" alt = "Computer_shop">
-    </div>
-    <div class = "about_des">
+    <!-- Main Content -->
+    <div class="main-content">
+      <!-- Page Title -->
+      <div class="page-title">
+        <h1>About TechHub</h1>
         <p>
-            Established in 2024, Techhub in Kutubedda, Moratuwa is your go-to destination for computers, laptops, and accessories. We pride ourselves on offering top-notch products sourced from reputable brands, ensuring our customers have access to the latest technology.<br></br>
-
-            Our knowledgeable staff are here to assist you every step of the way, whether you're in need of a new computer, laptop, or accessories. At Techhub, customer satisfaction is our top priority, and we strive to provide personalized service and expert advice to help you make informed decisions about your purchases.<br></br>
-
-            With a commitment to offering high-quality products at competitive prices, Techhub is proud to be a trusted destination for tech enthusiasts in Kutubedda, Moratuwa. Visit us today and let us help you find the perfect tech solutions for your needs.<br></br>
+          Your trusted partner for premium laptops, desktops, and accessories
+          since 2020
         </p>
+      </div>
+
+      <!-- About Description -->
+      <div class="about_des">
+        <h2>Our Story</h2>
+        <p>
+          Welcome to <strong>TechHub</strong>, Sri Lanka's premier destination
+          for cutting-edge technology solutions. Founded in 2020, we have been
+          at the forefront of bringing the latest in computing technology to
+          professionals, students, and tech enthusiasts across the island.
+        </p>
+
+        <p>
+          Located in the heart of Moratuwa, our state-of-the-art showroom and
+          service center spans over 5,000 square feet, showcasing the latest
+          laptops, desktop computers, and accessories from world-renowned
+          brands. We pride ourselves on offering not just products, but complete
+          technology solutions tailored to your specific needs.
+        </p>
+
+        <h3>Why Choose TechHub?</h3>
+        <ul>
+          <li>
+            <i class="fas fa-certificate"></i> Authorized dealer for all major
+            brands including Dell, HP, Lenovo, ASUS, and more
+          </li>
+          <li>
+            <i class="fas fa-user-cog"></i> Expert technical support and
+            consultation services
+          </li>
+          <li>
+            <i class="fas fa-tags"></i> Competitive pricing with flexible
+            payment options
+          </li>
+          <li>
+            <i class="fas fa-shield-alt"></i> Comprehensive warranty and
+            after-sales service
+          </li>
+          <li>
+            <i class="fas fa-shipping-fast"></i> Fast and reliable island-wide
+            delivery
+          </li>
+          <li>
+            <i class="fas fa-tools"></i> Professional setup and installation
+            services
+          </li>
+        </ul>
+
+        <!-- Company Stats -->
+        <div class="stats-grid">
+          <div class="stat-item">
+            <i class="fas fa-users"></i>
+            <span class="stat-number">10,000+</span>
+            <span class="stat-label">Happy Customers</span>
+          </div>
+          <div class="stat-item">
+            <i class="fas fa-box-open"></i>
+            <span class="stat-number">500+</span>
+            <span class="stat-label">Products Available</span>
+          </div>
+          <div class="stat-item">
+            <i class="fas fa-handshake"></i>
+            <span class="stat-number">15+</span>
+            <span class="stat-label">Brand Partners</span>
+          </div>
+          <div class="stat-item">
+            <i class="fas fa-headset"></i>
+            <span class="stat-number">24/7</span>
+            <span class="stat-label">Customer Support</span>
+          </div>
+        </div>
+
+        <h3>Our Mission</h3>
+        <p>
+          To empower individuals and businesses with the right technology
+          solutions that enhance productivity, creativity, and connectivity. We
+          believe that technology should be accessible, reliable, and tailored
+          to each customer's unique requirements.
+        </p>
+
+        <h3>Our Vision</h3>
+        <p>
+          To become the most trusted technology partner in Sri Lanka, known for
+          our exceptional customer service, extensive product knowledge, and
+          commitment to bringing the latest technological innovations to our
+          community.
+        </p>
+      </div>
+
+      <!-- Call to Action -->
+      <div class="cta-section">
+        <h3>Ready to Find Your Perfect Tech Solution?</h3>
+        <p>
+          Visit our showroom or browse our extensive online catalog to discover
+          the latest in computing technology.
+        </p>
+        <a href="home.html" class="btn"
+          ><i class="fas fa-shopping-cart"></i> Explore Products</a
+        >
+      </div>
     </div>
 
-    <!-- Contact -->
-    <section class="section contact">
-      <div class="row">
-        <div class="col">
-          <h2>CUSTOMER SUPPORT AND CONTACT</h2>
-          <p>We love our customers and they can reach us any time
-          of day we will be at your service 24/7.</p><br>
-
-          <p class="con_para">Call Us : 077 2549488</p>
-          <p class="con_para">Email :
-          <a class = "mail" href="mailto:shehanmaleesha@2001@gmail.com">Techhub.lk@gmail.com</a></p>
-          <p class="con_para">Visit Our Store :</p>
-          <p class="con_para">No. 101/3, Bandaranayake Mawatha, Katubedda, Moratuwa. </p>
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1980.8869467799295!2d79.89987739839478!3d6.797341200000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae245416110cae5%3A0x81d0203d74bad4!2sQWW2%2BWWP%2C%20Lane%2C%20Moratuwa%2010400!5e0!3m2!1sen!2slk!4v1714672029311!5m2!1sen!2slk" width="50%" height="auto" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <!-- Contact Section -->
+    <div class="contact">
+      <h3>Get in Touch</h3>
+      <div class="contact-grid">
+        <div class="contact-item">
+          <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+          <div class="con_para">
+            <strong>Visit Our Showroom</strong><br />
+            123 Galle Road, Moratuwa<br />
+            Sri Lanka 10400
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon"><i class="fas fa-phone"></i></div>
+          <div class="con_para">
+            <strong>Call Us</strong><br />
+            +94 11 264 5789<br />
+            +94 77 123 4567
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+          <div class="con_para">
+            <strong>Email Us</strong><br />
+            <a href="mailto:info@techhub.lk" class="mail">info@techhub.lk</a
+            ><br />
+            <a href="mailto:support@techhub.lk" class="mail"
+              >support@techhub.lk</a
+            >
+          </div>
         </div>
       </div>
-    </section>
+    </div>
 
+    <!-- Footer -->
     <footer>
-        <div class="footer-column">
-          <h3>Company</h3>
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>TechHub</h3>
+          <p>Your trusted technology partner for all computing needs</p>
+          <div class="newsletter-form">
+            <h4>Newsletter</h4>
+            <p>Stay updated with our latest offers</p>
+            <div class="input-group">
+              <input type="email" placeholder="Enter your email" />
+              <button type="submit">
+                <i class="fas fa-paper-plane"></i> Subscribe
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-section">
+          <h4>Quick Links</h4>
           <ul>
-            <li><a href="aboutus.html">About Us</a></li>
-            <li><a href="#">Careers</a></li>
-            <li><a href="#">Customer Reviews</a></li>
+            <li>
+              <a href="home.html"><i class="fas fa-home"></i> Home</a>
+            </li>
+            <li>
+              <a href="Laptop.html"><i class="fas fa-laptop"></i> Laptops</a>
+            </li>
+            <li>
+              <a href="desktop.html"><i class="fas fa-desktop"></i> Desktops</a>
+            </li>
+            <li>
+              <a href="accessories.html"
+                ><i class="fas fa-mouse"></i> Accessories</a
+              >
+            </li>
+            <li>
+              <a href="aboutus.html"
+                ><i class="fas fa-info-circle"></i> About Us</a
+              >
+            </li>
           </ul>
         </div>
-        
-        <div class="footer-column">
-          <h3>Contact</h3>
-          <ul>
-            <li><a href="#">Store Locations</a></li>
-            <li><a href="#">Online Enquiry</a></li>
-            <li><a href="#">Phone Details</a></li>
-            <li><a href="#">Feedback & Complaints</a></li>
-            <li><a href="#">FAQs</a></li>
-          </ul>
+
+        <div class="footer-section">
+          <h4>Contact Info</h4>
+          <p><i class="fas fa-map-marker-alt"></i> 123 Galle Road, Moratuwa</p>
+          <p><i class="fas fa-phone"></i> +94 11 264 5789</p>
+          <p><i class="fas fa-envelope"></i> info@techhub.lk</p>
+          <p><i class="fas fa-clock"></i> Mon-Sat: 9AM-8PM</p>
         </div>
-        
-        <div class="footer-column">
-          <h3>Information</h3>
-          <ul>
-            <li><a href="#">Open Hours</a></li>
-            <li><a href="#">Warranty & Returns</a></li>
-            <li><a href="#">Shipping</a></li>
-            <li><a href="#">Terms & Conditions</a></li>
-            <li><a href="#">Privacy Statement</a></li>
-          </ul>
+
+        <div class="footer-section">
+          <h4>Follow Us</h4>
+          <p>Connect with us on social media</p>
+          <div class="social-links">
+            <a href="#" class="facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="youtube"><i class="fab fa-youtube"></i></a>
+          </div>
         </div>
-        
-        <div class="footer-column wider-column">
-          <h3>Don’t Miss Anything</h3>
-          <p>Subscribe to get the notifications of latest products, Deals & Giveaways!</p>
-          <form id="emailForm">
-            <input type="email" placeholder="Enter your Email" name="email">
-            <button type="submit">Subscribe</button>
-          </form>
-          <h4>Stay in Touch</h4>
-          <div class="social-media">
-            <a href="#"><img src="./images/footer/facebook.png" alt="Facebook"></a>
-            <a href="#"><img src="./images/footer/twitter.png" alt="Twitter"></a>
-            <a href="#"><img src="./images/footer/instagram.jpg" alt="Instagram"></a>
-          </div>       
-        </div>
-      </footer>
-    </body>
-  </html>
+      </div>
+
+      <div class="footer-bottom">
+        <p>
+          &copy; 2024 TechHub. All rights reserved. | Privacy Policy | Terms of
+          Service
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
