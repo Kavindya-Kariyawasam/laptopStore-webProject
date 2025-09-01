@@ -1,406 +1,666 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Home</title>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css"/>
-        <link rel="stylesheet" type="text/css" href="home.css">
-        <link rel="stylesheet" type="text/css" href="slider.css">
-        <link rel="stylesheet" type="text/css" href="navbar.css">
-        <link rel="stylesheet" type="text/css" href="footer.css">
-        <script defer src="menu.js"></script>
-        <script defer src="slider.js"></script>
-        <script defer src="footer.js"></script>
-    </head>
-    <body>
-        <nav class="navbar">
-            <div class="navbar-container">
-                <div class="navbar-brand">
-                    <a href="home.html">
-                     <img src="./images/logo.png" alt="Lap_store logo">
-                    </a>
-                </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-                <ul class="navbar-nav-left">
-                    <li><a href="home.html">Home</a></li>
-                    <li><a href="Laptop.html">Laptops</a></li>
-                    <li><a href="desktop.html">Desktops</a></li>
-                    <li><a href="accessories.html">Accessories</a></li>
-                    <li><a href="aboutus.html">About</a></li>
-                </ul>
+    <!-- Font Awesome Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
 
-                <ul class="navbar-nav-right">
-                    <li><a href="signup.php"><button class="btn btn-dark-outline">Join now</button></a></li>
-                    <li><a href="login.php"><button class="btn btn-dark">Sign in</button></a></li>
-                </ul> 
-                
-                <!-- Hamburger Menu -->
-                <button class="hamburger" type="button" id="menu-btn">
-                    <span class="hamburger-top"></span>
-                    <span class="hamburger-middle"></span>
-                    <span class="hamburger-bottom"></span>
-                </button>
-            </div>
-        </nav>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/navbar.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/footer.css" />
+    <link rel="stylesheet" href="assets/css/home.css" />
+    <link rel="stylesheet" href="assets/css/slider.css" />
 
+    <!-- JavaScript -->
+    <script defer src="assets/js/menu.js"></script>
+    <script defer src="assets/js/slider.js"></script>
+    <script defer src="assets/js/footer.js"></script>
 
-        <!-- Mobile Menu -->
-        <div class="mobile-menu hidden" id="menu">
-            <ul>
-              <li><a href="home.html">Home</a></li>
-              <li><a href="Laptop.html">Laptops</a></li>
-              <li><a href="desktop.html">Desktops</a></li>
-              <li><a href="accessories.html">Accessories</a></li>
-              <li><a href="aboutus.html">About</a></li>
-            </ul>
-            <div class="mobile-menu-bottom">
-                <ul>
-                    <li><a href="signup.php"><button class="btn btn-dark-outline">Join now</button></a></li>
-                    <li><a href="login.php"><button class="btn btn-dark">Sign in</button></a></li>
-                </ul>
-            </div>
+    <title>TechHub - Premium Tech Solutions</title>
+  </head>
+  <body>
+    <!-- Header -->
+    <nav class="navbar">
+      <div class="navbar-container">
+        <div class="navbar-brand">
+          <a href="home.html">
+            <img src="./assets/images/icons/logo.png" alt="TechHub logo" />
+          </a>
         </div>
-        
-  <!--slider-->
-  <div class="deals">
-    <h1>New deals</h1>
-    <P>Don't miss out on the best deals of the year!</P>    
-  </div>
-  <div class="slider-container">
-    <div class="slider">
-      <img src="./images/home/deals4.jpeg" alt="Banner 1">
-      <img src="./images/home/deals2.jpeg" alt="Banner 2">
-      <img src="./images/home/deals1.jpeg" alt="Banner 3">
-      <img src="./images/home/deals5.jpeg" alt="Banner 1">
-      <img src="./images/home/deals6.png" alt="Banner 2">
-      <img src="./images/home/deals3.jpeg" alt="Banner 3">
+
+        <ul class="navbar-nav-left">
+          <li>
+            <a href="home.html"><i class="fas fa-home"></i> Home</a>
+          </li>
+          <li>
+            <a href="Laptop.html"><i class="fas fa-laptop"></i> Laptops</a>
+          </li>
+          <li>
+            <a href="desktop.html"><i class="fas fa-desktop"></i> Desktops</a>
+          </li>
+          <li>
+            <a href="accessories.html"
+              ><i class="fas fa-mouse"></i> Accessories</a
+            >
+          </li>
+          <li>
+            <a href="aboutus.html"><i class="fas fa-info-circle"></i> About</a>
+          </li>
+        </ul>
+
+        <ul class="navbar-nav-right">
+          <li>
+            <a href="login.php" class="btn btn-dark-outline"
+              ><i class="fas fa-sign-in-alt"></i> Login</a
+            >
+          </li>
+          <li>
+            <a href="signup.php" class="btn btn-dark"
+              ><i class="fas fa-user-plus"></i> Register</a
+            >
+          </li>
+        </ul>
+
+        <button class="hamburger">
+          <span class="hamburger-top"></span>
+          <span class="hamburger-middle"></span>
+          <span class="hamburger-bottom"></span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu hidden">
+      <ul>
+        <li>
+          <a href="home.html"><i class="fas fa-home"></i> Home</a>
+        </li>
+        <li>
+          <a href="Laptop.html"><i class="fas fa-laptop"></i> Laptops</a>
+        </li>
+        <li>
+          <a href="desktop.html"><i class="fas fa-desktop"></i> Desktops</a>
+        </li>
+        <li>
+          <a href="accessories.html"
+            ><i class="fas fa-mouse"></i> Accessories</a
+          >
+        </li>
+        <li>
+          <a href="aboutus.html"><i class="fas fa-info-circle"></i> About</a>
+        </li>
+      </ul>
+      <div class="mobile-menu-bottom">
+        <a href="login.php" class="btn btn-dark-outline"
+          ><i class="fas fa-sign-in-alt"></i> Login</a
+        >
+        <a href="signup.php" class="btn btn-dark"
+          ><i class="fas fa-user-plus"></i> Register</a
+        >
+      </div>
     </div>
-  </div>
-    <!-- Categories Section -->
-    <section class="section category">
-        <div class="top">
-          <div class="cat-center">
-            <div class="cat" id="cat1">
-                <a href="Laptop.html">
-                  <img src="./images/laptopfront.png" alt="Laptop Photo" />
-                  <div>
-                    <p>LAPTOPS</p>
-                  </div>
-                </a>
-            </div>
-            <div class="cat" id="cat2">
-              <a href="desktop.html">
-                <img src="./images/desktopfront.png" alt="Laptop Photo" />
-                <div>
-                  <p>DESKTOPS</p>
-                </div>
-              </a>
-            </div>
-            <div class="cat" id="cat3">
-              <a href="accessories.html">
-                <img src="./images/accessoriesfront.png" alt="Laptop Photo" />
-                <div>
-                  <p>ACCESSORIES</p>
-                </div>
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-  
-      <!-- New Arrivals -->
-      <section class="section new-arrival bottom">
-        <div class="title">
-          <h1>NEW ARRIVALS</h1>
-          <p>Fresh off the line! Our NEW ARRIVALS are here</p>
-        </div>
-  
-        <div class="product-center">
-          <div class="product-item">
-            <div class="overlay">
-              <a href="" class="product-thumb">
-                <img src="./images/home/D1.jpg" alt="Desk1" />
-              </a>
-            </div>
-            <div class="product-info">
-              <span>DESKTOPS</span>
-              <a href="desktop.html">HP All in One 24 cr0065d PC-i3</a>
-              <h4>Rs.255,000</h4>
-            </div>
-            <ul class="icons">
-              <li><i class="bx bx-heart"></i></li>
-              <li><i class="bx bx-search"></i></li>
-              <li><a href="checkout_D1.html"><i class="bx bx-cart"></i></a></li>
-            </ul>
-          </div>
-          <div class="product-item">
-            <div class="overlay">
-              <a href="" class="product-thumb">
-                <img src="./images/home/D2.jpg" alt="Desk2" />
-              </a>
-              <span class="discount">3%</span>
-            </div>
-  
-            <div class="product-info">
-              <span>DESKTOPS</span>
-              <a href="desktop.html">HP All in One 24 cr0067d PC-i5</a>
-              <h4>Rs.289,000</h4>
-            </div>
-            <ul class="icons">
-              <li><i class="bx bx-heart"></i></li>
-              <li><i class="bx bx-search"></i></li>
-              <li><a href="checkout_D2.html"><i class="bx bx-cart"></i></a></li>
-            </ul>
-          </div>
-          <div class="product-item">
-            <div class="overlay">
-              <a href="" class="product-thumb">
-                <img src="./images/home/D4.jpg" alt="Desk3" />
-              </a>
-            </div>
-            <div class="product-info">
-              <span>DESKTOPS</span>
-              <a href="desktop.html">TECH-GAMING Intel Core i3-12100 12th Gen+</a>
-              <h4>Rs.235,000</h4>
-            </div>
-            <ul class="icons">
-              <li><i class="bx bx-heart"></i></li>
-              <li><i class="bx bx-search"></i></li>
-              <li><a href="checkout_D4.html"><i class="bx bx-cart"></i></a></li>
-            </ul>
-          </div>
-          <div class="product-item">
-            <div class="overlay">
-              <a href="" class="product-thumb">
-                <img src="./images/home/L7.jpg" alt="Lap7" />
-              </a>
-              <span class="discount">4%</span>
-            </div>
-            <div class="product-info">
-              <span>LAPTOPS</span>
-              <a href="Laptop.html">Asus ExpertBook B1502CB – i5</a>
-              <h4>Rs.187,000</h4>
-            </div>
-            <ul class="icons">
-              <li><i class="bx bx-heart"></i></li>
-              <li><i class="bx bx-search"></i></li>
-              <li><a href="checkout_L7.html"><i class="bx bx-cart"></i></a></li>
-            </ul>
-          </div>
-          <div class="product-item">
-            <div class="overlay">
-              <a href="" class="product-thumb">
-                <img src="./images/home/L8.jpg" alt="Lap8" />
-              </a>
-            </div>
-            <div class="product-info">
-              <span>LAPTOPS</span>
-              <a href="Laptop.html">Asus ROG Strix G16 (As G614JIR 126) – i9</a>
-              <h4>Rs.282,000</h4>
-            </div>
-            <ul class="icons">
-              <li><i class="bx bx-heart"></i></li>
-              <li><i class="bx bx-search"></i></li>
-              <li><i class="bx bx-cart"></i></li>
-            </ul>
-          </div>
-          <div class="product-item">
-            <div class="overlay">
-              <a href="" class="product-thumb">
-                <img src="./images/home/a5.jpg" alt="Acc5" />
-              </a>
-            </div>
-            <div class="product-info">
-              <span>ACCESSORIES</span>
-              <a href="accessories.html">Headset</a>
-              <h4>Rs.4200</h4>
-            </div>
-            <ul class="icons">
-              <li><i class="bx bx-heart"></i></li>
-              <li><i class="bx bx-search"></i></li>
-              <li><i class="bx bx-cart"></i></li>
-            </ul>
-          </div>
-          <div class="product-item">
-            <div class="overlay">
-              <a href="" class="product-thumb">
-                <img src="./images/home/a6.jpg" alt="Acc6" />
-              </a>
-              <span class="discount">11%</span>
-            </div>
-            <div class="product-info">
-              <span>ACCESSORIES</span>
-              <a href="accessories.html">Web camera</a>
-              <h4>Rs.3750</h4>
-            </div>
-            <ul class="icons">
-              <li><i class="bx bx-heart"></i></li>
-              <li><i class="bx bx-search"></i></li>
-              <li><i class="bx bx-cart"></i></li>
-            </ul>
-          </div>
-          <div class="product-item">
-            <div class="overlay">
-              <a href="" class="product-thumb">
-                <img src="./images/home/a7.png" alt="Acc7" />
-              </a>
-            </div>
-            <div class="product-info">
-              <span>ACCESSORIES</span>
-              <a href="accessories.html">Uninterrupted Power Supply</a>
-              <h4>Rs.7800</h4>
-            </div>
-            <ul class="icons">
-              <li><i class="bx bx-heart"></i></li>
-              <li><i class="bx bx-search"></i></li>
-              <li><i class="bx bx-cart"></i></li>
-            </ul>
-          </div>
-        </div>
-      </section>
-      <!-- Promo -->
 
-    <section class="section banner">
-      <div class="left">
-        <span class="trend">Hottest</span>
-        <h1>New Collection 2024</h1>
-        <p>New Arrival <span class="color">Sale 20% OFF</span> Limited Time Offer</p>
-        <a href="#" class="btn btn-1">Discover Now</a>
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-content">
+        <div class="hero-text">
+          <span class="hero-badge"
+            ><i class="fas fa-bolt"></i> Welcome to TechHub</span
+          >
+          <h1>Premium Tech Solutions for Every Need</h1>
+          <p>
+            Discover the latest laptops, desktops, and accessories with
+            unbeatable prices and expert support. Your technology journey starts
+            here.
+          </p>
+          <div class="hero-buttons">
+            <a href="#categories" class="btn-hero primary"
+              ><i class="fas fa-rocket"></i> Explore Products</a
+            >
+            <a href="aboutus.html" class="btn-hero secondary"
+              ><i class="fas fa-info-circle"></i> Learn More</a
+            >
+          </div>
+          <div class="hero-stats">
+            <div class="stat">
+              <span class="stat-number">10K+</span>
+              <span class="stat-label">Happy Customers</span>
+            </div>
+            <div class="stat">
+              <span class="stat-number">500+</span>
+              <span class="stat-label">Products</span>
+            </div>
+            <div class="stat">
+              <span class="stat-number">24/7</span>
+              <span class="stat-label">Support</span>
+            </div>
+          </div>
+        </div>
+        <div class="hero-image">
+          <div class="hero-image-wrapper">
+            <img src="./assets/images/banners/setup.jpg" alt="Tech Setup" />
+            <div class="hero-floating-cards">
+              <div class="floating-card card-1">
+                <i class="fas fa-laptop"></i>
+                <span>Latest Laptops</span>
+              </div>
+              <div class="floating-card card-2">
+                <i class="fas fa-shield-alt"></i>
+                <span>Warranty</span>
+              </div>
+              <div class="floating-card card-3">
+                <i class="fas fa-shipping-fast"></i>
+                <span>Fast Delivery</span>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="right">
-        <img src="./images/home/setup.jpg" alt="setup">
-      </div>
-    </section>   
-           
-      
-    <!-- Featured -->
-
-    <section class="section best-selling">
-      <div class="title">
-        <h1>BEST SELLING</h1>
-        <p>Get the lowdown on the hottest laptops on the market!</p>
-      </div>
-
-      <div class="product-center">
-        <div class="product-item">
-          <div class="overlay">
-            <a href="" class="product-thumb">
-              <img src="./images/home/L1.jpg" alt="Lap1" />
-            </a>
-            <span class="discount">5%</span>
-          </div>
-          <div class="product-info">
-            <span>LAPTOPS</span>
-            <a href="">Acer Aspire 3 A315 Notebook (R5)</a>
-            <h4>Rs.255,000</h4>
-          </div>
-          <ul class="icons">
-            <li><i class="bx bx-heart"></i></li>
-            <li><i class="bx bx-search"></i></li>
-            <li><i class="bx bx-cart"></i></li>
-          </ul>
-        </div>
-        <div class="product-item">
-          <div class="overlay">
-            <a href="" class="product-thumb">
-              <img src="./images/home/L2.jpg" alt="Lap2" />
-            </a>
-          </div>
-
-          <div class="product-info">
-            <span>LAPTOPS</span>
-            <a href="">Acer Aspire 5 A515 – i5</a>
-            <h4>Rs.157,000</h4>
-          </div>
-          <ul class="icons">
-            <li><i class="bx bx-heart"></i></li>
-            <li><i class="bx bx-search"></i></li>
-            <li><i class="bx bx-cart"></i></li>
-          </ul>
-        </div>
-        <div class="product-item">
-          <div class="overlay">
-            <a href="" class="product-thumb">
-              <img src="./images/home/L3.jpg" alt="Lap3" />
-            </a>
-            <span class="discount">8%</span>
-          </div>
-          <div class="product-info">
-            <span>LAPTOPS</span>
-            <a href="">ACER Aspire A515 – i5 1135G7</a>
-            <h4>Rs.234,000</h4>
-          </div>
-          <ul class="icons">
-            <li><i class="bx bx-heart"></i></li>
-            <li><i class="bx bx-search"></i></li>
-            <li><i class="bx bx-cart"></i></li>
-          </ul>
-        </div>
-        <div class="product-item">
-          <div class="overlay">
-            <a href="" class="product-thumb">
-              <img src="./images/home/L4.jpg" alt="Lap4" />
-            </a>
-          </div>
-          <div class="product-info">
-            <span>LAPTOPS</span>
-            <a href="">Acer Nitro V 15 ANV15-51-52AM Gaming – i5</a>
-            <h4>Rs.262,000</h4>
-          </div>
-          <ul class="icons">
-            <li><i class="bx bx-heart"></i></li>
-            <li><i class="bx bx-search"></i></li>
-            <li><i class="bx bx-cart"></i></li>
-          </ul>
-        </div>
-
     </section>
+
+    <!-- Deals Section -->
+    <section class="deals-section">
+      <div class="container">
+        <div class="section-header">
+          <h2><i class="fas fa-fire"></i> Hot Deals</h2>
+          <p>Don't miss out on the best deals of the year!</p>
+        </div>
+        <div class="slider-container">
+          <div class="slider">
+            <img src="./assets/images/banners/deals4.jpeg" alt="Deal 1" />
+            <img src="./assets/images/banners/deals2.jpeg" alt="Deal 2" />
+            <img src="./assets/images/banners/deals1.jpeg" alt="Deal 3" />
+            <img src="./assets/images/banners/deals5.jpeg" alt="Deal 4" />
+            <img src="./assets/images/banners/deals6.png" alt="Deal 5" />
+            <img src="./assets/images/banners/deals3.jpeg" alt="Deal 6" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section id="categories" class="categories-section">
+      <div class="container">
+        <div class="section-header">
+          <h2><i class="fas fa-th-large"></i> Shop by Category</h2>
+          <p>Find exactly what you're looking for</p>
+        </div>
+        <div class="categories-grid">
+          <div class="category-card">
+            <a href="Laptop.html">
+              <div class="category-image">
+                <img
+                  src="./assets/images/banners/laptopfront.png"
+                  alt="Laptops"
+                />
+                <div class="category-overlay">
+                  <i class="fas fa-laptop"></i>
+                </div>
+              </div>
+              <div class="category-info">
+                <h3>Laptops</h3>
+                <p>Portable powerhouses for work and play</p>
+                <span class="category-link"
+                  >Explore <i class="fas fa-arrow-right"></i
+                ></span>
+              </div>
+            </a>
+          </div>
+
+          <div class="category-card">
+            <a href="desktop.html">
+              <div class="category-image">
+                <img
+                  src="./assets/images/banners/desktopfront.png"
+                  alt="Desktops"
+                />
+                <div class="category-overlay">
+                  <i class="fas fa-desktop"></i>
+                </div>
+              </div>
+              <div class="category-info">
+                <h3>Desktops</h3>
+                <p>High-performance systems for professionals</p>
+                <span class="category-link"
+                  >Explore <i class="fas fa-arrow-right"></i
+                ></span>
+              </div>
+            </a>
+          </div>
+
+          <div class="category-card">
+            <a href="accessories.html">
+              <div class="category-image">
+                <img
+                  src="./assets/images/banners/accessoriesfront.png"
+                  alt="Accessories"
+                />
+                <div class="category-overlay">
+                  <i class="fas fa-mouse"></i>
+                </div>
+              </div>
+              <div class="category-info">
+                <h3>Accessories</h3>
+                <p>Complete your setup with premium gear</p>
+                <span class="category-link"
+                  >Explore <i class="fas fa-arrow-right"></i
+                ></span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- New Arrivals Section -->
+    <section class="products-section">
+      <div class="container">
+        <div class="section-header">
+          <h2><i class="fas fa-star"></i> New Arrivals</h2>
+          <p>Fresh off the line! Our newest products are here</p>
+        </div>
+        <div class="products-grid">
+          <div class="product-card">
+            <div class="product-image">
+              <img
+                src="./assets/images/products/D1.jpg"
+                alt="HP All in One 24"
+              />
+              <div class="product-badges">
+                <span class="badge new">New</span>
+              </div>
+              <div class="product-actions">
+                <button class="action-btn" title="Add to Wishlist">
+                  <i class="fas fa-heart"></i>
+                </button>
+                <button class="action-btn" title="Quick View">
+                  <i class="fas fa-eye"></i>
+                </button>
+                <a
+                  href="checkout_D1.html"
+                  class="action-btn"
+                  title="Add to Cart"
+                  ><i class="fas fa-shopping-cart"></i
+                ></a>
+              </div>
+            </div>
+            <div class="product-info">
+              <span class="product-category">Desktops</span>
+              <h3 class="product-title">HP All in One 24 cr0065d PC-i3</h3>
+              <div class="product-price">Rs.255,000</div>
+              <div class="product-rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+                <span>(4.5)</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <div class="product-image">
+              <img
+                src="./assets/images/products/D2.jpg"
+                alt="HP All in One 24 i5"
+              />
+              <div class="product-badges">
+                <span class="badge discount">3% OFF</span>
+              </div>
+              <div class="product-actions">
+                <button class="action-btn" title="Add to Wishlist">
+                  <i class="fas fa-heart"></i>
+                </button>
+                <button class="action-btn" title="Quick View">
+                  <i class="fas fa-eye"></i>
+                </button>
+                <a
+                  href="checkout_D2.html"
+                  class="action-btn"
+                  title="Add to Cart"
+                  ><i class="fas fa-shopping-cart"></i
+                ></a>
+              </div>
+            </div>
+            <div class="product-info">
+              <span class="product-category">Desktops</span>
+              <h3 class="product-title">HP All in One 24 cr0067d PC-i5</h3>
+              <div class="product-price">Rs.289,000</div>
+              <div class="product-rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <span>(5.0)</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <div class="product-image">
+              <img
+                src="./assets/images/products/L7.png"
+                alt="Asus ExpertBook"
+              />
+              <div class="product-badges">
+                <span class="badge discount">4% OFF</span>
+              </div>
+              <div class="product-actions">
+                <button class="action-btn" title="Add to Wishlist">
+                  <i class="fas fa-heart"></i>
+                </button>
+                <button class="action-btn" title="Quick View">
+                  <i class="fas fa-eye"></i>
+                </button>
+                <a
+                  href="checkout_L7.html"
+                  class="action-btn"
+                  title="Add to Cart"
+                  ><i class="fas fa-shopping-cart"></i
+                ></a>
+              </div>
+            </div>
+            <div class="product-info">
+              <span class="product-category">Laptops</span>
+              <h3 class="product-title">Asus ExpertBook B1502CB - i5</h3>
+              <div class="product-price">Rs.187,000</div>
+              <div class="product-rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+                <span>(4.0)</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <div class="product-image">
+              <img src="./assets/images/products/L8.png" alt="Asus ROG Strix" />
+              <div class="product-badges">
+                <span class="badge gaming">Gaming</span>
+              </div>
+              <div class="product-actions">
+                <button class="action-btn" title="Add to Wishlist">
+                  <i class="fas fa-heart"></i>
+                </button>
+                <button class="action-btn" title="Quick View">
+                  <i class="fas fa-eye"></i>
+                </button>
+                <button class="action-btn" title="Add to Cart">
+                  <i class="fas fa-shopping-cart"></i>
+                </button>
+              </div>
+            </div>
+            <div class="product-info">
+              <span class="product-category">Laptops</span>
+              <h3 class="product-title">Asus ROG Strix G16 - i9</h3>
+              <div class="product-price">Rs.282,000</div>
+              <div class="product-rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <span>(5.0)</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="section-footer">
+          <a href="Laptop.html" class="btn-view-all"
+            >View All Products <i class="fas fa-arrow-right"></i
+          ></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Promo Banner -->
+    <section class="promo-banner">
+      <div class="promo-content">
+        <div class="promo-text">
+          <span class="promo-badge"
+            ><i class="fas fa-clock"></i> Limited Time</span
+          >
+          <h2>New Collection 2024</h2>
+          <p>
+            New Arrival <span class="highlight">Sale 20% OFF</span> Limited Time
+            Offer
+          </p>
+          <a href="#" class="btn-promo"
+            ><i class="fas fa-shopping-bag"></i> Shop Now</a
+          >
+        </div>
+        <div class="promo-image">
+          <img src="./assets/images/banners/setup.jpg" alt="New Collection" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Best Selling Section -->
+    <section class="products-section best-selling">
+      <div class="container">
+        <div class="section-header">
+          <h2><i class="fas fa-trophy"></i> Best Selling</h2>
+          <p>Get the lowdown on the hottest laptops on the market!</p>
+        </div>
+        <div class="products-grid">
+          <div class="product-card">
+            <div class="product-image">
+              <img src="./assets/images/products/L1.png" alt="Acer Aspire 3" />
+              <div class="product-badges">
+                <span class="badge discount">5% OFF</span>
+                <span class="badge bestseller">Bestseller</span>
+              </div>
+              <div class="product-actions">
+                <button class="action-btn" title="Add to Wishlist">
+                  <i class="fas fa-heart"></i>
+                </button>
+                <button class="action-btn" title="Quick View">
+                  <i class="fas fa-eye"></i>
+                </button>
+                <button class="action-btn" title="Add to Cart">
+                  <i class="fas fa-shopping-cart"></i>
+                </button>
+              </div>
+            </div>
+            <div class="product-info">
+              <span class="product-category">Laptops</span>
+              <h3 class="product-title">Acer Aspire 3 A315 Notebook (R5)</h3>
+              <div class="product-price">Rs.255,000</div>
+              <div class="product-rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+                <span>(4.5)</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <div class="product-image">
+              <img src="./assets/images/products/L2.png" alt="Acer Aspire 5" />
+              <div class="product-actions">
+                <button class="action-btn" title="Add to Wishlist">
+                  <i class="fas fa-heart"></i>
+                </button>
+                <button class="action-btn" title="Quick View">
+                  <i class="fas fa-eye"></i>
+                </button>
+                <button class="action-btn" title="Add to Cart">
+                  <i class="fas fa-shopping-cart"></i>
+                </button>
+              </div>
+            </div>
+            <div class="product-info">
+              <span class="product-category">Laptops</span>
+              <h3 class="product-title">Acer Aspire 5 A515 – i5</h3>
+              <div class="product-price">Rs.157,000</div>
+              <div class="product-rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+                <span>(4.0)</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <div class="product-image">
+              <img
+                src="./assets/images/products/L3.png"
+                alt="ACER Aspire A515"
+              />
+              <div class="product-badges">
+                <span class="badge discount">8% OFF</span>
+              </div>
+              <div class="product-actions">
+                <button class="action-btn" title="Add to Wishlist">
+                  <i class="fas fa-heart"></i>
+                </button>
+                <button class="action-btn" title="Quick View">
+                  <i class="fas fa-eye"></i>
+                </button>
+                <button class="action-btn" title="Add to Cart">
+                  <i class="fas fa-shopping-cart"></i>
+                </button>
+              </div>
+            </div>
+            <div class="product-info">
+              <span class="product-category">Laptops</span>
+              <h3 class="product-title">ACER Aspire A515 – i5 1135G7</h3>
+              <div class="product-price">Rs.234,000</div>
+              <div class="product-rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <span>(5.0)</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <div class="product-image">
+              <img
+                src="./assets/images/products/L4.png"
+                alt="Acer Nitro V 15"
+              />
+              <div class="product-badges">
+                <span class="badge gaming">Gaming</span>
+              </div>
+              <div class="product-actions">
+                <button class="action-btn" title="Add to Wishlist">
+                  <i class="fas fa-heart"></i>
+                </button>
+                <button class="action-btn" title="Quick View">
+                  <i class="fas fa-eye"></i>
+                </button>
+                <button class="action-btn" title="Add to Cart">
+                  <i class="fas fa-shopping-cart"></i>
+                </button>
+              </div>
+            </div>
+            <div class="product-info">
+              <span class="product-category">Laptops</span>
+              <h3 class="product-title">Acer Nitro V 15 Gaming – i5</h3>
+              <div class="product-price">Rs.262,000</div>
+              <div class="product-rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+                <span>(4.5)</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
     <footer>
-      <div class="footer-column">
-        <h3>Company</h3>
-        <ul>
-          <li><a href="aboutus.html">About Us</a></li>
-          <li><a href="#">Careers</a></li>
-          <li><a href="#">Customer Reviews</a></li>
-        </ul>
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>TechHub</h3>
+          <p>Your trusted technology partner for all computing needs</p>
+          <div class="newsletter-form">
+            <h4>Newsletter</h4>
+            <p>Stay updated with our latest offers</p>
+            <div class="input-group">
+              <input type="email" placeholder="Enter your email" />
+              <button type="submit">
+                <i class="fas fa-paper-plane"></i> Subscribe
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-section">
+          <h4>Quick Links</h4>
+          <ul>
+            <li>
+              <a href="home.html"><i class="fas fa-home"></i> Home</a>
+            </li>
+            <li>
+              <a href="Laptop.html"><i class="fas fa-laptop"></i> Laptops</a>
+            </li>
+            <li>
+              <a href="desktop.html"><i class="fas fa-desktop"></i> Desktops</a>
+            </li>
+            <li>
+              <a href="accessories.html"
+                ><i class="fas fa-mouse"></i> Accessories</a
+              >
+            </li>
+            <li>
+              <a href="aboutus.html"
+                ><i class="fas fa-info-circle"></i> About Us</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h4>Contact Info</h4>
+          <p><i class="fas fa-map-marker-alt"></i> 123 Galle Road, Moratuwa</p>
+          <p><i class="fas fa-phone"></i> +94 11 264 5789</p>
+          <p><i class="fas fa-envelope"></i> info@techhub.lk</p>
+          <p><i class="fas fa-clock"></i> Mon-Sat: 9AM-8PM</p>
+        </div>
+
+        <div class="footer-section">
+          <h4>Follow Us</h4>
+          <p>Connect with us on social media</p>
+          <div class="social-links">
+            <a href="#" class="facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="youtube"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
       </div>
-      
-      <div class="footer-column">
-        <h3>Contact</h3>
-        <ul>
-          <li><a href="#">Store Locations</a></li>
-          <li><a href="#">Online Enquiry</a></li>
-          <li><a href="#">Phone Details</a></li>
-          <li><a href="#">Feedback & Complaints</a></li>
-          <li><a href="#">FAQs</a></li>
-        </ul>
-      </div>
-      
-      <div class="footer-column">
-        <h3>Information</h3>
-        <ul>
-          <li><a href="#">Open Hours</a></li>
-          <li><a href="#">Warranty & Returns</a></li>
-          <li><a href="#">Shipping</a></li>
-          <li><a href="#">Terms & Conditions</a></li>
-          <li><a href="#">Privacy Statement</a></li>
-        </ul>
-      </div>
-      
-      <div class="footer-column wider-column">
-        <h3>Don’t Miss Anything</h3>
-        <p>Subscribe to get the notifications of latest products, Deals & Giveaways!</p>
-        <form id="emailForm">
-          <input type="email" placeholder="Enter your Email" name="email">
-          <button type="submit">Subscribe</button>
-        </form>
-        <h4>Stay in Touch</h4>
-        <div class="social-media">
-          <a href="#"><img src="./images/footer/facebook.png" alt="Facebook"></a>
-          <a href="#"><img src="./images/footer/twitter.png" alt="Twitter"></a>
-          <a href="#"><img src="./images/footer/instagram.jpg" alt="Instagram"></a>
-        </div>       
+
+      <div class="footer-bottom">
+        <p>
+          &copy; 2024 TechHub. All rights reserved. | Privacy Policy | Terms of
+          Service
+        </p>
       </div>
     </footer>
   </body>
