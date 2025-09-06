@@ -1,223 +1,382 @@
 <?php
   require "database.php";
 
-  if(isset($_POST["signup-btn"])) {//Getting inputs from the form.
+  if(isset($_POST["signup-btn"])) {
     $name = $_POST["name"];
     $email = $_POST["email"];
     $username = $_POST["username"];
     $password = $_POST["password"];
 
-    //Defining a SQL Insert Query Format
-    $sql = "INSERT INTO Users(Name,Email,Username,Password)VALUES('$name','$email','$username','$password');";
+    // Check if username or email already exists
+    $checkSql = "SELECT * FROM Users WHERE Username='$username' OR Email='$email'";
+    $checkResult = $con->query($checkSql);
+    
+    if($checkResult->num_rows > 0) {
+      echo "<script>alert('Username or Email already exists');</script>";
+    } else {
+      // Insert new user
+      $sql = "INSERT INTO Users(Name,Email,Username,Password)VALUES('$name','$email','$username','$password');";
+      $result = $con->query($sql);
 
-    //Run this Query Format as an SQL Query
-    $result = $con->query($sql);
-
-    //Checking for the Confirmation of Insertion
-    if($result===true){
-      echo "<script>alert('Sucessfully created an account');
-      location.replace('login.php');</script>";
-    }else{
-      echo "<script>alert('Data Insertion Failed');</script>";
+      if($result===true){
+        echo "<script>alert('Successfully created an account');
+        location.replace('login.php');</script>";
+      }else{
+        echo "<script>alert('Data Insertion Failed');</script>";
+      }
     }
   }
-  
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sign In</title>
-  <link rel="stylesheet" href="signup.css">
-  <link rel="stylesheet" href="navbar.css">
-  <link rel="stylesheet" type="text/css" href="footer.css">
-  <script defer src="menu.js"></script>
-  <script defer src="footer.js"></script>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - LapStore</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/signup.css">
+    <link rel="stylesheet" href="assets/css/navbar.css">
+    <link rel="stylesheet" href="assets/css/footer.css">
+    <script defer src="assets/js/menu.js"></script>
+    <script defer src="assets/js/footer.js"></script>
+  </head>
+  <body>
     <nav class="navbar">
-        <div class="navbar-container">
-            <div class="navbar-brand">
-                <a href="home.html">
-                 <img src="./images/logo.png" alt="Lap_store logo">
-                </a>
-            </div>
-    
-            <ul class="navbar-nav-left">
-              <li><a href="home.html">Home</a></li>
-              <li><a href="Laptop.html">Laptops</a></li>
-              <li><a href="desktop.html">Desktops</a></li>
-              <li><a href="accessories.html">Accessories</a></li>
-              <li><a href="aboutus.html">About</a></li>
-            </ul>
-            
-            <!-- Hamburger Menu -->
-            <button class="hamburger" type="button" id="menu-btn">
-                <span class="hamburger-top"></span>
-                <span class="hamburger-middle"></span>
-                <span class="hamburger-bottom"></span>
-            </button>
-        </div>
-      </nav>
-    
-      <!-- Mobile Menu -->
-      <div class="mobile-menu hidden" id="menu">
-          <ul>
-            <li><a href="home.html">Home</a></li>
-            <li><a href="Laptop.html">Laptops</a></li>
-            <li><a href="desktop.html">Desktops</a></li>
-            <li><a href="accessories.html">Accessories</a></li>
-            <li><a href="aboutus.html">About</a></li>
+      <div class="navbar-container">
+          <div class="navbar-brand">
+              <a href="home.html">
+              <img src="./assets/images/icons/logo.png" alt="Lap_store logo">
+              </a>
+          </div>
+
+          <ul class="navbar-nav-left">
+            <li><a href="home.html"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="Laptop.html"><i class="fas fa-laptop"></i> Laptops</a></li>
+            <li><a href="desktop.html"><i class="fas fa-desktop"></i> Desktops</a></li>
+            <li><a href="accessories.html"><i class="fas fa-headphones"></i> Accessories</a></li>
+            <li><a href="aboutus.html"><i class="fas fa-info-circle"></i> About</a></li>
           </ul>
+
+          <ul class="navbar-nav-right">
+              <li><button class="btn btn-dark-outline"><a href="login.php"><i class="fas fa-sign-in-alt"></i> Sign in</a></button></li>
+              <li><button class="btn btn-dark"><a href="signup.php"><i class="fas fa-user-plus"></i> Join now</a></button></li>
+          </ul>
+          
+          <!-- Hamburger Menu -->
+          <button class="hamburger" type="button" id="menu-btn">
+              <span class="hamburger-top"></span>
+              <span class="hamburger-middle"></span>
+              <span class="hamburger-bottom"></span>
+          </button>
+      </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu hidden" id="menu">
+        <ul>
+          <li><a href="home.html"><i class="fas fa-home"></i> Home</a></li>
+          <li><a href="Laptop.html"><i class="fas fa-laptop"></i> Laptops</a></li>
+          <li><a href="desktop.html"><i class="fas fa-desktop"></i> Desktops</a></li>
+          <li><a href="accessories.html"><i class="fas fa-headphones"></i> Accessories</a></li>
+          <li><a href="aboutus.html"><i class="fas fa-info-circle"></i> About</a></li>
+        </ul>
+        <div class="mobile-menu-bottom">
+          <button class="btn btn-dark-outline"><a href="login.php"><i class="fas fa-sign-in-alt"></i> Sign in</a></button>
+          <button class="btn btn-dark"><a href="signup.php"><i class="fas fa-user-plus"></i> Join now</a></button>
+        </div>
+    </div>
+
+    <div class="auth-container">
+      <div class="auth-card">
+        <div class="auth-header">
+          <i class="fas fa-user-plus auth-icon"></i>
+          <h1>Create Account</h1>
+          <p>Join LapStore for the best tech deals</p>
+        </div>
+
+        <form id="signup-form" action="#" method="POST" class="auth-form">
+          <div class="form-row">
+            <div class="input-group">
+              <label for="name"><i class="fas fa-user"></i> Full Name</label>
+              <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+              <div class="error-message" id="nameError"></div>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="input-group">
+              <label for="email"><i class="fas fa-envelope"></i> Email Address</label>
+              <input type="email" id="email" name="email" placeholder="Enter your email" required>
+              <div class="error-message" id="emailError"></div>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="input-group">
+              <label for="username"><i class="fas fa-at"></i> Username</label>
+              <input type="text" id="username" name="username" placeholder="Choose a username" required>
+              <div class="error-message" id="usernameError"></div>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="input-group">
+              <label for="password"><i class="fas fa-lock"></i> Password</label>
+              <div class="password-input">
+                <input type="password" id="password" name="password" placeholder="Create a password" required>
+                <button type="button" class="toggle-password" onclick="togglePassword('password', 'toggleIcon1')">
+                  <i class="fas fa-eye" id="toggleIcon1"></i>
+                </button>
+              </div>
+              <div class="password-strength" id="passwordStrength"></div>
+              <div class="error-message" id="passwordError"></div>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="input-group">
+              <label for="confirm-password"><i class="fas fa-lock"></i> Confirm Password</label>
+              <div class="password-input">
+                <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm your password" required>
+                <button type="button" class="toggle-password" onclick="togglePassword('confirm-password', 'toggleIcon2')">
+                  <i class="fas fa-eye" id="toggleIcon2"></i>
+                </button>
+              </div>
+              <div class="error-message" id="confirmPasswordError"></div>
+            </div>
+          </div>
+
+          <div class="form-options">
+            <label class="checkbox-container">
+              <input type="checkbox" id="terms" required>
+              <span class="checkbox-text">
+                I agree to the <a href="#" target="_blank">Terms & Conditions</a> and <a href="#" target="_blank">Privacy Policy</a>
+              </span>
+            </label>
+          </div>
+
+          <div class="form-buttons">
+            <button type="button" class="auth-btn secondary" onclick="window.location.href='home.html'">
+              <i class="fas fa-times"></i> Cancel
+            </button>
+            <button type="submit" class="auth-btn primary" name="signup-btn" onclick="return validateForm()">
+              <i class="fas fa-user-plus"></i> Create Account
+            </button>
+          </div>
+
+          <div class="auth-footer">
+            <p>Already have an account? <a href="login.php">Sign in here</a></p>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>TechHub</h3>
+          <p>Your trusted technology partner for all computing needs</p>
+          <div class="newsletter-form">
+            <h4>Newsletter</h4>
+            <p>Stay updated with our latest offers</p>
+            <div class="input-group">
+              <input type="email" placeholder="Enter your email" />
+              <button type="submit">
+                <i class="fas fa-paper-plane"></i> Subscribe
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-section">
+          <h4>Quick Links</h4>
+          <ul>
+            <li>
+              <a href="home.html"><i class="fas fa-home"></i> Home</a>
+            </li>
+            <li>
+              <a href="Laptop.html"><i class="fas fa-laptop"></i> Laptops</a>
+            </li>
+            <li>
+              <a href="desktop.html"><i class="fas fa-desktop"></i> Desktops</a>
+            </li>
+            <li>
+              <a href="accessories.html"
+                ><i class="fas fa-mouse"></i> Accessories</a
+              >
+            </li>
+            <li>
+              <a href="aboutus.html"
+                ><i class="fas fa-info-circle"></i> About Us</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h4>Contact Info</h4>
+          <p><i class="fas fa-map-marker-alt"></i> 123 Galle Road, Moratuwa</p>
+          <p><i class="fas fa-phone"></i> +94 11 264 5789</p>
+          <p><i class="fas fa-envelope"></i> info@techhub.lk</p>
+          <p><i class="fas fa-clock"></i> Mon-Sat: 9AM-8PM</p>
+        </div>
+
+        <div class="footer-section">
+          <h4>Follow Us</h4>
+          <p>Connect with us on social media</p>
+          <div class="social-links">
+            <a href="#" class="facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="youtube"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
       </div>
 
-  <div class="container">
-    <div class="login-form">
-      <form id="signup-form" action="#" method="POST">
-        <h1>Sign Up</h1>
-        <p>Please fill in this form to create an account. or <a href="login.php">Login</a></p>
+      <div class="footer-bottom">
+        <p>
+          &copy; 2024 TechHub. All rights reserved. | Privacy Policy | Terms of
+          Service
+        </p>
+      </div>
+    </footer>
 
-        <label for="name">Name</label>
-        <input type="text" id="name" name="name" placeholder="Enter Name" required />
+    <script>
+      function validateForm() {
+        const name = document.getElementById('name').value.trim();
+        const email = document.getElementById('email').value.trim();
+        const username = document.getElementById('username').value.trim();
+        const password = document.getElementById('password').value;
+        const confirmPassword = document.getElementById('confirm-password').value;
+        const terms = document.getElementById('terms').checked;
 
-        <label for="email">Email</label>
-        <input type="email" id="email" name="email" placeholder="Enter Email" required />
+        let isValid = true;
 
-        <label for="username">Username</label>
-        <input type="text" id="username" name="username" placeholder="Enter username" required />
+        // Clear previous errors
+        document.querySelectorAll('.error-message').forEach(el => el.textContent = '');
 
-        <label for="password">Password</label>
-        <input type="password" id="password" name="password" placeholder="Enter Password" required />
+        // Validate Name
+        if (name === '') {
+          document.getElementById('nameError').textContent = 'Please enter your full name.';
+          isValid = false;
+        }
 
-        <label for="confirm-password">Confirm Password</label>
-        <input type="password" id="confirm-password" name="confirm-password" placeholder="Repeat Password" required />
+        // Validate Email
+        if (email === '') {
+          document.getElementById('emailError').textContent = 'Please enter your email.';
+          isValid = false;
+        } else if (!isValidEmail(email)) {
+          document.getElementById('emailError').textContent = 'Please enter a valid email address.';
+          isValid = false;
+        }
 
-        <label>
-          <input type="checkbox" checked="checked" name="remember" style="margin-bottom: 15px">
-          Remember me
-        </label>
+        // Validate Username
+        if (username === '') {
+          document.getElementById('usernameError').textContent = 'Please enter a username.';
+          isValid = false;
+        } else if (username.length < 4) {
+          document.getElementById('usernameError').textContent = 'Username must be at least 4 characters long.';
+          isValid = false;
+        }
 
-        <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
+        // Validate Password
+        if (password === '') {
+          document.getElementById('passwordError').textContent = 'Please enter a password.';
+          isValid = false;
+        } else if (password.length < 6) {
+          document.getElementById('passwordError').textContent = 'Password must be at least 6 characters long.';
+          isValid = false;
+        }
 
-        <div class="buttons">
-          <button type="button" class="cancelbtn">Cancel</button>
-          <button type="submit" class="signupbtn" name="signup-btn" onclick="return validateForm()">Sign Up</button>
-          <!-- <input type="submit" value="submit" name="signup-btn" class="signupbtn"> -->
-        </div>
-      </form>
-    </div>
-  </div>
-  <footer>
-    <div class="footer-column">
-      <h3>Company</h3>
-      <ul>
-        <li><a href="#">About Us</a></li>
-        <li><a href="#">Careers</a></li>
-        <li><a href="#">Customer Reviews</a></li>
-      </ul>
-    </div>
-    
-    <div class="footer-column">
-      <h3>Contact</h3>
-      <ul>
-        <li><a href="#">Store Locations</a></li>
-        <li><a href="#">Online Enquiry</a></li>
-        <li><a href="#">Phone Details</a></li>
-        <li><a href="#">Feedback & Complaints</a></li>
-        <li><a href="#">FAQs</a></li>
-      </ul>
-    </div>
-    
-    <div class="footer-column">
-      <h3>Information</h3>
-      <ul>
-        <li><a href="#">Open Hours</a></li>
-        <li><a href="#">Warranty & Returns</a></li>
-        <li><a href="#">Shipping</a></li>
-        <li><a href="#">Terms & Conditions</a></li>
-        <li><a href="#">Privacy Statement</a></li>
-      </ul>
-    </div>
-    
-    <div class="footer-column wider-column">
-      <h3>Don’t Miss Anything</h3>
-      <p>Subscribe to get the notifications of latest products, Deals & Giveaways!</p>
-      <form id="emailForm">
-        <input type="email" placeholder="Enter your Email" name="email">
-        <button type="submit">Subscribe</button>
-      </form>
-      <h4>Stay in Touch</h4>
-      <div class="social-media">
-        <a href="#"><img src="./images/footer/facebook.png" alt="Facebook"></a>
-        <a href="#"><img src="./images/footer/twitter.png" alt="Twitter"></a>
-        <a href="#"><img src="./images/footer/instagram.jpg" alt="Instagram"></a>
-      </div>     
-    </div>
-  </footer>
+        // Validate Confirm Password
+        if (confirmPassword === '') {
+          document.getElementById('confirmPasswordError').textContent = 'Please confirm your password.';
+          isValid = false;
+        } else if (password !== confirmPassword) {
+          document.getElementById('confirmPasswordError').textContent = 'Passwords do not match.';
+          isValid = false;
+        }
 
-  <script>
+        // Validate Terms
+        if (!terms) {
+          alert('Please accept the Terms & Conditions to continue.');
+          isValid = false;
+        }
 
-    function validateForm() {
-      const name = document.getElementById('name').value.trim();
-      const email = document.getElementById('email').value.trim();
-      const password = document.getElementById('password').value;
-      const confirmPassword = document.getElementById('confirm-password').value;
-
-      // Validate First Name
-      if (fname === '') {
-        alert('Please enter your First Name.');
-        return false;
+        return isValid;
       }
 
-      // Validate Email
-      if (email === '') {
-        alert('Please enter your Email.');
-        return false;
-      } else if (!isValidEmail(email)) {
-        alert('Please enter a valid Email.');
-        return false;
+      function isValidEmail(email) {
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return emailRegex.test(email);
       }
 
-      // Validate Username
-      if (username === '') { // New block
-        alert('Please enter your Username.');
-        return false;
-      } else if (username.length < 4) {
-        alert('Username must be at least 4 characters long.');
-        return false;
+      function togglePassword(inputId, iconId) {
+        const passwordInput = document.getElementById(inputId);
+        const toggleIcon = document.getElementById(iconId);
+        
+        if (passwordInput.type === 'password') {
+          passwordInput.type = 'text';
+          toggleIcon.classList.remove('fa-eye');
+          toggleIcon.classList.add('fa-eye-slash');
+        } else {
+          passwordInput.type = 'password';
+          toggleIcon.classList.remove('fa-eye-slash');
+          toggleIcon.classList.add('fa-eye');
+        }
       }
 
-      // Validate Password
-      if (password === '') {
-        alert('Please enter your Password.');
-        return false;
-      } else if (password.length < 6) {
-        alert('Password must be at least 6 characters long.');
-        return false;
+      function checkPasswordStrength(password) {
+        const strengthIndicator = document.getElementById('passwordStrength');
+        let strength = 0;
+        let feedback = '';
+
+        if (password.length >= 6) strength++;
+        if (password.match(/[a-z]/)) strength++;
+        if (password.match(/[A-Z]/)) strength++;
+        if (password.match(/[0-9]/)) strength++;
+        if (password.match(/[^a-zA-Z0-9]/)) strength++;
+
+        switch(strength) {
+          case 0:
+          case 1:
+            feedback = 'Weak';
+            strengthIndicator.className = 'password-strength weak';
+            break;
+          case 2:
+          case 3:
+            feedback = 'Medium';
+            strengthIndicator.className = 'password-strength medium';
+            break;
+          case 4:
+          case 5:
+            feedback = 'Strong';
+            strengthIndicator.className = 'password-strength strong';
+            break;
+        }
+
+        strengthIndicator.textContent = password ? `Password strength: ${feedback}` : '';
       }
 
-      // Validate Confirm Password
-      if (confirmPassword === '') {
-        alert('Please confirm your Password.');
-        return false;
-      } else if (password !== confirmPassword) {
-        alert('Passwords do not match.');
-        return false;
-      }
+      // Add event listeners
+      document.getElementById('password').addEventListener('input', function() {
+        checkPasswordStrength(this.value);
+      });
 
-      // If all validations pass, submit the form
-      alert('Sign up successful!');
-      form.reset();
-    });
-
-    // Function to validate email format
-    function isValidEmail(email) {
-      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-      return emailRegex.test(email);
-    }
-    }
-  </script>
-</body>
+      document.getElementById('signup-form').addEventListener('submit', function(e) {
+        e.preventDefault();
+        if (validateForm()) {
+          const submitBtn = this.querySelector('.auth-btn.primary');
+          submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Creating Account...';
+          submitBtn.disabled = true;
+          this.submit();
+        }
+      });
+    </script>
+  </body>
 </html>
