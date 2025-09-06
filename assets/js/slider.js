@@ -1,24 +1,25 @@
-document.addEventListener("DOMContentLoaded", function() {
-    const slider = document.querySelector('.slider');
-    const slides = document.querySelectorAll('.slider img');
-    const slideWidth = slides[0].clientWidth;
-    let counter = 1; // Start at 1 to skip the cloned first slide
-  
-    function nextSlide() {
-      counter++;
-      slider.style.transition = "transform 0.5s ease-in-out";
-      slider.style.transform = `translateX(-${counter * slideWidth}px)`;
-  
-      // Reset to the original slides when reaching the cloned ones
-      if (counter >= slides.length - 1) {
-        setTimeout(() => {
-          slider.style.transition = "none";
-          counter = 1;
-          slider.style.transform = `translateX(-${counter * slideWidth}px)`;
-        }, 2000); // Wait for the transition to complete before resetting
-      }
-    }
-  
-    setInterval(nextSlide, 2000);
-  });
-  
+// Slider Variables
+let currentSlide = 0;
+const totalSlides = 6;
+
+// Function to display a specific slide
+function showSlide(index) {
+  const slider = document.querySelector(".slider");
+  const slideWidth = 100; // Each slide is 100% width
+  slider.style.transform = `translateX(-${index * slideWidth}%)`;
+}
+
+// Navigate to next slide
+function nextSlide() {
+  currentSlide = (currentSlide + 1) % totalSlides;
+  showSlide(currentSlide);
+}
+
+// Navigate to previous slide
+function prevSlide() {
+  currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+  showSlide(currentSlide);
+}
+
+// Auto slide every 4 seconds
+setInterval(nextSlide, 4000);
