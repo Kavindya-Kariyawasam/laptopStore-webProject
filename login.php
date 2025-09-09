@@ -120,7 +120,7 @@
               <span class="checkmark"></span>
               Remember Me
             </label>
-            <a href="#" class="forgot-link">Forgot Password?</a>
+            <a href="forgotPassword.php" class="forgot-link">Forgot Password?</a>
           </div>
 
           <button type="submit" name="login-btn" class="auth-btn">
@@ -199,8 +199,9 @@
 
       <div class="footer-bottom">
         <p>
-          &copy; 2024 TechHub. All rights reserved. | Privacy Policy | Terms of
-          Service
+          &copy; 2024 TechHub. All rights reserved. | 
+          <a href="privacyPolicy.html">Privacy Policy</a> | 
+          <a href="termsConditions.html">Terms of Service</a>
         </p>
       </div>
     </footer>

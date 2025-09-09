@@ -154,7 +154,7 @@
             <label class="checkbox-container">
               <input type="checkbox" id="terms" required>
               <span class="checkbox-text">
-                I agree to the <a href="#" target="_blank">Terms & Conditions</a> and <a href="#" target="_blank">Privacy Policy</a>
+                I agree to the <a href="termsConditions.html" target="_blank">Terms & Conditions</a> and <a href="privacyPolicy.html" target="_blank">Privacy Policy</a>
               </span>
             </label>
           </div>
@@ -240,8 +240,9 @@
 
       <div class="footer-bottom">
         <p>
-          &copy; 2024 TechHub. All rights reserved. | Privacy Policy | Terms of
-          Service
+          &copy; 2024 TechHub. All rights reserved. | 
+          <a href="privacyPolicy.html">Privacy Policy</a> | 
+          <a href="termsConditions.html">Terms of Service</a>
         </p>
       </div>
     </footer>
