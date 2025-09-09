@@ -2,279 +2,541 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css"/>
-    <link rel="stylesheet" type="text/css" href="product.css">
-    <link rel="stylesheet" type="text/css" href="navbar.css">
-    <link rel="stylesheet" type="text/css" href="footer.css">
-    <script defer src="menu.js"></script>
-    <script defer src="footer.js"></script>
-    <title>Laptops</title>
+
+    <!-- Font Awesome Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/navbar.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/footer.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/laptop.css" />
+
+    <!-- JavaScript -->
+    <script defer src="assets/js/menu.js"></script>
+    <script defer src="assets/js/footer.js"></script>
+
+    <title>Laptops - TechHub</title>
   </head>
 
   <body>
-    <!-- Navigation -->
+    <!-- Header -->
     <nav class="navbar">
       <div class="navbar-container">
-          <div class="navbar-brand">
-              <a href="home.html">
-               <img src="./images/logo.png" alt="Lap_store logo">
-              </a>
-          </div>
+        <div class="navbar-brand">
+          <a href="home.html">
+            <img src="./assets/images/icons/logo.png" alt="TechHub logo" />
+          </a>
+        </div>
 
-          <ul class="navbar-nav-left">
-            <li><a href="home.html">Home</a></li>
-            <li><a href="Laptop.html">Laptops</a></li>
-            <li><a href="desktop.html">Desktops</a></li>
-            <li><a href="accessories.html">Accessories</a></li>
-            <li><a href="aboutus.html">About</a></li>
-          </ul>
+        <ul class="navbar-nav-left">
+          <li>
+            <a href="home.html"><i class="fas fa-home"></i> Home</a>
+          </li>
+          <li>
+            <a href="Laptop.html" class="active"
+              ><i class="fas fa-laptop"></i> Laptops</a
+            >
+          </li>
+          <li>
+            <a href="desktop.html"><i class="fas fa-desktop"></i> Desktops</a>
+          </li>
+          <li>
+            <a href="accessories.html"
+              ><i class="fas fa-mouse"></i> Accessories</a
+            >
+          </li>
+          <li>
+            <a href="aboutus.html"><i class="fas fa-info-circle"></i> About</a>
+          </li>
+        </ul>
 
-          <ul class="navbar-nav-right">
-              <li><a href="signup.php"><button class="btn btn-dark-outline">Join now</button></a></li>
-              <li><a href="login.php"></a><button class="btn btn-dark">Sign in</button></a></li>
-          </ul> 
-          
-          <!-- Hamburger Menu -->
-          <button class="hamburger" type="button" id="menu-btn">
-              <span class="hamburger-top"></span>
-              <span class="hamburger-middle"></span>
-              <span class="hamburger-bottom"></span>
-          </button>
+        <ul class="navbar-nav-right">
+          <li>
+            <a href="login.php" class="btn btn-dark-outline">
+              <i class="fas fa-sign-in-alt"></i> Login
+            </a>
+          </li>
+          <li>
+            <a href="signup.php" class="btn btn-dark">
+              <i class="fas fa-user-plus"></i> Register
+            </a>
+          </li>
+        </ul>
+
+        <button class="hamburger">
+          <span class="hamburger-top"></span>
+          <span class="hamburger-middle"></span>
+          <span class="hamburger-bottom"></span>
+        </button>
       </div>
-  </nav>
+    </nav>
 
-  
-  <!-- Mobile Menu -->
-  <div class="mobile-menu hidden" id="menu">
+    <!-- Mobile Menu -->
+    <div class="mobile-menu hidden">
       <ul>
-        <li><a href="home.html">Home</a></li>
-        <li><a href="Laptop.html">Laptops</a></li>
-        <li><a href="desktop.html">Desktops</a></li>
-        <li><a href="accessories.html">Accessories</a></li>
-        <li><a href="aboutus.html">About</a></li>
+        <li>
+          <a href="home.html"><i class="fas fa-home"></i> Home</a>
+        </li>
+        <li>
+          <a href="Laptop.html"><i class="fas fa-laptop"></i> Laptops</a>
+        </li>
+        <li>
+          <a href="desktop.html"><i class="fas fa-desktop"></i> Desktops</a>
+        </li>
+        <li>
+          <a href="accessories.html"
+            ><i class="fas fa-mouse"></i> Accessories</a
+          >
+        </li>
+        <li>
+          <a href="aboutus.html"><i class="fas fa-info-circle"></i> About</a>
+        </li>
       </ul>
       <div class="mobile-menu-bottom">
-          <ul>
-              <li><a href="signup.php"><button class="btn btn-dark-outline">Join now</button></a></li>
-              <li><a href="login.php"></a><button class="btn btn-dark">Sign in</button></a></li>
-          </ul>
+        <a href="login.php" class="btn btn-dark-outline">
+          <i class="fas fa-sign-in-alt"></i> Login
+        </a>
+        <a href="signup.php" class="btn btn-dark">
+          <i class="fas fa-user-plus"></i> Register
+        </a>
       </div>
-  </div>
+    </div>
 
-    <!-- All Products -->
-    <section class="section all-products" id="products">
-      <div class="top container">
-        <h1>All Products</h1>
-        <form>
-          <select>
-            <option value="1">Defualt Sorting</option>
-            <option value="2">Sort By Price</option>
-            <option value="3">Sort By Popularity</option>
-            <option value="4">Sort By Sale</option>
-            <option value="5">Sort By Rating</option>
-          </select>
-          <span><i class="bx bx-chevron-down"></i></span>
-        </form>
-      </div>
-      <div class="product-center container">
-        <div class="product-item">
-          <div class="overlay">
-            <a href="L1.html" class="product-thumb">
-              <img src="./images/L1.png" alt="L1" />
-            </a>
-            <span class="discount">10%</span>
+    <!-- Main Content -->
+    <main class="main-content">
+      <!-- Page Header -->
+      <section class="page-header">
+        <div class="container">
+          <div class="header-content">
+            <i class="fas fa-laptop header-icon"></i>
+            <h1>Premium Laptops</h1>
+            <p>
+              Discover our extensive collection of high-performance laptops for
+              every need
+            </p>
           </div>
-          <div class="product-info">
-            <span>LAPTOPS</span>
-            <a href="L1.html">Acer Aspire 3 A315 Notebook (R5)</a>
-            <h4>Rs.255,000</h4>
-          </div>
-          <ul class="icons">
-            <li><i class="bx bx-heart"></i></li>
-            <li><i class="bx bx-search"></i></li>
-            <li><i class="bx bx-cart"></i></li>
-          </ul>
         </div>
-        <div class="product-item">
-          <div class="overlay">
-            <a href="L2.html" class="product-thumb">
-              <img src="./images/L2.png" alt="" />
-            </a>
-            <span class="discount">12%</span>
+      </section>
+
+      <!-- Filter Section -->
+      <section class="filter-section">
+        <div class="container">
+          <div class="filter-container">
+            <div class="filter-group">
+              <label for="brand-filter">
+                <i class="fas fa-tags"></i> Brand
+              </label>
+              <select id="brand-filter">
+                <option value="">All Brands</option>
+                <option value="dell">Dell</option>
+                <option value="hp">HP</option>
+                <option value="lenovo">Lenovo</option>
+                <option value="asus">ASUS</option>
+              </select>
+            </div>
+            <div class="filter-group">
+              <label for="price-filter">
+                <i class="fas fa-dollar-sign"></i> Price Range
+              </label>
+              <select id="price-filter">
+                <option value="">All Prices</option>
+                <option value="0-50000">Under Rs. 50,000</option>
+                <option value="50000-100000">Rs. 50,000 - 100,000</option>
+                <option value="100000-200000">Rs. 100,000 - 200,000</option>
+                <option value="200000+">Above Rs. 200,000</option>
+              </select>
+            </div>
+            <div class="filter-group">
+              <label for="sort-filter">
+                <i class="fas fa-sort"></i> Sort By
+              </label>
+              <select id="sort-filter">
+                <option value="featured">Featured</option>
+                <option value="price-low">Price: Low to High</option>
+                <option value="price-high">Price: High to Low</option>
+                <option value="newest">Newest First</option>
+              </select>
+            </div>
           </div>
-          <div class="product-info">
-            <span>LAPTOPS</span>
-            <a href="L2.html">Acer Aspire 5 A515 – i5</a>
-            <h4>Rs.157,000</h4>
-          </div>
-          <ul class="icons">
-            <li><i class="bx bx-heart"></i></li>
-            <li><i class="bx bx-search"></i></li>
-            <li><i class="bx bx-cart"></i></li>
-          </ul>
         </div>
-        <div class="product-item">
-          <div class="overlay">
-            <a href="L3.html" class="product-thumb">
-              <img src="./images/L3.png" alt="" />
-            </a>
-            <span class="discount">3%</span>
+      </section>
+
+      <!-- Products Grid -->
+      <section class="products-section">
+        <div class="container">
+          <div class="products-grid">
+            <!-- Product 1 -->
+            <div class="product-card" data-brand="dell" data-price="120000">
+              <div class="product-image">
+                <img
+                  src="assets/images/products/L1.png"
+                  alt="Dell Inspiron 15"
+                />
+                <div class="product-overlay">
+                  <a href="L1.html" class="view-details-btn">
+                    <i class="fas fa-eye"></i> View Details
+                  </a>
+                </div>
+                <div class="product-badge">Featured</div>
+              </div>
+              <div class="product-info">
+                <h3>Dell Inspiron 15 3000</h3>
+                <p class="product-specs">
+                  <i class="fas fa-microchip"></i> Intel Core i5 |
+                  <i class="fas fa-memory"></i> 8GB RAM |
+                  <i class="fas fa-hdd"></i> 256GB SSD
+                </p>
+                <div class="product-rating">
+                  <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                  </div>
+                  <span class="rating-text">(4.2)</span>
+                </div>
+                <div class="product-price">
+                  <span class="current-price">Rs. 120,000</span>
+                  <span class="original-price">Rs. 135,000</span>
+                </div>
+                <div class="product-actions">
+                  <button class="add-to-cart-btn">
+                    <i class="fas fa-shopping-cart"></i> Add to Cart
+                  </button>
+                  <button class="wishlist-btn">
+                    <i class="far fa-heart"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="product-card" data-brand="hp" data-price="95000">
+              <div class="product-image">
+                <img src="assets/images/products/L2.png" alt="HP Pavilion" />
+                <div class="product-overlay">
+                  <a href="L2.html" class="view-details-btn">
+                    <i class="fas fa-eye"></i> View Details
+                  </a>
+                </div>
+              </div>
+              <div class="product-info">
+                <h3>HP Pavilion 14</h3>
+                <p class="product-specs">
+                  <i class="fas fa-microchip"></i> AMD Ryzen 5 |
+                  <i class="fas fa-memory"></i> 8GB RAM |
+                  <i class="fas fa-hdd"></i> 512GB SSD
+                </p>
+                <div class="product-rating">
+                  <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </div>
+                  <span class="rating-text">(4.5)</span>
+                </div>
+                <div class="product-price">
+                  <span class="current-price">Rs. 95,000</span>
+                  <span class="original-price">Rs. 110,000</span>
+                </div>
+                <div class="product-actions">
+                  <button class="add-to-cart-btn">
+                    <i class="fas fa-shopping-cart"></i> Add to Cart
+                  </button>
+                  <button class="wishlist-btn">
+                    <i class="far fa-heart"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="product-card" data-brand="lenovo" data-price="85000">
+              <div class="product-image">
+                <img
+                  src="assets/images/products/L3.png"
+                  alt="Lenovo ThinkPad"
+                />
+                <div class="product-overlay">
+                  <a href="L3.html" class="view-details-btn">
+                    <i class="fas fa-eye"></i> View Details
+                  </a>
+                </div>
+              </div>
+              <div class="product-info">
+                <h3>Lenovo ThinkPad E14</h3>
+                <p class="product-specs">
+                  <i class="fas fa-microchip"></i> Intel Core i7 |
+                  <i class="fas fa-memory"></i> 16GB RAM |
+                  <i class="fas fa-hdd"></i> 512GB SSD
+                </p>
+                <div class="product-rating">
+                  <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                  </div>
+                  <span class="rating-text">(4.3)</span>
+                </div>
+                <div class="product-price">
+                  <span class="current-price">Rs. 85,000</span>
+                  <span class="original-price">Rs. 95,000</span>
+                </div>
+                <div class="product-actions">
+                  <button class="add-to-cart-btn">
+                    <i class="fas fa-shopping-cart"></i> Add to Cart
+                  </button>
+                  <button class="wishlist-btn">
+                    <i class="far fa-heart"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Product 4 -->
+            <div class="product-card" data-brand="asus" data-price="105000">
+              <div class="product-image">
+                <img src="assets/images/products/L4.png" alt="ASUS VivoBook" />
+                <div class="product-overlay">
+                  <a href="L4.html" class="view-details-btn">
+                    <i class="fas fa-eye"></i> View Details
+                  </a>
+                </div>
+                <div class="product-badge new">New</div>
+              </div>
+              <div class="product-info">
+                <h3>ASUS VivoBook S15</h3>
+                <p class="product-specs">
+                  <i class="fas fa-microchip"></i> Intel Core i5 |
+                  <i class="fas fa-memory"></i> 8GB RAM |
+                  <i class="fas fa-hdd"></i> 256GB SSD
+                </p>
+                <div class="product-rating">
+                  <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                  </div>
+                  <span class="rating-text">(4.1)</span>
+                </div>
+                <div class="product-price">
+                  <span class="current-price">Rs. 105,000</span>
+                </div>
+                <div class="product-actions">
+                  <button class="add-to-cart-btn">
+                    <i class="fas fa-shopping-cart"></i> Add to Cart
+                  </button>
+                  <button class="wishlist-btn">
+                    <i class="far fa-heart"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="product-info">
-            <span>Acer Laptops, Laptops,</span>
-            <a href="L3.html">ACER Aspire A515 – i5 1135G7</a>
-            <h4>Rs.234,000</h4>
+
+          <!-- Load More Button -->
+          <div class="load-more-section">
+            <button class="load-more-btn">
+              <i class="fas fa-plus"></i> Load More Products
+            </button>
           </div>
-          <ul class="icons">
-            <li><i class="bx bx-heart"></i></li>
-            <li><i class="bx bx-search"></i></li>
-            <li><i class="bx bx-cart"></i></li>
-          </ul>
         </div>
-        <div class="product-item">
-          <div class="overlay">
-            <a href="L4.html" class="product-thumb">
-              <img src="./images/L4.png" alt="" />
-            </a>
+      </section>
+
+      <!-- Features Section -->
+      <section class="features-section">
+        <div class="container">
+          <h2>Why Choose Our Laptops?</h2>
+          <div class="features-grid">
+            <div class="feature-item">
+              <i class="fas fa-shipping-fast"></i>
+              <h3>Free Delivery</h3>
+              <p>Island-wide free delivery on all laptop orders</p>
+            </div>
+            <div class="feature-item">
+              <i class="fas fa-shield-alt"></i>
+              <h3>Warranty Protection</h3>
+              <p>Comprehensive warranty coverage up to 3 years</p>
+            </div>
+            <div class="feature-item">
+              <i class="fas fa-tools"></i>
+              <h3>Free Setup</h3>
+              <p>Professional installation and setup service included</p>
+            </div>
+            <div class="feature-item">
+              <i class="fas fa-headset"></i>
+              <h3>24/7 Support</h3>
+              <p>Round-the-clock technical support and assistance</p>
+            </div>
           </div>
-          <div class="product-info">
-            <span>Acer Laptops, Gaming,</span>
-            <a href="L4.html">Acer Nitro V 15 ANV15-51-52AM Gaming – i5</a>
-            <h4>Rs.262,000</h4>
-          </div>
-          <ul class="icons">
-            <li><i class="bx bx-heart"></i></li>
-            <li><i class="bx bx-search"></i></li>
-            <li><i class="bx bx-cart"></i></li>
-          </ul>
         </div>
-        <div class="product-item">
-          <div class="overlay">
-            <a href="" class="product-thumb">
-              <img src="./images/L5.png" alt="" />
-            </a>
-            <span class="discount">6%</span>
-          </div>
-          <div class="product-info">
-            <span>Asus Laptops, Laptops</span>
-            <a href="">Asus Creator Gaming Q530VJ – i7</a>
-            <h4>Rs.221,000</h4>
-          </div>
-          <ul class="icons">
-            <li><i class="bx bx-heart"></i></li>
-            <li><i class="bx bx-search"></i></li>
-            <li><i class="bx bx-cart"></i></li>
-          </ul>
-        </div>
-        <div class="product-item">
-          <div class="overlay">
-            <a href="" class="product-thumb">
-              <img src="./images/L6.png" alt="" />
-            </a>
-          </div>
-          <div class="product-info">
-            <span>Asus Laptops Gaming,</span>
-            <a href="">Asus Creator Gaming Q540VJ – i9
-            </a>
-            <h4>Rs.245,000</h4>
-          </div>
-          <ul class="icons">
-            <li><i class="bx bx-heart"></i></li>
-            <li><i class="bx bx-search"></i></li>
-            <li><i class="bx bx-cart"></i></li>
-          </ul>
-        </div>
-        <div class="product-item">
-          <div class="overlay">
-            <a href="" class="product-thumb">
-              <img src="./images/L7.png" alt="" />
-            </a>
-            <span class="discount">9%</span>
-          </div>
-          <div class="product-info">
-            <span>Asus Laptops, Laptops</span>
-            <a href="">Asus ExpertBook B1502CB – i5</a>
-            <h4>Rs.187,000</h4>
-          </div>
-          <ul class="icons">
-            <li><i class="bx bx-heart"></i></li>
-            <li><i class="bx bx-search"></i></li>
-            <li><i class="bx bx-cart"></i></li>
-          </ul>
-        </div>
-        <div class="product-item">
-          <div class="overlay">
-            <a href="" class="product-thumb">
-              <img src="./images/L8.png" alt="" />
-            </a>
-          </div>
-          <div class="product-info">
-            <span>Asus Laptops, Gaming</span>
-            <a href="">Asus ROG Strix G16 (As G614JIR 126) – i9</a>
-            <h4>Rs.282,000</h4>
-          </div>
-          <ul class="icons">
-            <li><i class="bx bx-heart"></i></li>
-            <li><i class="bx bx-search"></i></li>
-            <li><i class="bx bx-cart"></i></li>
-          </ul>
-        </div>
-      </div>
-    </section>
-    <section class="pagination">
-      <div class="container">
-        <span>1</span> <span>2</span> <span>3</span> <span>4</span>
-        <span><i class="bx bx-right-arrow-alt"></i></span>
-      </div>
-    </section>
+      </section>
+    </main>
+
     <!-- Footer -->
     <footer>
-      <div class="footer-column">
-        <h3>Company</h3>
-        <ul>
-          <li><a href="#">About Us</a></li>
-          <li><a href="#">Careers</a></li>
-          <li><a href="#">Customer Reviews</a></li>
-        </ul>
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>TechHub</h3>
+          <p>Your trusted technology partner for all computing needs</p>
+          <div class="newsletter-form">
+            <h4>Newsletter</h4>
+            <p>Stay updated with our latest offers</p>
+            <div class="input-group">
+              <input type="email" placeholder="Enter your email" />
+              <button type="submit">
+                <i class="fas fa-paper-plane"></i> Subscribe
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-section">
+          <h4>Quick Links</h4>
+          <ul>
+            <li>
+              <a href="home.html"><i class="fas fa-home"></i> Home</a>
+            </li>
+            <li>
+              <a href="Laptop.html"><i class="fas fa-laptop"></i> Laptops</a>
+            </li>
+            <li>
+              <a href="desktop.html"><i class="fas fa-desktop"></i> Desktops</a>
+            </li>
+            <li>
+              <a href="accessories.html"
+                ><i class="fas fa-mouse"></i> Accessories</a
+              >
+            </li>
+            <li>
+              <a href="aboutus.html"
+                ><i class="fas fa-info-circle"></i> About Us</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h4>Contact Info</h4>
+          <p><i class="fas fa-map-marker-alt"></i> 123 Galle Road, Moratuwa</p>
+          <p><i class="fas fa-phone"></i> +94 11 264 5789</p>
+          <p><i class="fas fa-envelope"></i> info@techhub.lk</p>
+          <p><i class="fas fa-clock"></i> Mon-Sat: 9AM-8PM</p>
+        </div>
+
+        <div class="footer-section">
+          <h4>Follow Us</h4>
+          <p>Connect with us on social media</p>
+          <div class="social-links">
+            <a href="#" class="facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="youtube"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
       </div>
-      
-      <div class="footer-column">
-        <h3>Contact</h3>
-        <ul>
-          <li><a href="#">Store Locations</a></li>
-          <li><a href="#">Online Enquiry</a></li>
-          <li><a href="#">Phone Details</a></li>
-          <li><a href="#">Feedback & Complaints</a></li>
-          <li><a href="#">FAQs</a></li>
-        </ul>
-      </div>
-      
-      <div class="footer-column">
-        <h3>Information</h3>
-        <ul>
-          <li><a href="#">Open Hours</a></li>
-          <li><a href="#">Warranty & Returns</a></li>
-          <li><a href="#">Shipping</a></li>
-          <li><a href="#">Terms & Conditions</a></li>
-          <li><a href="#">Privacy Statement</a></li>
-        </ul>
-      </div>
-      
-      <div class="footer-column wider-column">
-        <h3>Don’t Miss Anything</h3>
-        <p>Subscribe to get the notifications of latest products, Deals & Giveaways!</p>
-        <form id="emailForm">
-          <input type="email" placeholder="Enter your Email" name="email">
-          <button type="submit">Subscribe</button>
-        </form>
-        <h4>Stay in Touch</h4>
-        <div class="social-media">
-          <a href="#"><img src="./images/footer/facebook.png" alt="Facebook"></a>
-          <a href="#"><img src="./images/footer/twitter.png" alt="Twitter"></a>
-          <a href="#"><img src="./images/footer/instagram.jpg" alt="Instagram"></a>
-        </div>       
+
+      <div class="footer-bottom">
+        <p>
+          &copy; 2024 TechHub. All rights reserved. |
+          <a href="privacyPolicy.html">Privacy Policy</a> |
+          <a href="termsConditions.html">Terms of Service</a>
+        </p>
       </div>
     </footer>
+
+    <script>
+      // Filter functionality
+      document.addEventListener("DOMContentLoaded", function () {
+        const brandFilter = document.getElementById("brand-filter");
+        const priceFilter = document.getElementById("price-filter");
+        const sortFilter = document.getElementById("sort-filter");
+        const productCards = document.querySelectorAll(".product-card");
+
+        function filterProducts() {
+          const selectedBrand = brandFilter.value;
+          const selectedPrice = priceFilter.value;
+
+          productCards.forEach((card) => {
+            const cardBrand = card.dataset.brand;
+            const cardPrice = parseInt(card.dataset.price);
+
+            let showCard = true;
+
+            // Brand filter
+            if (selectedBrand && cardBrand !== selectedBrand) {
+              showCard = false;
+            }
+
+            // Price filter
+            if (selectedPrice) {
+              const [min, max] = selectedPrice
+                .split("-")
+                .map((p) => p.replace("+", ""));
+              const minPrice = parseInt(min) || 0;
+              const maxPrice = max ? parseInt(max) : Infinity;
+
+              if (cardPrice < minPrice || cardPrice > maxPrice) {
+                showCard = false;
+              }
+            }
+
+            card.style.display = showCard ? "block" : "none";
+          });
+        }
+
+        brandFilter.addEventListener("change", filterProducts);
+        priceFilter.addEventListener("change", filterProducts);
+
+        // Wishlist functionality
+        document.querySelectorAll(".wishlist-btn").forEach((btn) => {
+          btn.addEventListener("click", function () {
+            const icon = this.querySelector("i");
+            icon.classList.toggle("far");
+            icon.classList.toggle("fas");
+
+            if (icon.classList.contains("fas")) {
+              this.style.color = "#e53e3e";
+            } else {
+              this.style.color = "";
+            }
+          });
+        });
+
+        // Add to cart functionality
+        document.querySelectorAll(".add-to-cart-btn").forEach((btn) => {
+          btn.addEventListener("click", function () {
+            const originalText = this.innerHTML;
+            this.innerHTML = '<i class="fas fa-check"></i> Added!';
+            this.style.backgroundColor = "#38a169";
+
+            setTimeout(() => {
+              this.innerHTML = originalText;
+              this.style.backgroundColor = "";
+            }, 2000);
+          });
+        });
+      });
+    </script>
   </body>
 </html>
