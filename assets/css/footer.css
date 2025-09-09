@@ -262,6 +262,17 @@ footer::before {
   margin: 0;
 }
 
+.footer-bottom a {
+  color: var(--primary-blue);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-bottom a:hover {
+  color: var(--hover-color);
+  text-decoration: underline;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
   .footer-content {
