@@ -2,246 +2,785 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css"/>
-    <link rel="stylesheet" type="text/css" href="accessories.css">
-    <link rel="stylesheet" type="text/css" href="navbar.css">
-    <link rel="stylesheet" type="text/css" href="footer.css">
-    <script defer src="menu.js"></script>
-    <script defer src="footer.js"></script>
-    <title>Speakers</title>
+
+    <!-- Font Awesome Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/navbar.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/footer.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="assets/css/accessoryDetails.css"
+    />
+
+    <!-- JavaScript -->
+    <script defer src="assets/js/menu.js"></script>
+    <script defer src="assets/js/footer.js"></script>
+
+    <title>Portable Bluetooth Speaker - TechHub</title>
   </head>
 
   <body>
-    <!-- Navigation -->
+    <!-- Header -->
     <nav class="navbar">
       <div class="navbar-container">
-          <div class="navbar-brand">
-              <a href="home.html">
-               <img src="./images/logo.png" alt="Lap_store logo">
-              </a>
-          </div>
+        <div class="navbar-brand">
+          <a href="home.html">
+            <img src="./assets/images/icons/logo.png" alt="TechHub logo" />
+          </a>
+        </div>
 
-          <ul class="navbar-nav-left">
-            <li><a href="home.html">Home</a></li>
-            <li><a href="Laptop.html">Laptops</a></li>
-            <li><a href="desktop.html">Desktops</a></li>
-            <li><a href="accessories.html">Accessories</a></li>
-            <li><a href="aboutus.html">About</a></li>
-          </ul>
+        <ul class="navbar-nav-left">
+          <li>
+            <a href="home.html"><i class="fas fa-home"></i> Home</a>
+          </li>
+          <li>
+            <a href="Laptop.html"><i class="fas fa-laptop"></i> Laptops</a>
+          </li>
+          <li>
+            <a href="desktop.html"><i class="fas fa-desktop"></i> Desktops</a>
+          </li>
+          <li>
+            <a href="accessories.html"
+              ><i class="fas fa-mouse"></i> Accessories</a
+            >
+          </li>
+          <li>
+            <a href="aboutus.html"><i class="fas fa-info-circle"></i> About</a>
+          </li>
+        </ul>
 
-          <ul class="navbar-nav-right">
-              <li><a href="signup.php"><button class="btn btn-dark-outline">Join now</button></a></li>
-              <li><a href="login.php"><button class="btn btn-dark">Sign in</button></a></li>
-          </ul> 
-          
-          <!-- Hamburger Menu -->
-          <button class="hamburger" type="button" id="menu-btn">
-              <span class="hamburger-top"></span>
-              <span class="hamburger-middle"></span>
-              <span class="hamburger-bottom"></span>
-          </button>
+        <ul class="navbar-nav-right">
+          <li>
+            <a href="login.php" class="btn btn-dark-outline">
+              <i class="fas fa-sign-in-alt"></i> Login
+            </a>
+          </li>
+          <li>
+            <a href="signup.php" class="btn btn-dark">
+              <i class="fas fa-user-plus"></i> Register
+            </a>
+          </li>
+        </ul>
+
+        <button class="hamburger">
+          <span class="hamburger-top"></span>
+          <span class="hamburger-middle"></span>
+          <span class="hamburger-bottom"></span>
+        </button>
       </div>
-  </nav>
+    </nav>
 
-
-  <!-- Mobile Menu -->
-  <div class="mobile-menu hidden" id="menu">
+    <!-- Mobile Menu -->
+    <div class="mobile-menu hidden">
       <ul>
-        <li><a href="home.html">Home</a></li>
-        <li><a href="Laptop.html">Laptops</a></li>
-        <li><a href="desktop.html">Desktops</a></li>
-        <li><a href="accessories.html">Accessories</a></li>
-        <li><a href="aboutus.html">About</a></li>
+        <li>
+          <a href="home.html"><i class="fas fa-home"></i> Home</a>
+        </li>
+        <li>
+          <a href="Laptop.html"><i class="fas fa-laptop"></i> Laptops</a>
+        </li>
+        <li>
+          <a href="desktop.html"><i class="fas fa-desktop"></i> Desktops</a>
+        </li>
+        <li>
+          <a href="accessories.html"
+            ><i class="fas fa-mouse"></i> Accessories</a
+          >
+        </li>
+        <li>
+          <a href="aboutus.html"><i class="fas fa-info-circle"></i> About</a>
+        </li>
       </ul>
       <div class="mobile-menu-bottom">
-          <ul>
-              <li><a href="signup.php"><button class="btn btn-dark-outline">Join now</button></a></li>
-              <li><a href="login.php"><button class="btn btn-dark">Sign in</button></a></li>
-          </ul>
+        <a href="login.php" class="btn btn-dark-outline">
+          <i class="fas fa-sign-in-alt"></i> Login
+        </a>
+        <a href="signup.php" class="btn btn-dark">
+          <i class="fas fa-user-plus"></i> Register
+        </a>
       </div>
-  </div>
+    </div>
 
-    <!-- Product Details -->
-    <section class="section product-detail">
-      <div class="details container">
-        <div class="left image-container">
-          <div class="main">
-            <img src="./images/a4.png" id="zoom" alt="" />
-          </div>
+    <!-- Main Content -->
+    <main class="main-content">
+      <!-- Breadcrumb -->
+      <section class="breadcrumb-section">
+        <div class="container">
+          <nav class="breadcrumb">
+            <a href="home.html"><i class="fas fa-home"></i> Home</a>
+            <span class="separator">></span>
+            <a href="accessories.html">Accessories</a>
+            <span class="separator">></span>
+            <span class="current">Portable Bluetooth Speaker</span>
+          </nav>
         </div>
-        <div class="right">
-          <span>Accessories</span>
-          <h1>Portable Speaker</h1>
-          <div class="price">Rs.6500</div>
-          <form>
-            <div>
-              <select>
-                <option value="Select Size" selected disabled>
-                  Select Size
-                </option>
-                <option value="1">32</option>
-                <option value="2">42</option>
-                <option value="3">52</option>
-                <option value="4">62</option>
-              </select>
-              <span><i class="bx bx-chevron-down"></i></span>
+      </section>
+
+      <!-- Product Details -->
+      <section class="product-details-section">
+        <div class="container">
+          <div class="product-details-grid">
+            <!-- Product Images -->
+            <div class="product-images">
+              <div class="main-image">
+                <img
+                  src="assets/images/products/a4.png"
+                  alt="Portable Bluetooth Speaker"
+                  id="mainImage"
+                />
+                <div class="image-badges">
+                  <span class="badge discount">19% OFF</span>
+                </div>
+              </div>
+              <div class="thumbnail-images">
+                <img
+                  src="assets/images/products/a4.png"
+                  alt="Speaker - View 1"
+                  class="thumbnail active"
+                  onclick="changeMainImage(this)"
+                />
+              </div>
             </div>
-          </form>
-          <form class="form">
-            <input type="text" placeholder="1" />
-            <a href="cart.html" class="addCart">Add To Cart</a>
-          </form>
-          <h3>Product Details</h3>
-          <p>
-            <ul>
-              <li style="list-style: disc;">Classic square box delicate wooden monitor speaker for stunning stereo sound.</li>
-              <li style="list-style: disc;">Two-way speaker system with dynamic sound and powerful bass.</li>
-              <li style="list-style: disc;">DC output supports USB charging for other devices.</li>
-              <li style="list-style: disc;">BT, 2RCA, optical and coaxial inputs for your multiple choice.</li>
-              <li style="list-style: disc;">Support wireless remote control, a variety of transmission free switching.</li>
-            </ul>    
-          </p>
-        </div>
-      </div>
-    </section>
 
-    <!-- Related -->
-    <section class="section featured">
-      <div class="top container">
-        <h1>Related Products</h1>
-        <a href="#" class="view-more">View more</a>
-      </div>
-      <div class="product-center container">
-        
-        <!--headset-->
-        <div class="product-item">
-          <div class="overlay">
-            <a href="" class="product-thumb">
-              <img src="./images/a5.jpg" alt="" />
-            </a>
-            <span class="discount">40%</span>
-          </div>
-          <div class="product-info">
-            <span>ACCESSORIES</span>
-            <a href="">Headset</a>
-            <h4>Rs.4200</h4>
-          </div>
-          <ul class="icons">
-            <li><i class="bx bx-heart"></i></li>
-            <li><i class="bx bx-search"></i></li>
-            <li><i class="bx bx-cart"></i></li>
-          </ul>
-        </div>
-
-        <!--web cam-->
-        <div class="product-item">
-          <div class="overlay">
-            <a href="" class="product-thumb">
-              <img src="./images/a6.jpg" alt="" />
-            </a>
-          </div>
-          <div class="product-info">
-            <span>ACCESSORIES</span>
-            <a href="">Web camera</a>
-            <h4>Rs.3750</h4>
-          </div>
-          <ul class="icons">
-            <li><i class="bx bx-heart"></i></li>
-            <li><i class="bx bx-search"></i></li>
-            <li><i class="bx bx-cart"></i></li>
-          </ul>
-        </div>
-
-        <!--ups-->
-        <div class="product-item">
-            <div class="overlay">
-              <a href="" class="product-thumb">
-                <img src="./images/a7.png" alt="" />
-              </a>
-              <span class="discount">40%</span>
-            </div>
+            <!-- Product Info -->
             <div class="product-info">
-              <span>ACCESSORIES</span>
-              <a href="">Uninterrupted Power Supply</a>
-              <h4>Rs.7800</h4>
-            </div>
-            <ul class="icons">
-              <li><i class="bx bx-heart"></i></li>
-              <li><i class="bx bx-search"></i></li>
-              <li><i class="bx bx-cart"></i></li>
-            </ul>
-          </div>
+              <div class="product-header">
+                <h1>Portable Bluetooth Speaker</h1>
+                <div class="product-rating">
+                  <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                  </div>
+                  <span class="rating-text">(4.5/5)</span>
+                  <span class="reviews-count">• 127 reviews</span>
+                </div>
+                <p class="product-sku">SKU: SPK-BT-PORT-001</p>
+              </div>
 
-          <!--extension cable-->
-        <div class="product-item">
-            <div class="overlay">
-              <a href="" class="product-thumb">
-                <img src="./images/a8.jpg" alt="" />
-              </a>
+              <div class="product-price">
+                <span class="current-price">Rs. 6,500</span>
+                <span class="original-price">Rs. 8,000</span><br />
+                <span class="discount-badge">Save Rs. 1,500</span>
+              </div>
+
+              <div class="product-highlights">
+                <h3><i class="fas fa-star"></i> Key Features</h3>
+                <ul>
+                  <li>
+                    <i class="fas fa-bluetooth-b"></i> Bluetooth 5.0
+                    Connectivity
+                  </li>
+                  <li><i class="fas fa-volume-up"></i> 20W Powerful Output</li>
+                  <li>
+                    <i class="fas fa-battery-three-quarters"></i> 12-Hour
+                    Battery Life
+                  </li>
+                  <li><i class="fas fa-tint"></i> IPX6 Waterproof Rating</li>
+                  <li><i class="fas fa-microphone"></i> Built-in Microphone</li>
+                  <li><i class="fas fa-music"></i> 360° Stereo Sound</li>
+                </ul>
+              </div>
+
+              <div class="product-options">
+                <div class="option-group">
+                  <label>Color Options:</label>
+                  <div class="option-buttons">
+                    <button class="option-btn active" data-color="black">
+                      Black
+                    </button>
+                    <button class="option-btn" data-color="blue">Blue</button>
+                    <button class="option-btn" data-color="red">Red</button>
+                    <button class="option-btn" data-color="white">White</button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="quantity-section">
+                <label>Quantity:</label>
+                <div class="quantity-controls">
+                  <button class="quantity-btn" onclick="decreaseQuantity()">
+                    -
+                  </button>
+                  <input
+                    type="number"
+                    id="quantity"
+                    value="1"
+                    min="1"
+                    max="10"
+                  />
+                  <button class="quantity-btn" onclick="increaseQuantity()">
+                    +
+                  </button>
+                </div>
+                <span class="stock-info"
+                  ><i class="fas fa-check-circle"></i> In Stock (18 units
+                  available)</span
+                >
+              </div>
+
+              <div class="action-buttons">
+                <button class="add-to-cart-btn">
+                  <i class="fas fa-shopping-cart"></i> Add to Cart
+                </button>
+                <button class="buy-now-btn">
+                  <i class="fas fa-bolt"></i> Buy Now
+                </button>
+                <button class="wishlist-btn">
+                  <i class="far fa-heart"></i>
+                </button>
+              </div>
+
+              <div class="delivery-info">
+                <div class="delivery-item">
+                  <i class="fas fa-shipping-fast"></i>
+                  <div>
+                    <strong>Free Delivery</strong>
+                    <p>Island-wide delivery within 2-3 business days</p>
+                  </div>
+                </div>
+                <div class="delivery-item">
+                  <i class="fas fa-undo"></i>
+                  <div>
+                    <strong>7-Day Returns</strong>
+                    <p>Easy returns within 7 days of delivery</p>
+                  </div>
+                </div>
+                <div class="delivery-item">
+                  <i class="fas fa-shield-alt"></i>
+                  <div>
+                    <strong>2-Year Warranty</strong>
+                    <p>Manufacturer warranty included</p>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div class="product-info">
-              <span>ACCESSORIES</span>
-              <a href="">Extension Chord</a>
-              <h4>Rs.4100</h4>
-            </div>
-            <ul class="icons">
-              <li><i class="bx bx-heart"></i></li>
-              <li><i class="bx bx-search"></i></li>
-              <li><i class="bx bx-cart"></i></li>
-            </ul>
           </div>
-      </div>
-    </section>
+        </div>
+      </section>
+
+      <!-- Product Tabs -->
+      <section class="product-tabs-section">
+        <div class="container">
+          <div class="tabs-container">
+            <div class="tab-buttons">
+              <button
+                class="tab-btn active"
+                onclick="showTab('specifications')"
+              >
+                <i class="fas fa-list"></i> Specifications
+              </button>
+              <button class="tab-btn" onclick="showTab('reviews')">
+                <i class="fas fa-star"></i> Reviews (127)
+              </button>
+              <button class="tab-btn" onclick="showTab('warranty')">
+                <i class="fas fa-shield-alt"></i> Warranty
+              </button>
+            </div>
+
+            <div class="tab-content">
+              <!-- Specifications Tab -->
+              <div id="specifications" class="tab-pane active">
+                <div class="specs-grid">
+                  <div class="spec-category">
+                    <h3><i class="fas fa-volume-up"></i> Audio & Sound</h3>
+                    <table class="specs-table">
+                      <tr>
+                        <td>Type</td>
+                        <td>Portable Bluetooth Speaker</td>
+                      </tr>
+                      <tr>
+                        <td>Connectivity</td>
+                        <td>Bluetooth 5.0</td>
+                      </tr>
+                      <tr>
+                        <td>Output Power</td>
+                        <td>20W Total (10W x 2)</td>
+                      </tr>
+                      <tr>
+                        <td>Frequency Response</td>
+                        <td>65Hz - 20kHz</td>
+                      </tr>
+                    </table>
+                  </div>
+
+                  <div class="spec-category">
+                    <h3><i class="fas fa-cog"></i> Performance</h3>
+                    <table class="specs-table">
+                      <tr>
+                        <td>Audio Codecs</td>
+                        <td>SBC, AAC</td>
+                      </tr>
+                      <tr>
+                        <td>Signal-to-Noise Ratio</td>
+                        <td>≥ 85dB</td>
+                      </tr>
+                      <tr>
+                        <td>Driver Size</td>
+                        <td>2 x 52mm Full Range</td>
+                      </tr>
+                      <tr>
+                        <td>Bluetooth Range</td>
+                        <td>Up to 10m (33ft)</td>
+                      </tr>
+                    </table>
+                  </div>
+
+                  <div class="spec-category">
+                    <h3><i class="fas fa-battery-full"></i> Power</h3>
+                    <table class="specs-table">
+                      <tr>
+                        <td>Battery</td>
+                        <td>2400mAh Li-ion</td>
+                      </tr>
+                      <tr>
+                        <td>Battery Life</td>
+                        <td>Up to 12 hours</td>
+                      </tr>
+                      <tr>
+                        <td>Charging Time</td>
+                        <td>3-4 hours</td>
+                      </tr>
+                      <tr>
+                        <td>Charging Port</td>
+                        <td>USB-C</td>
+                      </tr>
+                    </table>
+                  </div>
+
+                  <div class="spec-category">
+                    <h3><i class="fas fa-desktop"></i> Compatibility</h3>
+                    <table class="specs-table">
+                      <tr>
+                        <td>Operating Systems</td>
+                        <td>iOS, Android, Windows, macOS</td>
+                      </tr>
+                      <tr>
+                        <td>Water Resistance</td>
+                        <td>IPX6</td>
+                      </tr>
+                      <tr>
+                        <td>Microphone</td>
+                        <td>Built-in for Hands-free Calls</td>
+                      </tr>
+                    </table>
+                  </div>
+
+                  <div class="spec-category">
+                    <h3><i class="fas fa-ruler"></i> Physical</h3>
+                    <table class="specs-table">
+                      <tr>
+                        <td>Dimensions</td>
+                        <td>210 x 70 x 70 mm</td>
+                      </tr>
+                      <tr>
+                        <td>Weight</td>
+                        <td>650g</td>
+                      </tr>
+                      <tr>
+                        <td>Color Options</td>
+                        <td>Black, Blue, Red, White</td>
+                      </tr>
+                      <tr>
+                        <td>Package Contents</td>
+                        <td>Speaker, USB-C Cable, User Manual</td>
+                      </tr>
+                    </table>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Reviews Tab -->
+              <div id="reviews" class="tab-pane">
+                <div class="reviews-summary">
+                  <div class="rating-overview">
+                    <div class="rating-score">
+                      <span class="score">4.5</span>
+                      <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                      </div>
+                      <p>Based on 127 reviews</p>
+                    </div>
+                    <div class="rating-breakdown">
+                      <div class="rating-bar">
+                        <span>5 stars</span>
+                        <div class="bar">
+                          <div class="fill" style="width: 68%"></div>
+                        </div>
+                        <span>68%</span>
+                      </div>
+                      <div class="rating-bar">
+                        <span>4 stars</span>
+                        <div class="bar">
+                          <div class="fill" style="width: 22%"></div>
+                        </div>
+                        <span>22%</span>
+                      </div>
+                      <div class="rating-bar">
+                        <span>3 stars</span>
+                        <div class="bar">
+                          <div class="fill" style="width: 8%"></div>
+                        </div>
+                        <span>8%</span>
+                      </div>
+                      <div class="rating-bar">
+                        <span>2 stars</span>
+                        <div class="bar">
+                          <div class="fill" style="width: 2%"></div>
+                        </div>
+                        <span>2%</span>
+                      </div>
+                      <div class="rating-bar">
+                        <span>1 star</span>
+                        <div class="bar">
+                          <div class="fill" style="width: 0%"></div>
+                        </div>
+                        <span>0%</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="reviews-list">
+                  <div class="review-item">
+                    <div class="review-header">
+                      <div class="reviewer-info">
+                        <strong>Sarah Mendis</strong>
+                        <div class="stars">
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                        </div>
+                      </div>
+                      <span class="review-date">2 weeks ago</span>
+                    </div>
+                    <h4>Amazing sound quality!</h4>
+                    <p>
+                      This speaker delivers incredible sound quality for its
+                      size. The bass is surprisingly deep and the battery life
+                      is excellent. Perfect for outdoor gatherings and beach
+                      trips. The waterproof feature really works!
+                    </p>
+                    <div class="review-helpful">
+                      <button>
+                        <i class="fas fa-thumbs-up"></i> Helpful (24)
+                      </button>
+                    </div>
+                  </div>
+
+                  <div class="review-item">
+                    <div class="review-header">
+                      <div class="reviewer-info">
+                        <strong>Mike Rodriguez</strong>
+                        <div class="stars">
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="far fa-star"></i>
+                        </div>
+                      </div>
+                      <span class="review-date">1 month ago</span>
+                    </div>
+                    <h4>Great value for money</h4>
+                    <p>
+                      Solid build quality and great sound. Bluetooth connection
+                      is stable and the speaker connects quickly. Only minor
+                      complaint is that it could be slightly louder for very
+                      large outdoor spaces, but overall very satisfied.
+                    </p>
+                    <div class="review-helpful">
+                      <button>
+                        <i class="fas fa-thumbs-up"></i> Helpful (16)
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Warranty Tab -->
+              <div id="warranty" class="tab-pane">
+                <div class="warranty-content">
+                  <div class="warranty-card">
+                    <div class="warranty-header">
+                      <i class="fas fa-shield-alt"></i>
+                      <h3>2-Year Manufacturer Warranty</h3>
+                    </div>
+                    <div class="warranty-details">
+                      <h4>What's Covered:</h4>
+                      <ul>
+                        <li>Manufacturing defects</li>
+                        <li>Audio driver failures</li>
+                        <li>Bluetooth connectivity issues</li>
+                        <li>Battery performance problems</li>
+                        <li>Charging port malfunctions</li>
+                      </ul>
+
+                      <h4>What's Not Covered:</h4>
+                      <ul>
+                        <li>Physical damage from drops or impacts</li>
+                        <li>Water damage beyond IPX6 rating</li>
+                        <li>Normal wear and tear</li>
+                        <li>Damage due to misuse</li>
+                        <li>Battery degradation after 1 year</li>
+                      </ul>
+
+                      <h4>Warranty Service:</h4>
+                      <p>
+                        For warranty claims, contact our service center at
+                        <strong>+94 11 234 5678</strong> or email
+                        <strong>support@techhub.lk</strong>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Related Products -->
+      <section class="related-products-section">
+        <div class="container">
+          <h2>You May Also Like</h2>
+          <div class="related-products-grid">
+            <div class="product-card">
+              <div class="product-image">
+                <img
+                  src="assets/images/products/a1.jpg"
+                  alt="Wireless Optical Mouse"
+                />
+                <a href="mouse.html" class="view-btn">View Details</a>
+              </div>
+              <div class="product-info">
+                <h3>Wireless Optical Mouse</h3>
+                <div class="product-price">
+                  <span class="price">Rs. 3,500</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="product-card">
+              <div class="product-image">
+                <img
+                  src="assets/images/products/a2.jpg"
+                  alt="Mechanical Gaming Keyboard"
+                />
+                <a href="keyboard.html" class="view-btn">View Details</a>
+              </div>
+              <div class="product-info">
+                <h3>Mechanical Gaming Keyboard</h3>
+                <div class="product-price">
+                  <span class="price">Rs. 8,500</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="product-card">
+              <div class="product-image">
+                <img
+                  src="assets/images/products/a3.jpg"
+                  alt="Premium Wireless Earphones"
+                />
+                <a href="earphone.html" class="view-btn">View Details</a>
+              </div>
+              <div class="product-info">
+                <h3>Premium Wireless Earphones</h3>
+                <div class="product-price">
+                  <span class="price">Rs. 4,500</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
 
     <!-- Footer -->
     <footer>
-      <div class="footer-column">
-        <h3>Company</h3>
-        <ul>
-          <li><a href="#">About Us</a></li>
-          <li><a href="#">Careers</a></li>
-          <li><a href="#">Customer Reviews</a></li>
-        </ul>
-      </div>
-      
-      <div class="footer-column">
-        <h3>Contact</h3>
-        <ul>
-          <li><a href="#">Store Locations</a></li>
-          <li><a href="#">Online Enquiry</a></li>
-          <li><a href="#">Phone Details</a></li>
-          <li><a href="#">Feedback & Complaints</a></li>
-          <li><a href="#">FAQs</a></li>
-        </ul>
-      </div>
-      
-      <div class="footer-column">
-        <h3>Information</h3>
-        <ul>
-          <li><a href="#">Open Hours</a></li>
-          <li><a href="#">Warranty & Returns</a></li>
-          <li><a href="#">Shipping</a></li>
-          <li><a href="#">Terms & Conditions</a></li>
-          <li><a href="#">Privacy Statement</a></li>
-        </ul>
-      </div>
-      
-      <div class="footer-column wider-column">
-        <h3>Don’t Miss Anything</h3>
-        <p>Subscribe to get the notifications of latest products, Deals & Giveaways!</p>
-        <form id="emailForm">
-          <input type="email" placeholder="Enter your Email" name="email">
-          <button type="submit">Subscribe</button>
-        </form>
-        <h4>Stay in Touch</h4>
-        <div class="social-media">
-          <a href="#"><img src="./images/footer/facebook.png" alt="Facebook"></a>
-          <a href="#"><img src="./images/footer/twitter.png" alt="Twitter"></a>
-          <a href="#"><img src="./images/footer/instagram.jpg" alt="Instagram"></a>
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>TechHub</h3>
+          <p>Your trusted technology partner for all computing needs</p>
+          <div class="newsletter-form">
+            <h4>Newsletter</h4>
+            <p>Stay updated with our latest offers</p>
+            <div class="input-group">
+              <input type="email" placeholder="Enter your email" />
+              <button type="submit">
+                <i class="fas fa-paper-plane"></i> Subscribe
+              </button>
+            </div>
+          </div>
         </div>
-       
+
+        <div class="footer-section">
+          <h4>Quick Links</h4>
+          <ul>
+            <li>
+              <a href="home.html"><i class="fas fa-home"></i> Home</a>
+            </li>
+            <li>
+              <a href="Laptop.html"><i class="fas fa-laptop"></i> Laptops</a>
+            </li>
+            <li>
+              <a href="desktop.html"><i class="fas fa-desktop"></i> Desktops</a>
+            </li>
+            <li>
+              <a href="accessories.html"
+                ><i class="fas fa-mouse"></i> Accessories</a
+              >
+            </li>
+            <li>
+              <a href="aboutus.html"
+                ><i class="fas fa-info-circle"></i> About Us</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h4>Contact Info</h4>
+          <p><i class="fas fa-map-marker-alt"></i> 123 Galle Road, Moratuwa</p>
+          <p><i class="fas fa-phone"></i> +94 11 234 5678</p>
+          <p><i class="fas fa-envelope"></i> info@techhub.lk</p>
+          <p><i class="fas fa-clock"></i> Mon-Sat: 9AM-8PM</p>
+        </div>
+
+        <div class="footer-section">
+          <h4>Follow Us</h4>
+          <p>Connect with us on social media</p>
+          <div class="social-links">
+            <a href="#" class="facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="youtube"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>
+          &copy; 2024 TechHub. All rights reserved. |
+          <a href="privacyPolicy.html">Privacy Policy</a> |
+          <a href="termsConditions.html">Terms of Service</a>
+        </p>
       </div>
     </footer>
+
+    <script>
+      // Image gallery functionality
+      function changeMainImage(thumbnail) {
+        const mainImage = document.getElementById("mainImage");
+        mainImage.src = thumbnail.src;
+
+        // Update active thumbnail
+        document
+          .querySelectorAll(".thumbnail")
+          .forEach((t) => t.classList.remove("active"));
+        thumbnail.classList.add("active");
+      }
+
+      // Quantity controls
+      function increaseQuantity() {
+        const input = document.getElementById("quantity");
+        const current = parseInt(input.value);
+        if (current < 10) {
+          input.value = current + 1;
+        }
+      }
+
+      function decreaseQuantity() {
+        const input = document.getElementById("quantity");
+        const current = parseInt(input.value);
+        if (current > 1) {
+          input.value = current - 1;
+        }
+      }
+
+      // Tab functionality
+      function showTab(tabName) {
+        // Hide all tab panes
+        document.querySelectorAll(".tab-pane").forEach((pane) => {
+          pane.classList.remove("active");
+        });
+
+        // Remove active class from all buttons
+        document.querySelectorAll(".tab-btn").forEach((btn) => {
+          btn.classList.remove("active");
+        });
+
+        // Show selected tab
+        document.getElementById(tabName).classList.add("active");
+        event.target.classList.add("active");
+      }
+
+      // Option buttons functionality
+      document.querySelectorAll(".option-btn").forEach((btn) => {
+        btn.addEventListener("click", function () {
+          // Remove active class from siblings
+          this.parentNode.querySelectorAll(".option-btn").forEach((sibling) => {
+            sibling.classList.remove("active");
+          });
+
+          // Add active class to clicked button
+          this.classList.add("active");
+        });
+      });
+
+      // Add to cart functionality
+      document
+        .querySelector(".add-to-cart-btn")
+        .addEventListener("click", function () {
+          const originalText = this.innerHTML;
+          this.innerHTML = '<i class="fas fa-check"></i> Added to Cart!';
+          this.style.backgroundColor = "#38a169";
+
+          setTimeout(() => {
+            this.innerHTML = originalText;
+            this.style.backgroundColor = "";
+          }, 2000);
+        });
+
+      // Wishlist functionality
+      document
+        .querySelector(".wishlist-btn")
+        .addEventListener("click", function () {
+          const icon = this.querySelector("i");
+          icon.classList.toggle("far");
+          icon.classList.toggle("fas");
+
+          if (icon.classList.contains("fas")) {
+            this.style.color = "#e53e3e";
+          } else {
+            this.style.color = "";
+          }
+        });
+    </script>
   </body>
 </html>
