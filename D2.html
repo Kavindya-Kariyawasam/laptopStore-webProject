@@ -1,232 +1,834 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css"/>
-    <link rel="stylesheet" type="text/css" href="desktop.css">
-    <link rel="stylesheet" type="text/css" href="navbar.css">
-    <link rel="stylesheet" type="text/css" href="footer.css">
-    <script defer src="menu.js"></script>
-    <script defer src="footer.js"></script>
-    <title>Desktop</title>
-</head>
-<body >
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Font Awesome Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/navbar.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/footer.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="assets/css/desktopDetails.css"
+    />
+
+    <!-- JavaScript -->
+    <script defer src="assets/js/menu.js"></script>
+    <script defer src="assets/js/footer.js"></script>
+
+    <title>HP All in One 24 cr0067d PC-i5 - TechHub</title>
+  </head>
+
+  <body>
+    <!-- Header -->
     <nav class="navbar">
-        <div class="navbar-container">
-            <div class="navbar-brand">
-                <a href="home.html">
-                 <img src="./images/logo.png" alt="Lap_store logo">
-                </a>
-            </div>
-
-            <ul class="navbar-nav-left">
-                <li><a href="home.html">Home</a></li>
-                <li><a href="Laptop.html">Laptops</a></li>
-                <li><a href="desktop.html">Desktops</a></li>
-                <li><a href="accessories.html">Accessories</a></li>
-                <li><a href="aboutus.html">About</a></li>
-            </ul>
-
-            <ul class="navbar-nav-right">
-                <li><a href="signup.php"><button class="btn btn-dark-outline">Join now</button></a></li>
-                <li><a href="login.php"><button class="btn btn-dark">Sign in</button></a></li>
-            </ul> 
-            
-            <!-- Hamburger Menu -->
-            <button class="hamburger" type="button" id="menu-btn">
-                <span class="hamburger-top"></span>
-                <span class="hamburger-middle"></span>
-                <span class="hamburger-bottom"></span>
-            </button>
+      <div class="navbar-container">
+        <div class="navbar-brand">
+          <a href="home.html">
+            <img src="./assets/images/icons/logo.png" alt="TechHub logo" />
+          </a>
         </div>
+
+        <ul class="navbar-nav-left">
+          <li>
+            <a href="home.html"><i class="fas fa-home"></i> Home</a>
+          </li>
+          <li>
+            <a href="Laptop.html"><i class="fas fa-laptop"></i> Laptops</a>
+          </li>
+          <li>
+            <a href="desktop.html"><i class="fas fa-desktop"></i> Desktops</a>
+          </li>
+          <li>
+            <a href="accessories.html"
+              ><i class="fas fa-mouse"></i> Accessories</a
+            >
+          </li>
+          <li>
+            <a href="aboutus.html"><i class="fas fa-info-circle"></i> About</a>
+          </li>
+        </ul>
+
+        <ul class="navbar-nav-right">
+          <li>
+            <a href="login.php" class="btn btn-dark-outline">
+              <i class="fas fa-sign-in-alt"></i> Login
+            </a>
+          </li>
+          <li>
+            <a href="signup.php" class="btn btn-dark">
+              <i class="fas fa-user-plus"></i> Register
+            </a>
+          </li>
+        </ul>
+
+        <button class="hamburger">
+          <span class="hamburger-top"></span>
+          <span class="hamburger-middle"></span>
+          <span class="hamburger-bottom"></span>
+        </button>
+      </div>
     </nav>
 
-
     <!-- Mobile Menu -->
-    <div class="mobile-menu hidden" id="menu">
-        <ul>
-          <li><a href="home.html">Home</a></li>
-          <li><a href="Laptop.html">Laptops</a></li>
-          <li><a href="desktop.html">Desktops</a></li>
-          <li><a href="accessories.html">Accessories</a></li>
-          <li><a href="aboutus.html">About</a></li>
-        </ul>
-        <div class="mobile-menu-bottom">
-            <ul>
-                <li><a href="signup.php"><button class="btn btn-dark-outline">Join now</button></a></li>
-                <li><a href="login.php"><button class="btn btn-dark">Sign in</button></a></li>
-            </ul>
-        </div>
+    <div class="mobile-menu hidden">
+      <ul>
+        <li>
+          <a href="home.html"><i class="fas fa-home"></i> Home</a>
+        </li>
+        <li>
+          <a href="Laptop.html"><i class="fas fa-laptop"></i> Laptops</a>
+        </li>
+        <li>
+          <a href="desktop.html"><i class="fas fa-desktop"></i> Desktops</a>
+        </li>
+        <li>
+          <a href="accessories.html"
+            ><i class="fas fa-mouse"></i> Accessories</a
+          >
+        </li>
+        <li>
+          <a href="aboutus.html"><i class="fas fa-info-circle"></i> About</a>
+        </li>
+      </ul>
+      <div class="mobile-menu-bottom">
+        <a href="login.php" class="btn btn-dark-outline">
+          <i class="fas fa-sign-in-alt"></i> Login
+        </a>
+        <a href="signup.php" class="btn btn-dark">
+          <i class="fas fa-user-plus"></i> Register
+        </a>
+      </div>
     </div>
 
-    <div style="margin-left: 85px; margin-right: 20px;">
-        
-    
-        <!--Desktop1 Details-->
-        <div class="details">
-            <div class="leftImageContainer">
-                <img src="./images/D2.jpg" alt="Desktop2">
-            </div>
-            <div class="rightDetails">
-                <span>All in one, Desktop, Laptops and Computers</span>
-                <h1>HP All in One 24 cr0065d PC - i5</h1><hr>
-                <div class="d1Details">
-                    <p>-Intel Core i5 - 1335U Processor</p>
-                    <p>-512GB PCIe NVMe M.2 SSD</p>
-                    <p>-8GB DDR4-3200 MHz RAM</p>
-                    <p>-23.8", FHD(1920 x 1080),IPS Display</p> 
-                    <p>-Intel UHD Graphics</p>   
-                    <p>-Windows 11 Home</p>   
-                    <p>-MS Office 2021</p>   
-                
-                <p>
-                    <strong>*Free MS212 Bluetooth Speaker*</strong>
-                </p>
-    
-                </div>
-                <img src="./images/d1_warranty.jpg" alt="warranty">
-                <h1>Rs.289,000</h1>
-                <form class="form">
-                    <input type="text" placeholder="1">
-                    <a href="#" class="addCart">Add To Cart</a>
-                </form>
-                
-            </div>
+    <!-- Main Content -->
+    <main class="main-content">
+      <!-- Breadcrumb -->
+      <section class="breadcrumb-section">
+        <div class="container">
+          <nav class="breadcrumb">
+            <a href="home.html"><i class="fas fa-home"></i> Home</a>
+            <span class="separator">></span>
+            <a href="desktop.html">Desktops</a>
+            <span class="separator">></span>
+            <span class="current">HP All in One 24 cr0067d PC-i5</span>
+          </nav>
         </div>
-    
-        <!--Related-->
-        <section class="section featured">
-            <div class="top container">
-                <h1>Related Products</h1>
-                <a href="#" class="view-more">View more</a>
-            </div>
-            <div class="product-center container">
-                <div class="product-item">
-                    <div class="overlay">
-                        <a href="" class="product-thumb">
-                            <img src="./images/D1.jpg" alt="">
-                        </a>
-                    </div>
-                    <div class="product-info">
-                        <span>Desktop</span>
-                        <a href="">HP All in One 24 cr0065d PC-i3</a>
-                        <h4>Rs 289,000</h4>
-                    </div>
-                    <ul class="icons">
-                        <li><i class="bx bx-heart"></i></li>
-                        <li><i class="bx bx-search"></i></li>
-                        <li><i class="bx bx-cart"></i></li>
-                    </ul>
-                </div>
-    
-                <div class="product-item">
-                    <div class="overlay">
-                        <a href="" class="product-thumb">
-                            <img src="./images/D3.jpg" alt="">
-                        </a>
-                    </div>
-                    <div class="product-info">
-                        <span>Desktop</span>
-                        <a href="">HP PRO TOWER 280 G9 Core i5 12th Gen Desktop Computer</a>
-                        <h4>Rs 223,000</h4>
-                    </div>
-                    <ul class="icons">
-                        <li><i class="bx bx-heart"></i></li>
-                        <li><i class="bx bx-search"></i></li>
-                        <li><i class="bx bx-cart"></i></li>
-                    </ul>
-                </div>
-    
-                <div class="product-item">
-                    <div class="overlay">
-                        <a href="" class="product-thumb">
-                            <img src="./images/D4.jpg" alt="">
-                        </a>
-                    </div>
-                    <div class="product-info">
-                        <span>Desktop</span>
-                        <a href="">TECH-GAMING Intel Core i3-12100 12th Gen+</a>
-                        <h4>Rs 168,000</h4>
-                    </div>
-                    <ul class="icons">
-                        <li><i class="bx bx-heart"></i></li>
-                        <li><i class="bx bx-search"></i></li>
-                        <li><i class="bx bx-cart"></i></li>
-                    </ul>
-                </div>
-    
-                <div class="product-item">
-                    <div class="overlay">
-                        <a href="" class="product-thumb">
-                            <img src="./images/D5.jpg" alt="" style="width:auto; height:270px">
-                        </a>
-                    </div>
-                    <div class="product-info">
-                        <span>Desktop</span>
-                        <a href="">DELL VOSTRO 3020|I5 13GEN|8GB|256GB+ITB|18.5LED|DOS</a>
-                        <h4>Rs 297,000</h4>
-                    </div>
-                    <ul class="icons">
-                        <li><i class="bx bx-heart"></i></li>
-                        <li><i class="bx bx-search"></i></li>
-                        <li><i class="bx bx-cart"></i></li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-    
-       
-    
-    </div>
+      </section>
 
-     <!--Footer-->
-     <footer>
-        <div class="footer-column">
-          <h3>Company</h3>
+      <!-- Product Details -->
+      <section class="product-details-section">
+        <div class="container">
+          <div class="product-details-grid">
+            <!-- Product Images -->
+            <div class="product-images">
+              <div class="main-image">
+                <img
+                  src="assets/images/products/D2.jpg"
+                  alt="HP All in One 24 cr0067d PC-i5"
+                  id="mainImage"
+                />
+                <div class="image-badges">
+                  <span class="badge featured">Premium</span>
+                </div>
+              </div>
+              <div class="thumbnail-images">
+                <img
+                  src="assets/images/products/D2.jpg"
+                  alt="HP All in One - View 1"
+                  class="thumbnail active"
+                  onclick="changeMainImage(this)"
+                />
+                <img
+                  src="assets/images/products/d1_warranty.jpg"
+                  alt="HP All in One - Warranty"
+                  class="thumbnail"
+                  onclick="changeMainImage(this)"
+                />
+              </div>
+            </div>
+
+            <!-- Product Info -->
+            <div class="product-info">
+              <div class="product-header">
+                <h1>HP All in One 24 cr0067d PC-i5</h1>
+                <div class="product-rating">
+                  <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </div>
+                  <span class="rating-text">(4.5/5)</span>
+                  <span class="reviews-count">• 127 reviews</span>
+                </div>
+                <p class="product-sku">SKU: HP-AIO-24-CR0067D</p>
+              </div>
+
+              <div class="product-price">
+                <span class="current-price">Rs. 145,000</span>
+                <span class="original-price">Rs. 165,000</span><br />
+                <span class="discount-badge">Save Rs. 20,000</span>
+              </div>
+
+              <div class="product-highlights">
+                <h3><i class="fas fa-star"></i> Key Features</h3>
+                <ul>
+                  <li>
+                    <i class="fas fa-microchip"></i> Intel Core i5-8265U
+                    Processor
+                  </li>
+                  <li>
+                    <i class="fas fa-memory"></i> 8GB DDR4 RAM (Upgradeable to
+                    32GB)
+                  </li>
+                  <li>
+                    <i class="fas fa-hdd"></i> 1TB HDD + 256GB SSD Storage
+                  </li>
+                  <li><i class="fas fa-tv"></i> 23.8" Full HD IPS Display</li>
+                  <li><i class="fas fa-palette"></i> Intel UHD Graphics 620</li>
+                  <li><i class="fas fa-wifi"></i> Wi-Fi 6 & Bluetooth 5.0</li>
+                </ul>
+              </div>
+
+              <div class="product-options">
+                <div class="option-group">
+                  <label>Storage Options:</label>
+                  <div class="option-buttons">
+                    <button class="option-btn active" data-price="289000">
+                      1TB HDD + 256GB SSD
+                    </button>
+                    <button class="option-btn" data-price="325000">
+                      1TB HDD + 512GB SSD (+Rs. 36,000)
+                    </button>
+                  </div>
+                </div>
+
+                <div class="option-group">
+                  <label>RAM Configuration:</label>
+                  <div class="option-buttons">
+                    <button class="option-btn active" data-ram="8gb">
+                      8GB RAM
+                    </button>
+                    <button class="option-btn" data-ram="16gb">
+                      16GB RAM (+Rs. 18,000)
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="quantity-section">
+                <label>Quantity:</label>
+                <div class="quantity-controls">
+                  <button class="quantity-btn" onclick="decreaseQuantity()">
+                    -
+                  </button>
+                  <input
+                    type="number"
+                    id="quantity"
+                    value="1"
+                    min="1"
+                    max="10"
+                  />
+                  <button class="quantity-btn" onclick="increaseQuantity()">
+                    +
+                  </button>
+                </div>
+                <span class="stock-info"
+                  ><i class="fas fa-check-circle"></i> In Stock (12 units
+                  available)</span
+                >
+              </div>
+
+              <div class="action-buttons">
+                <button class="add-to-cart-btn">
+                  <i class="fas fa-shopping-cart"></i> Add to Cart
+                </button>
+                <button class="buy-now-btn">
+                  <i class="fas fa-bolt"></i> Buy Now
+                </button>
+                <button class="wishlist-btn">
+                  <i class="far fa-heart"></i>
+                </button>
+              </div>
+
+              <div class="delivery-info">
+                <div class="delivery-item">
+                  <i class="fas fa-shipping-fast"></i>
+                  <div>
+                    <strong>Free Delivery</strong>
+                    <p>Island-wide delivery within 3-5 business days</p>
+                  </div>
+                </div>
+                <div class="delivery-item">
+                  <i class="fas fa-undo"></i>
+                  <div>
+                    <strong>7-Day Returns</strong>
+                    <p>Easy returns within 7 days of delivery</p>
+                  </div>
+                </div>
+                <div class="delivery-item">
+                  <i class="fas fa-shield-alt"></i>
+                  <div>
+                    <strong>3-Year Warranty</strong>
+                    <p>Extended manufacturer warranty included</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Product Tabs -->
+      <section class="product-tabs-section">
+        <div class="container">
+          <div class="tabs-container">
+            <div class="tab-buttons">
+              <button
+                class="tab-btn active"
+                onclick="showTab('specifications')"
+              >
+                <i class="fas fa-list"></i> Specifications
+              </button>
+              <button class="tab-btn" onclick="showTab('reviews')">
+                <i class="fas fa-star"></i> Reviews (127)
+              </button>
+              <button class="tab-btn" onclick="showTab('warranty')">
+                <i class="fas fa-shield-alt"></i> Warranty
+              </button>
+            </div>
+
+            <div class="tab-content">
+              <!-- Specifications Tab -->
+              <div id="specifications" class="tab-pane active">
+                <div class="specs-grid">
+                  <div class="spec-category">
+                    <h3><i class="fas fa-microchip"></i> Processor</h3>
+                    <table class="specs-table">
+                      <tr>
+                        <td>Processor</td>
+                        <td>Intel Core i5-8265U</td>
+                      </tr>
+                      <tr>
+                        <td>Processor Speed</td>
+                        <td>1.6 GHz (up to 3.9 GHz)</td>
+                      </tr>
+                      <tr>
+                        <td>Number of Cores</td>
+                        <td>4 Cores, 8 Threads</td>
+                      </tr>
+                      <tr>
+                        <td>Cache</td>
+                        <td>6MB Intel Smart Cache</td>
+                      </tr>
+                    </table>
+                  </div>
+
+                  <div class="spec-category">
+                    <h3><i class="fas fa-memory"></i> Memory & Storage</h3>
+                    <table class="specs-table">
+                      <tr>
+                        <td>RAM</td>
+                        <td>8GB DDR4-2400MHz</td>
+                      </tr>
+                      <tr>
+                        <td>RAM Slots</td>
+                        <td>2 Slots (1 used, 1 free)</td>
+                      </tr>
+                      <tr>
+                        <td>Max RAM</td>
+                        <td>32GB</td>
+                      </tr>
+                      <tr>
+                        <td>Storage</td>
+                        <td>1TB 7200RPM HDD + 256GB PCIe SSD</td>
+                      </tr>
+                    </table>
+                  </div>
+
+                  <div class="spec-category">
+                    <h3><i class="fas fa-tv"></i> Display</h3>
+                    <table class="specs-table">
+                      <tr>
+                        <td>Screen Size</td>
+                        <td>23.8 inches</td>
+                      </tr>
+                      <tr>
+                        <td>Resolution</td>
+                        <td>1920 x 1080 (Full HD)</td>
+                      </tr>
+                      <tr>
+                        <td>Display Type</td>
+                        <td>IPS LED-backlit</td>
+                      </tr>
+                      <tr>
+                        <td>Brightness</td>
+                        <td>250 nits</td>
+                      </tr>
+                    </table>
+                  </div>
+
+                  <div class="spec-category">
+                    <h3><i class="fas fa-palette"></i> Graphics</h3>
+                    <table class="specs-table">
+                      <tr>
+                        <td>Graphics</td>
+                        <td>Intel UHD Graphics 620</td>
+                      </tr>
+                      <tr>
+                        <td>Video Memory</td>
+                        <td>Shared with system memory</td>
+                      </tr>
+                    </table>
+                  </div>
+
+                  <div class="spec-category">
+                    <h3><i class="fas fa-plug"></i> Connectivity</h3>
+                    <table class="specs-table">
+                      <tr>
+                        <td>Wi-Fi</td>
+                        <td>Wi-Fi 6 (802.11ax)</td>
+                      </tr>
+                      <tr>
+                        <td>Bluetooth</td>
+                        <td>Bluetooth 5.0</td>
+                      </tr>
+                      <tr>
+                        <td>USB Ports</td>
+                        <td>2x USB 3.1, 2x USB 2.0</td>
+                      </tr>
+                      <tr>
+                        <td>Other Ports</td>
+                        <td>HDMI, Audio Jack, Ethernet, SD Card Reader</td>
+                      </tr>
+                    </table>
+                  </div>
+
+                  <div class="spec-category">
+                    <h3><i class="fas fa-desktop"></i> Physical</h3>
+                    <table class="specs-table">
+                      <tr>
+                        <td>Dimensions</td>
+                        <td>543.6 x 463.9 x 173.8 mm</td>
+                      </tr>
+                      <tr>
+                        <td>Weight</td>
+                        <td>5.5 kg</td>
+                      </tr>
+                      <tr>
+                        <td>Color</td>
+                        <td>Natural Silver</td>
+                      </tr>
+                      <tr>
+                        <td>Included</td>
+                        <td>Wireless Keyboard & Mouse, Webcam</td>
+                      </tr>
+                    </table>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Reviews Tab -->
+              <div id="reviews" class="tab-pane">
+                <div class="reviews-summary">
+                  <div class="rating-overview">
+                    <div class="rating-score">
+                      <span class="score">4.5</span>
+                      <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                      </div>
+                      <p>Based on 127 reviews</p>
+                    </div>
+                    <div class="rating-breakdown">
+                      <div class="rating-bar">
+                        <span>5 stars</span>
+                        <div class="bar">
+                          <div class="fill" style="width: 58%"></div>
+                        </div>
+                        <span>58%</span>
+                      </div>
+                      <div class="rating-bar">
+                        <span>4 stars</span>
+                        <div class="bar">
+                          <div class="fill" style="width: 28%"></div>
+                        </div>
+                        <span>28%</span>
+                      </div>
+                      <div class="rating-bar">
+                        <span>3 stars</span>
+                        <div class="bar">
+                          <div class="fill" style="width: 10%"></div>
+                        </div>
+                        <span>10%</span>
+                      </div>
+                      <div class="rating-bar">
+                        <span>2 stars</span>
+                        <div class="bar">
+                          <div class="fill" style="width: 3%"></div>
+                        </div>
+                        <span>3%</span>
+                      </div>
+                      <div class="rating-bar">
+                        <span>1 star</span>
+                        <div class="bar">
+                          <div class="fill" style="width: 1%"></div>
+                        </div>
+                        <span>1%</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="reviews-list">
+                  <div class="review-item">
+                    <div class="review-header">
+                      <div class="reviewer-info">
+                        <strong>Rajesh Kumar</strong>
+                        <div class="stars">
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                        </div>
+                      </div>
+                      <span class="review-date">1 week ago</span>
+                    </div>
+                    <h4>Excellent performance and value</h4>
+                    <p>
+                      Outstanding desktop PC with great i5 performance. The SSD
+                      + HDD combo gives both speed and storage capacity. Display
+                      quality is crisp and clear. Perfect for both work and
+                      entertainment. Highly recommended!
+                    </p>
+                    <div class="review-helpful">
+                      <button>
+                        <i class="fas fa-thumbs-up"></i> Helpful (22)
+                      </button>
+                    </div>
+                  </div>
+
+                  <div class="review-item">
+                    <div class="review-header">
+                      <div class="reviewer-info">
+                        <strong>Anita Silva</strong>
+                        <div class="stars">
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="far fa-star"></i>
+                        </div>
+                      </div>
+                      <span class="review-date">2 weeks ago</span>
+                    </div>
+                    <h4>Great all-in-one solution</h4>
+                    <p>
+                      Very satisfied with this purchase. The i5 processor
+                      handles all my tasks smoothly. Setup was straightforward
+                      and the wireless keyboard/mouse work perfectly. Only minor
+                      issue is the fan can be slightly noisy under heavy load.
+                    </p>
+                    <div class="review-helpful">
+                      <button>
+                        <i class="fas fa-thumbs-up"></i> Helpful (14)
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Warranty Tab -->
+              <div id="warranty" class="tab-pane">
+                <div class="warranty-content">
+                  <div class="warranty-card">
+                    <div class="warranty-header">
+                      <i class="fas fa-shield-alt"></i>
+                      <h3>3-Year Extended Warranty</h3>
+                    </div>
+                    <div class="warranty-details">
+                      <h4>What's Covered:</h4>
+                      <ul>
+                        <li>Manufacturing defects</li>
+                        <li>Hardware component failures</li>
+                        <li>Display and graphics issues</li>
+                        <li>Power supply problems</li>
+                        <li>Wireless keyboard and mouse</li>
+                        <li>Built-in webcam</li>
+                      </ul>
+
+                      <h4>What's Not Covered:</h4>
+                      <ul>
+                        <li>Physical damage or liquid spills</li>
+                        <li>Software issues</li>
+                        <li>Normal wear and tear</li>
+                        <li>Damage due to power surges</li>
+                        <li>User-caused damage</li>
+                      </ul>
+
+                      <h4>Warranty Service:</h4>
+                      <p>
+                        For warranty claims, contact our service center at
+                        <strong>+94 11 264 5789</strong> or email
+                        <strong>service@techhub.lk</strong>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Related Products -->
+      <section class="related-products-section">
+        <div class="container">
+          <h2>You May Also Like</h2>
+          <div class="related-products-grid">
+            <div class="product-card">
+              <div class="product-image">
+                <img
+                  src="assets/images/products/D1.jpg"
+                  alt="HP All-in-One 24 Desktop"
+                />
+                <a href="D1.html" class="view-btn">View Details</a>
+              </div>
+              <div class="product-info">
+                <h3>HP All-in-One 24" Desktop</h3>
+                <div class="product-price">
+                  <span class="price">Rs. 185,000</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="product-card">
+              <div class="product-image">
+                <img
+                  src="assets/images/products/D3.jpg"
+                  alt="HP PRO TOWER 280 G9"
+                />
+                <a href="D3.html" class="view-btn">View Details</a>
+              </div>
+              <div class="product-info">
+                <h3>HP PRO TOWER 280 G9</h3>
+                <div class="product-price">
+                  <span class="price">Rs. 223,000</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="product-card">
+              <div class="product-image">
+                <img
+                  src="assets/images/products/D4.jpg"
+                  alt="TECH-GAMING Intel Core i3-12100"
+                />
+                <a href="D4.html" class="view-btn">View Details</a>
+              </div>
+              <div class="product-info">
+                <h3>TECH-GAMING Intel Core i3-12100</h3>
+                <div class="product-price">
+                  <span class="price">Rs. 168,000</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>TechHub</h3>
+          <p>Your trusted technology partner for all computing needs</p>
+          <div class="newsletter-form">
+            <h4>Newsletter</h4>
+            <p>Stay updated with our latest offers</p>
+            <div class="input-group">
+              <input type="email" placeholder="Enter your email" />
+              <button type="submit">
+                <i class="fas fa-paper-plane"></i> Subscribe
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-section">
+          <h4>Quick Links</h4>
           <ul>
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Careers</a></li>
-            <li><a href="#">Customer Reviews</a></li>
+            <li>
+              <a href="home.html"><i class="fas fa-home"></i> Home</a>
+            </li>
+            <li>
+              <a href="Laptop.html"><i class="fas fa-laptop"></i> Laptops</a>
+            </li>
+            <li>
+              <a href="desktop.html"><i class="fas fa-desktop"></i> Desktops</a>
+            </li>
+            <li>
+              <a href="accessories.html"
+                ><i class="fas fa-mouse"></i> Accessories</a
+              >
+            </li>
+            <li>
+              <a href="aboutus.html"
+                ><i class="fas fa-info-circle"></i> About Us</a
+              >
+            </li>
           </ul>
         </div>
-        
-        <div class="footer-column">
-          <h3>Contact</h3>
-          <ul>
-            <li><a href="#">Store Locations</a></li>
-            <li><a href="#">Online Enquiry</a></li>
-            <li><a href="#">Phone Details</a></li>
-            <li><a href="#">Feedback & Complaints</a></li>
-            <li><a href="#">FAQs</a></li>
-          </ul>
+
+        <div class="footer-section">
+          <h4>Contact Info</h4>
+          <p><i class="fas fa-map-marker-alt"></i> 123 Galle Road, Moratuwa</p>
+          <p><i class="fas fa-phone"></i> +94 11 264 5789</p>
+          <p><i class="fas fa-envelope"></i> info@techhub.lk</p>
+          <p><i class="fas fa-clock"></i> Mon-Sat: 9AM-8PM</p>
         </div>
-        
-        <div class="footer-column">
-          <h3>Information</h3>
-          <ul>
-            <li><a href="#">Open Hours</a></li>
-            <li><a href="#">Warranty & Returns</a></li>
-            <li><a href="#">Shipping</a></li>
-            <li><a href="#">Terms & Conditions</a></li>
-            <li><a href="#">Privacy Statement</a></li>
-          </ul>
+
+        <div class="footer-section">
+          <h4>Follow Us</h4>
+          <p>Connect with us on social media</p>
+          <div class="social-links">
+            <a href="#" class="facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="youtube"><i class="fab fa-youtube"></i></a>
+          </div>
         </div>
-        
-        <div class="footer-column wider-column">
-          <h3>Don’t Miss Anything</h3>
-          <p>Subscribe to get the notifications of latest products, Deals & Giveaways!</p>
-          <form id="emailForm">
-            <input type="email" placeholder="Enter your Email" name="email">
-            <button type="submit">Subscribe</button>
-          </form>
-          <h4>Stay in Touch</h4>
-          <div class="social-media">
-            <a href="#"><img src="./images/footer/facebook.png" alt="Facebook"></a>
-            <a href="#"><img src="./images/footer/twitter.png" alt="Twitter"></a>
-            <a href="#"><img src="./images/footer/instagram.jpg" alt="Instagram"></a>
-          </div>       
-        </div>
-      </footer>
-</body>
+      </div>
+
+      <div class="footer-bottom">
+        <p>
+          &copy; 2024 TechHub. All rights reserved. |
+          <a href="privacyPolicy.html">Privacy Policy</a> |
+          <a href="termsConditions.html">Terms of Service</a>
+        </p>
+      </div>
+    </footer>
+
+    <script>
+      // Image gallery functionality
+      function changeMainImage(thumbnail) {
+        const mainImage = document.getElementById("mainImage");
+        mainImage.src = thumbnail.src;
+
+        // Update active thumbnail
+        document
+          .querySelectorAll(".thumbnail")
+          .forEach((t) => t.classList.remove("active"));
+        thumbnail.classList.add("active");
+      }
+
+      // Quantity controls
+      function increaseQuantity() {
+        const input = document.getElementById("quantity");
+        const current = parseInt(input.value);
+        if (current < 10) {
+          input.value = current + 1;
+        }
+      }
+
+      function decreaseQuantity() {
+        const input = document.getElementById("quantity");
+        const current = parseInt(input.value);
+        if (current > 1) {
+          input.value = current - 1;
+        }
+      }
+
+      // Tab functionality
+      function showTab(tabName) {
+        // Hide all tab panes
+        document.querySelectorAll(".tab-pane").forEach((pane) => {
+          pane.classList.remove("active");
+        });
+
+        // Remove active class from all buttons
+        document.querySelectorAll(".tab-btn").forEach((btn) => {
+          btn.classList.remove("active");
+        });
+
+        // Show selected tab
+        document.getElementById(tabName).classList.add("active");
+        event.target.classList.add("active");
+      }
+
+      // Option buttons functionality
+      document.querySelectorAll(".option-btn").forEach((btn) => {
+        btn.addEventListener("click", function () {
+          // Remove active class from siblings
+          this.parentNode.querySelectorAll(".option-btn").forEach((sibling) => {
+            sibling.classList.remove("active");
+          });
+
+          // Add active class to clicked button
+          this.classList.add("active");
+
+          // Update price if data-price exists
+          if (this.dataset.price) {
+            document.querySelector(
+              ".current-price"
+            ).textContent = `Rs. ${parseInt(
+              this.dataset.price
+            ).toLocaleString()}`;
+          }
+        });
+      });
+
+      // Add to cart functionality
+      document
+        .querySelector(".add-to-cart-btn")
+        .addEventListener("click", function () {
+          const originalText = this.innerHTML;
+          this.innerHTML = '<i class="fas fa-check"></i> Added to Cart!';
+          this.style.backgroundColor = "#38a169";
+
+          setTimeout(() => {
+            this.innerHTML = originalText;
+            this.style.backgroundColor = "";
+          }, 2000);
+        });
+
+      // Wishlist functionality
+      document
+        .querySelector(".wishlist-btn")
+        .addEventListener("click", function () {
+          const icon = this.querySelector("i");
+          icon.classList.toggle("far");
+          icon.classList.toggle("fas");
+
+          if (icon.classList.contains("fas")) {
+            this.style.color = "#e53e3e";
+          } else {
+            this.style.color = "";
+          }
+        });
+    </script>
+  </body>
 </html>
