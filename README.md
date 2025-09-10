@@ -332,8 +332,64 @@ VALUES ('testuser', 'password123', 'test@example.com', 'Test User', '+9498765432
 
 ## 👥 Contributing
 
-- **Developer**: Kavindya Kariyawasam
+### Core Development Team  
+- **Lead Developer & Project Owner**: Kavindya Kariyawasam
+- **Developer**: Shehan Maleesha
+- **Developer**: Manodi Gamage
+- **Developer**: Lasini Pallewaththa
+- **Developer**: Parindya Mullegama
 - **Repository**: [laptopStore-webProject](https://github.com/Kavindya-Kariyawasam/laptopStore-webProject)
+
+### Major Development Work by Kavindya Kariyawasam
+
+#### 🎨 Complete UI/UX Modernization
+- **Desktop Product Pages**: Completely redesigned and modernized all desktop product detail pages (D1.html, D2.html, D3.html, D4.html) with consistent styling, responsive design, and modern component architecture
+- **Laptop Product Pages**: Modernized laptop detail pages (L1.html, L2.html, L3.html, L4.html) with improved layout, interactive elements, and cohesive design system
+- **Accessory Product Line**: Designed and developed comprehensive accessory product pages including:
+  - `mouse.html` - Wireless Optical Mouse with complete specifications and reviews
+  - `keyboard.html` - Mechanical Gaming Keyboard with switch details and RGB features
+  - `earphone.html` - Premium Wireless Earphones with ANC and audio specifications
+  - `speaker.html` - Portable Bluetooth Speaker with waterproof features and connectivity options
+
+#### 🔧 CSS Architecture & Styling Systems
+- **Desktop Details CSS**: Developed comprehensive styling system in `desktopDetails.css` with CSS custom properties, responsive grid layouts, and interactive components
+- **Laptop Details CSS**: Enhanced `laptopDetails.css` with modern design patterns, warranty container fixes, and mobile-first responsive design
+- **Accessory Details CSS**: Created unified `accessoryDetails.css` system ensuring consistent styling across all accessory product pages
+- **Component Standardization**: Implemented consistent design patterns for product cards, tabs, rating systems, and interactive elements
+
+#### 🖥️ Frontend Development & JavaScript
+- **Interactive Features**: Developed JavaScript functionality for image galleries, quantity controls, color selection, and tab navigation systems
+- **Responsive Design**: Ensured all pages work seamlessly across desktop, tablet, and mobile devices
+- **Performance Optimization**: Optimized CSS and JavaScript for better loading times and user experience
+- **Cross-browser Compatibility**: Tested and ensured compatibility across major browsers
+
+#### 📝 Technical Documentation
+- **Comprehensive README**: Created detailed project documentation including:
+  - Complete project overview and feature descriptions
+  - Technology stack documentation
+  - Installation and setup instructions
+  - Database schema and configuration
+  - Usage guidelines and development workflows
+  - Future enhancement roadmap
+- **Code Documentation**: Added inline comments and maintained clean, readable code structure
+
+#### 🔄 Git & Version Control Management
+- **Branch Management**: Maintained organized development workflow with feature branches
+- **Commit Standards**: Implemented clear commit messaging for better project history
+- **Code Review Process**: Ensured quality through systematic code review and testing
+
+#### 🎯 Project Architecture Improvements
+- **File Organization**: Restructured project for better maintainability and scalability
+- **CSS Methodology**: Implemented consistent naming conventions and modular CSS architecture
+- **Asset Management**: Organized images, icons, and static assets for optimal performance
+- **Responsive Framework**: Built custom responsive grid system using CSS Grid and Flexbox
+
+### Impact & Results
+- **Design Consistency**: Achieved unified design language across all product categories
+- **User Experience**: Significantly improved navigation, product discovery, and conversion flows
+- **Code Quality**: Established maintainable, scalable codebase for future development
+- **Documentation**: Created comprehensive guides for future developers and contributors
+- **Performance**: Optimized loading times and responsiveness across all devices
 
 ## 🙏 Acknowledgments
 
