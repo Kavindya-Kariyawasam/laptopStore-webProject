@@ -234,6 +234,70 @@ body {
   font-weight: 600;
 }
 
+/* Free Gift Banner */
+.free-gift-banner {
+  display: flex;
+  align-items: center;
+  background: linear-gradient(135deg, #48bb78, #38a169);
+  color: white;
+  padding: 15px 20px;
+  border-radius: 12px;
+  margin: 20px 0;
+  box-shadow: 0 4px 15px rgba(72, 187, 120, 0.3);
+  animation: giftPulse 2s ease-in-out infinite alternate;
+}
+
+.gift-icon {
+  font-size: 2.5rem;
+  margin-right: 15px;
+  animation: giftBounce 1.5s ease-in-out infinite;
+}
+
+.gift-content h4 {
+  margin: 0 0 5px 0;
+  font-size: 1.1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.gift-content p {
+  margin: 0 0 5px 0;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.gift-value {
+  font-size: 0.85rem;
+  opacity: 0.9;
+  font-style: italic;
+}
+
+@keyframes giftPulse {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.02);
+  }
+}
+
+@keyframes giftBounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-5px);
+  }
+  60% {
+    transform: translateY(-3px);
+  }
+}
+
 /* Product Highlights */
 .product-highlights {
   margin-bottom: 2rem;
@@ -882,6 +946,23 @@ body {
 
   .current-price {
     font-size: 2rem;
+  }
+
+  .free-gift-banner {
+    padding: 12px 15px;
+  }
+
+  .gift-icon {
+    font-size: 2rem;
+    margin-right: 12px;
+  }
+
+  .gift-content h4 {
+    font-size: 1rem;
+  }
+
+  .gift-content p {
+    font-size: 0.9rem;
   }
 
   .action-buttons {
