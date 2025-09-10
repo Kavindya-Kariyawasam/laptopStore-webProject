@@ -2,295 +2,673 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Accessories</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css"/>
-    <link rel="stylesheet" type="text/css" href="accessories.css">
-    <link rel="stylesheet" type="text/css" href="navbar.css">
-    <link rel="stylesheet" type="text/css" href="footer.css">
-    <script defer src="menu.js"></script>
-    <script defer src="footer.js"></script>
+
+    <!-- Font Awesome Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/navbar.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/footer.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/accessories.css" />
+
+    <!-- JavaScript -->
+    <script defer src="assets/js/menu.js"></script>
+    <script defer src="assets/js/footer.js"></script>
+
+    <title>Accessories - TechHub</title>
   </head>
 
   <body>
-    <!-- Navigation -->
+    <!-- Header -->
     <nav class="navbar">
       <div class="navbar-container">
-          <div class="navbar-brand">
-              <a href="home.html">
-               <img src="./images/logo.png" alt="Lap_store logo">
-              </a>
-          </div>
+        <div class="navbar-brand">
+          <a href="home.html">
+            <img src="./assets/images/icons/logo.png" alt="TechHub logo" />
+          </a>
+        </div>
 
-          <ul class="navbar-nav-left">
-            <li><a href="home.html">Home</a></li>
-            <li><a href="Laptop.html">Laptops</a></li>
-            <li><a href="desktop.html">Desktops</a></li>
-            <li><a href="accessories.html">Accessories</a></li>
-            <li><a href="aboutus.html">About</a></li>
-          </ul>
+        <ul class="navbar-nav-left">
+          <li>
+            <a href="home.html"><i class="fas fa-home"></i> Home</a>
+          </li>
+          <li>
+            <a href="Laptop.html"><i class="fas fa-laptop"></i> Laptops</a>
+          </li>
+          <li>
+            <a href="desktop.html"><i class="fas fa-desktop"></i> Desktops</a>
+          </li>
+          <li>
+            <a href="accessories.html" class="active"
+              ><i class="fas fa-mouse"></i> Accessories</a
+            >
+          </li>
+          <li>
+            <a href="aboutus.html"><i class="fas fa-info-circle"></i> About</a>
+          </li>
+        </ul>
 
-          <ul class="navbar-nav-right">
-              <li><a href="signup.php"><button class="btn btn-dark-outline">Join now</button></a></li>
-              <li><a href="login.php"><button class="btn btn-dark">Sign in</button></a></li>
-          </ul> 
-          
-          <!-- Hamburger Menu -->
-          <button class="hamburger" type="button" id="menu-btn">
-              <span class="hamburger-top"></span>
-              <span class="hamburger-middle"></span>
-              <span class="hamburger-bottom"></span>
-          </button>
+        <ul class="navbar-nav-right">
+          <li>
+            <a href="login.php" class="btn btn-dark-outline">
+              <i class="fas fa-sign-in-alt"></i> Login
+            </a>
+          </li>
+          <li>
+            <a href="signup.php" class="btn btn-dark">
+              <i class="fas fa-user-plus"></i> Register
+            </a>
+          </li>
+        </ul>
+
+        <button class="hamburger">
+          <span class="hamburger-top"></span>
+          <span class="hamburger-middle"></span>
+          <span class="hamburger-bottom"></span>
+        </button>
       </div>
-  </nav>
+    </nav>
 
-
-  <!-- Mobile Menu -->
-  <div class="mobile-menu hidden" id="menu">
+    <!-- Mobile Menu -->
+    <div class="mobile-menu hidden">
       <ul>
-        <li><a href="home.html">Home</a></li>
-        <li><a href="Laptop.html">Laptops</a></li>
-        <li><a href="desktop.html">Desktops</a></li>
-        <li><a href="accessories.html">Accessories</a></li>
-        <li><a href="aboutus.html">About</a></li>
+        <li>
+          <a href="home.html"><i class="fas fa-home"></i> Home</a>
+        </li>
+        <li>
+          <a href="Laptop.html"><i class="fas fa-laptop"></i> Laptops</a>
+        </li>
+        <li>
+          <a href="desktop.html"><i class="fas fa-desktop"></i> Desktops</a>
+        </li>
+        <li>
+          <a href="accessories.html"
+            ><i class="fas fa-mouse"></i> Accessories</a
+          >
+        </li>
+        <li>
+          <a href="aboutus.html"><i class="fas fa-info-circle"></i> About</a>
+        </li>
       </ul>
       <div class="mobile-menu-bottom">
-          <ul>
-              <li><a href="signup.php"><button class="btn btn-dark-outline">Join now</button></a></li>
-              <li><a href="login.php"><button class="btn btn-dark">Sign in</button></a></li>
-          </ul>
+        <a href="login.php" class="btn btn-dark-outline">
+          <i class="fas fa-sign-in-alt"></i> Login
+        </a>
+        <a href="signup.php" class="btn btn-dark">
+          <i class="fas fa-user-plus"></i> Register
+        </a>
       </div>
-  </div>
+    </div>
 
-    <!-- All Products -->
-    <section class="section all-products" id="products">
-      <div class="top container">
-        <h1>Accessories</h1>
-        <form>
-          <select>
-            <option value="1">Default Sorting</option>
-            <option value="2">Sort By Price</option>
-            <option value="3">Sort By Popularity</option>
-            <option value="4">Sort By Sale</option>
-            <option value="5">Sort By Rating</option>
-          </select>
-          <span><i class="bx bx-chevron-down"></i></span>
-        </form>
-      </div>
-      <div class="product-center container">
-
-        <!--mouse-->
-        <div class="product-item">
-          <div class="overlay">
-            <a href="mouse.html" class="product-thumb">
-              <img src="./images/a1.jpg" alt="" />
-            </a>
-            <span class="discount">17%</span>
+    <!-- Main Content -->
+    <main class="main-content">
+      <!-- Page Header -->
+      <section class="page-header">
+        <div class="container">
+          <div class="header-content">
+            <i class="fas fa-mouse header-icon"></i>
+            <h1>Premium Computer Accessories</h1>
+            <p>
+              Enhance your computing experience with our wide range of
+              high-quality accessories
+            </p>
           </div>
-          <div class="product-info">
-            <span>ACCESSORIES</span>
-            <a href="mouse.html">Mouse</a> <!--change here-->
-            <h4>Rs.3500</h4>
-          </div>
-          <ul class="icons">
-            <li><i class="bx bx-heart"></i></li>
-            <li><i class="bx bx-search"></i></li>
-            <li><i class="bx bx-cart"></i></li>
-          </ul>
         </div>
+      </section>
 
-        <!--keyboard-->
-        <div class="product-item">
-          <div class="overlay">
-            <a href="keyboard.html" class="product-thumb">
-              <img src="./images/a2.jpg" alt="" />
-            </a>
-            <span class="discount">11%</span>
+      <!-- Filter Section -->
+      <section class="filter-section">
+        <div class="container">
+          <div class="filter-container">
+            <div class="filter-group">
+              <label for="category-filter">
+                <i class="fas fa-tags"></i> Category
+              </label>
+              <select id="category-filter">
+                <option value="">All Categories</option>
+                <option value="input">Input Devices</option>
+                <option value="audio">Audio</option>
+                <option value="power">Power & Cables</option>
+                <option value="imaging">Imaging</option>
+              </select>
+            </div>
+            <div class="filter-group">
+              <label for="price-filter">
+                <i class="fas fa-dollar-sign"></i> Price Range
+              </label>
+              <select id="price-filter">
+                <option value="">All Prices</option>
+                <option value="0-5000">Under Rs. 5,000</option>
+                <option value="5000-10000">Rs. 5,000 - 10,000</option>
+                <option value="10000+">Above Rs. 10,000</option>
+              </select>
+            </div>
+            <div class="filter-group">
+              <label for="sort-filter">
+                <i class="fas fa-sort"></i> Sort By
+              </label>
+              <select id="sort-filter">
+                <option value="featured">Featured</option>
+                <option value="price-low">Price: Low to High</option>
+                <option value="price-high">Price: High to Low</option>
+                <option value="newest">Newest First</option>
+              </select>
+            </div>
           </div>
-          <div class="product-info">
-            <span>ACCESSORIES</span>
-            <a href="keyboard.html">Keyboard</a>
-            <h4>Rs.3000</h4>
-          </div>
-          <ul class="icons">
-            <li><i class="bx bx-heart"></i></li>
-            <li><i class="bx bx-search"></i></li>
-            <li><i class="bx bx-cart"></i></li>
-          </ul>
         </div>
+      </section>
 
-        <!--earphones-->
-        <div class="product-item">
-          <div class="overlay">
-            <a href="earphone.html" class="product-thumb">
-              <img src="./images/a3.jpg" alt="" />
-            </a>
-            <span class="discount">7%</span>
-          </div>
-          <div class="product-info">
-            <span>ACCESSORIES</span>
-            <a href="earphone.html">Wired Earphones</a>
-            <h4>Rs.4500</h4>
-          </div>
-          <ul class="icons">
-            <li><i class="bx bx-heart"></i></li>
-            <li><i class="bx bx-search"></i></li>
-            <li><i class="bx bx-cart"></i></li>
-          </ul>
-        </div>
+      <!-- Products Grid -->
+      <section class="products-section">
+        <div class="container">
+          <div class="products-grid">
+            <!-- Mouse -->
+            <div class="product-card" data-category="input" data-price="3500">
+              <div class="product-image">
+                <img src="assets/images/products/a1.jpg" alt="Wireless Mouse" />
+                <div class="product-overlay">
+                  <a href="mouse.html" class="view-details-btn">
+                    <i class="fas fa-eye"></i> View Details
+                  </a>
+                </div>
+                <div class="product-badge discount">17% OFF</div>
+              </div>
+              <div class="product-info">
+                <h3>Wireless Optical Mouse</h3>
+                <p class="product-specs">
+                  <i class="fas fa-mouse"></i> Wireless |
+                  <i class="fas fa-bolt"></i> 1000 DPI |
+                  <i class="fas fa-battery-full"></i> Long Battery
+                </p>
+                <div class="product-rating">
+                  <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                  </div>
+                  <span class="rating-text">(4.2)</span>
+                </div>
+                <div class="product-price">
+                  <span class="current-price">Rs. 3,500</span>
+                  <span class="original-price">Rs. 4,200</span>
+                </div>
+                <div class="product-actions">
+                  <button class="add-to-cart-btn">
+                    <i class="fas fa-shopping-cart"></i> Add to Cart
+                  </button>
+                  <button class="wishlist-btn">
+                    <i class="far fa-heart"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
 
-        <!--speakers-->
-        <div class="product-item">
-          <div class="overlay">
-            <a href="speaker.html" class="product-thumb">
-              <img src="./images/a4.png" alt="" />
-            </a>
-          </div>
-          <div class="product-info">
-            <span>ACCESSORIES</span>
-            <a href="speaker.html">Speakers</a>
-            <h4>Rs.6500</h4>
-          </div>
-          <ul class="icons">
-            <li><i class="bx bx-heart"></i></li>
-            <li><i class="bx bx-search"></i></li>
-            <li><i class="bx bx-cart"></i></li>
-          </ul>
-        </div>
+            <!-- Keyboard -->
+            <div class="product-card" data-category="input" data-price="3000">
+              <div class="product-image">
+                <img
+                  src="assets/images/products/a2.jpg"
+                  alt="Mechanical Keyboard"
+                />
+                <div class="product-overlay">
+                  <a href="keyboard.html" class="view-details-btn">
+                    <i class="fas fa-eye"></i> View Details
+                  </a>
+                </div>
+                <div class="product-badge discount">11% OFF</div>
+              </div>
+              <div class="product-info">
+                <h3>Mechanical Gaming Keyboard</h3>
+                <p class="product-specs">
+                  <i class="fas fa-keyboard"></i> Mechanical |
+                  <i class="fas fa-lightbulb"></i> RGB Backlit |
+                  <i class="fas fa-gamepad"></i> Gaming
+                </p>
+                <div class="product-rating">
+                  <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </div>
+                  <span class="rating-text">(4.7)</span>
+                </div>
+                <div class="product-price">
+                  <span class="current-price">Rs. 3,000</span>
+                  <span class="original-price">Rs. 3,370</span>
+                </div>
+                <div class="product-actions">
+                  <button class="add-to-cart-btn">
+                    <i class="fas fa-shopping-cart"></i> Add to Cart
+                  </button>
+                  <button class="wishlist-btn">
+                    <i class="far fa-heart"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
 
-        <!--headset-->
-        <div class="product-item">
-          <div class="overlay">
-            <a href="#" class="product-thumb">
-              <img src="./images/a5.jpg" alt="" />
-            </a>
-            <span class="discount">20%</span>
-          </div>
-          <div class="product-info">
-            <span>ACCESSORIES</span>
-            <a href="#">Headset</a>
-            <h4>Rs.4200</h4>
-          </div>
-          <ul class="icons">
-            <li><i class="bx bx-heart"></i></li>
-            <li><i class="bx bx-search"></i></li>
-            <li><i class="bx bx-cart"></i></li>
-          </ul>
-        </div>
+            <!-- Earphones -->
+            <div class="product-card" data-category="audio" data-price="4500">
+              <div class="product-image">
+                <img
+                  src="assets/images/products/a3.jpg"
+                  alt="Wired Earphones"
+                />
+                <div class="product-overlay">
+                  <a href="earphone.html" class="view-details-btn">
+                    <i class="fas fa-eye"></i> View Details
+                  </a>
+                </div>
+                <div class="product-badge discount">7% OFF</div>
+              </div>
+              <div class="product-info">
+                <h3>Premium Wired Earphones</h3>
+                <p class="product-specs">
+                  <i class="fas fa-headphones"></i> HD Audio |
+                  <i class="fas fa-microphone"></i> Built-in Mic |
+                  <i class="fas fa-volume-up"></i> Noise Isolation
+                </p>
+                <div class="product-rating">
+                  <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                  </div>
+                  <span class="rating-text">(4.3)</span>
+                </div>
+                <div class="product-price">
+                  <span class="current-price">Rs. 4,500</span>
+                  <span class="original-price">Rs. 4,840</span>
+                </div>
+                <div class="product-actions">
+                  <button class="add-to-cart-btn">
+                    <i class="fas fa-shopping-cart"></i> Add to Cart
+                  </button>
+                  <button class="wishlist-btn">
+                    <i class="far fa-heart"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
 
-        <!--web cam-->
-        <div class="product-item">
-          <div class="overlay">
-            <a href="#" class="product-thumb">
-              <img src="./images/a6.jpg" alt="" />
-            </a>
-          </div>
-          <div class="product-info">
-            <span>ACCESSORIES</span>
-            <a href="#">Web camera</a>
-            <h4>Rs.3750</h4>
-          </div>
-          <ul class="icons">
-            <li><i class="bx bx-heart"></i></li>
-            <li><i class="bx bx-search"></i></li>
-            <li><i class="bx bx-cart"></i></li>
-          </ul>
-        </div>
+            <!-- Speakers -->
+            <div class="product-card" data-category="audio" data-price="6500">
+              <div class="product-image">
+                <img
+                  src="assets/images/products/a4.png"
+                  alt="Bluetooth Speakers"
+                />
+                <div class="product-overlay">
+                  <a href="speaker.html" class="view-details-btn">
+                    <i class="fas fa-eye"></i> View Details
+                  </a>
+                </div>
+                <div class="product-badge">Featured</div>
+              </div>
+              <div class="product-info">
+                <h3>Bluetooth Desktop Speakers</h3>
+                <p class="product-specs">
+                  <i class="fas fa-bluetooth"></i> Bluetooth 5.0 |
+                  <i class="fas fa-volume-up"></i> High Quality |
+                  <i class="fas fa-desktop"></i> Desktop
+                </p>
+                <div class="product-rating">
+                  <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </div>
+                  <span class="rating-text">(4.6)</span>
+                </div>
+                <div class="product-price">
+                  <span class="current-price">Rs. 6,500</span>
+                </div>
+                <div class="product-actions">
+                  <button class="add-to-cart-btn">
+                    <i class="fas fa-shopping-cart"></i> Add to Cart
+                  </button>
+                  <button class="wishlist-btn">
+                    <i class="far fa-heart"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
 
-        <!--ups-->
-        <div class="product-item">
-          <div class="overlay">
-            <a href="#" class="product-thumb">
-              <img src="./images/a7.png" alt="" />
-            </a>
-            <span class="discount">27%</span>
-          </div>
-          <div class="product-info">
-            <span>ACCESSORIES</span>
-            <a href="#">Uninterrupted Power Supply</a>
-            <h4>Rs.7800</h4>
-          </div>
-          <ul class="icons">
-            <li><i class="bx bx-heart"></i></li>
-            <li><i class="bx bx-search"></i></li>
-            <li><i class="bx bx-cart"></i></li>
-          </ul>
-        </div>
+            <!-- Headset -->
+            <div class="product-card" data-category="audio" data-price="4200">
+              <div class="product-image">
+                <img src="assets/images/products/a5.jpg" alt="Gaming Headset" />
+                <div class="product-overlay">
+                  <a href="#" class="view-details-btn">
+                    <i class="fas fa-eye"></i> View Details
+                  </a>
+                </div>
+                <div class="product-badge discount">20% OFF</div>
+              </div>
+              <div class="product-info">
+                <h3>Professional Gaming Headset</h3>
+                <p class="product-specs">
+                  <i class="fas fa-gamepad"></i> Gaming |
+                  <i class="fas fa-microphone"></i> Noise Cancelling |
+                  <i class="fas fa-headphones"></i> Surround Sound
+                </p>
+                <div class="product-rating">
+                  <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </div>
+                  <span class="rating-text">(4.8)</span>
+                </div>
+                <div class="product-price">
+                  <span class="current-price">Rs. 4,200</span>
+                  <span class="original-price">Rs. 5,250</span>
+                </div>
+                <div class="product-actions">
+                  <button class="add-to-cart-btn">
+                    <i class="fas fa-shopping-cart"></i> Add to Cart
+                  </button>
+                  <button class="wishlist-btn">
+                    <i class="far fa-heart"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
 
-        <!--extension cable-->
-        <div class="product-item">
-          <div class="overlay">
-            <a href="#" class="product-thumb">
-              <img src="./images/a8.jpg" alt="" />
-            </a>
+            <!-- Web Camera -->
+            <div class="product-card" data-category="imaging" data-price="3750">
+              <div class="product-image">
+                <img src="assets/images/products/a6.jpg" alt="Web Camera" />
+                <div class="product-overlay">
+                  <a href="#" class="view-details-btn">
+                    <i class="fas fa-eye"></i> View Details
+                  </a>
+                </div>
+              </div>
+              <div class="product-info">
+                <h3>HD Webcam with Microphone</h3>
+                <p class="product-specs">
+                  <i class="fas fa-video"></i> 1080p HD |
+                  <i class="fas fa-microphone"></i> Built-in Mic |
+                  <i class="fas fa-plug"></i> USB Plug & Play
+                </p>
+                <div class="product-rating">
+                  <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                  </div>
+                  <span class="rating-text">(4.1)</span>
+                </div>
+                <div class="product-price">
+                  <span class="current-price">Rs. 3,750</span>
+                </div>
+                <div class="product-actions">
+                  <button class="add-to-cart-btn">
+                    <i class="fas fa-shopping-cart"></i> Add to Cart
+                  </button>
+                  <button class="wishlist-btn">
+                    <i class="far fa-heart"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- UPS -->
+            <div class="product-card" data-category="power" data-price="7800">
+              <div class="product-image">
+                <img src="assets/images/products/a7.png" alt="UPS System" />
+                <div class="product-overlay">
+                  <a href="#" class="view-details-btn">
+                    <i class="fas fa-eye"></i> View Details
+                  </a>
+                </div>
+                <div class="product-badge discount">27% OFF</div>
+              </div>
+              <div class="product-info">
+                <h3>Uninterruptible Power Supply</h3>
+                <p class="product-specs">
+                  <i class="fas fa-bolt"></i> Power Backup |
+                  <i class="fas fa-shield-alt"></i> Surge Protection |
+                  <i class="fas fa-battery-full"></i> Long Backup
+                </p>
+                <div class="product-rating">
+                  <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </div>
+                  <span class="rating-text">(4.5)</span>
+                </div>
+                <div class="product-price">
+                  <span class="current-price">Rs. 7,800</span>
+                  <span class="original-price">Rs. 10,685</span>
+                </div>
+                <div class="product-actions">
+                  <button class="add-to-cart-btn">
+                    <i class="fas fa-shopping-cart"></i> Add to Cart
+                  </button>
+                  <button class="wishlist-btn">
+                    <i class="far fa-heart"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Extension Cable -->
+            <div class="product-card" data-category="power" data-price="4100">
+              <div class="product-image">
+                <img
+                  src="assets/images/products/a8.jpg"
+                  alt="Extension Cable"
+                />
+                <div class="product-overlay">
+                  <a href="#" class="view-details-btn">
+                    <i class="fas fa-eye"></i> View Details
+                  </a>
+                </div>
+              </div>
+              <div class="product-info">
+                <h3>Multi-Socket Extension Cord</h3>
+                <p class="product-specs">
+                  <i class="fas fa-plug"></i> 6 Outlets |
+                  <i class="fas fa-shield-alt"></i> Surge Protection |
+                  <i class="fas fa-ruler"></i> 3M Cable
+                </p>
+                <div class="product-rating">
+                  <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                  </div>
+                  <span class="rating-text">(4.0)</span>
+                </div>
+                <div class="product-price">
+                  <span class="current-price">Rs. 4,100</span>
+                </div>
+                <div class="product-actions">
+                  <button class="add-to-cart-btn">
+                    <i class="fas fa-shopping-cart"></i> Add to Cart
+                  </button>
+                  <button class="wishlist-btn">
+                    <i class="far fa-heart"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="product-info">
-            <span>ACCESSORIES</span>
-            <a href="#">Extension Chord</a>
-            <h4>Rs.4100</h4>
-          </div>
-          <ul class="icons">
-            <li><i class="bx bx-heart"></i></li>
-            <li><i class="bx bx-search"></i></li>
-            <li><i class="bx bx-cart"></i></li>
-          </ul>
         </div>
-      </div>
-    </section>
-    <section class="pagination">
-      <div class="container">
-        <span>1</span> <span>2</span> <span>3</span> <span>4</span>
-        <span><i class="bx bx-right-arrow-alt"></i></span>
-      </div>
-    </section>
+      </section>
+    </main>
+
     <!-- Footer -->
     <footer>
-      <div class="footer-column">
-        <h3>Company</h3>
-        <ul>
-          <li><a href="#">About Us</a></li>
-          <li><a href="#">Careers</a></li>
-          <li><a href="#">Customer Reviews</a></li>
-        </ul>
-      </div>
-      
-      <div class="footer-column">
-        <h3>Contact</h3>
-        <ul>
-          <li><a href="#">Store Locations</a></li>
-          <li><a href="#">Online Enquiry</a></li>
-          <li><a href="#">Phone Details</a></li>
-          <li><a href="#">Feedback & Complaints</a></li>
-          <li><a href="#">FAQs</a></li>
-        </ul>
-      </div>
-      
-      <div class="footer-column">
-        <h3>Information</h3>
-        <ul>
-          <li><a href="#">Open Hours</a></li>
-          <li><a href="#">Warranty & Returns</a></li>
-          <li><a href="#">Shipping</a></li>
-          <li><a href="#">Terms & Conditions</a></li>
-          <li><a href="#">Privacy Statement</a></li>
-        </ul>
-      </div>
-      
-      <div class="footer-column wider-column">
-        <h3>Don’t Miss Anything</h3>
-        <p>Subscribe to get the notifications of latest products, Deals & Giveaways!</p>
-        <form id="emailForm">
-          <input type="email" placeholder="Enter your Email" name="email">
-          <button type="submit">Subscribe</button>
-        </form>
-        <h4>Stay in Touch</h4>
-        <div class="social-media">
-          <a href="#"><img src="./images/footer/facebook.png" alt="Facebook"></a>
-          <a href="#"><img src="./images/footer/twitter.png" alt="Twitter"></a>
-          <a href="#"><img src="./images/footer/instagram.jpg" alt="Instagram"></a>
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>TechHub</h3>
+          <p>Your trusted technology partner for all computing needs</p>
+          <div class="newsletter-form">
+            <h4>Newsletter</h4>
+            <p>Stay updated with our latest offers</p>
+            <div class="input-group">
+              <input type="email" placeholder="Enter your email" />
+              <button type="submit">
+                <i class="fas fa-paper-plane"></i> Subscribe
+              </button>
+            </div>
+          </div>
         </div>
-       
+
+        <div class="footer-section">
+          <h4>Quick Links</h4>
+          <ul>
+            <li>
+              <a href="home.html"><i class="fas fa-home"></i> Home</a>
+            </li>
+            <li>
+              <a href="Laptop.html"><i class="fas fa-laptop"></i> Laptops</a>
+            </li>
+            <li>
+              <a href="desktop.html"><i class="fas fa-desktop"></i> Desktops</a>
+            </li>
+            <li>
+              <a href="accessories.html"
+                ><i class="fas fa-mouse"></i> Accessories</a
+              >
+            </li>
+            <li>
+              <a href="aboutus.html"
+                ><i class="fas fa-info-circle"></i> About Us</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h4>Contact Info</h4>
+          <p><i class="fas fa-map-marker-alt"></i> 123 Galle Road, Moratuwa</p>
+          <p><i class="fas fa-phone"></i> +94 11 264 5789</p>
+          <p><i class="fas fa-envelope"></i> info@techhub.lk</p>
+          <p><i class="fas fa-clock"></i> Mon-Sat: 9AM-8PM</p>
+        </div>
+
+        <div class="footer-section">
+          <h4>Follow Us</h4>
+          <p>Connect with us on social media</p>
+          <div class="social-links">
+            <a href="#" class="facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="youtube"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>
+          &copy; 2024 TechHub. All rights reserved. |
+          <a href="privacyPolicy.html">Privacy Policy</a> |
+          <a href="termsConditions.html">Terms of Service</a>
+        </p>
       </div>
     </footer>
+
+    <script>
+      // Filter functionality
+      document.addEventListener("DOMContentLoaded", function () {
+        const categoryFilter = document.getElementById("category-filter");
+        const priceFilter = document.getElementById("price-filter");
+        const sortFilter = document.getElementById("sort-filter");
+        const productCards = document.querySelectorAll(".product-card");
+
+        function filterProducts() {
+          const selectedCategory = categoryFilter.value;
+          const selectedPriceRange = priceFilter.value;
+
+          productCards.forEach((card) => {
+            const cardCategory = card.dataset.category;
+            const cardPrice = parseInt(card.dataset.price);
+            let showCard = true;
+
+            // Category filter
+            if (selectedCategory && cardCategory !== selectedCategory) {
+              showCard = false;
+            }
+
+            // Price filter
+            if (selectedPriceRange) {
+              if (selectedPriceRange === "0-5000" && cardPrice >= 5000) {
+                showCard = false;
+              } else if (
+                selectedPriceRange === "5000-10000" &&
+                (cardPrice < 5000 || cardPrice > 10000)
+              ) {
+                showCard = false;
+              } else if (selectedPriceRange === "10000+" && cardPrice < 10000) {
+                showCard = false;
+              }
+            }
+
+            card.style.display = showCard ? "block" : "none";
+          });
+        }
+
+        categoryFilter.addEventListener("change", filterProducts);
+        priceFilter.addEventListener("change", filterProducts);
+
+        // Wishlist functionality
+        document.querySelectorAll(".wishlist-btn").forEach((btn) => {
+          btn.addEventListener("click", function () {
+            const icon = this.querySelector("i");
+            icon.classList.toggle("fas");
+            icon.classList.toggle("far");
+            this.classList.toggle("active");
+          });
+        });
+
+        // Add to cart functionality
+        document.querySelectorAll(".add-to-cart-btn").forEach((btn) => {
+          btn.addEventListener("click", function () {
+            const originalText = this.innerHTML;
+            this.innerHTML = '<i class="fas fa-check"></i> Added!';
+            this.style.backgroundColor = "#38a169";
+
+            setTimeout(() => {
+              this.innerHTML = originalText;
+              this.style.backgroundColor = "";
+            }, 1500);
+          });
+        });
+      });
+    </script>
   </body>
 </html>
